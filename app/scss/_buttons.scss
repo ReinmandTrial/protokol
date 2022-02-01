@@ -1,0 +1,21 @@
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 4px;
+    font-size: 18px;
+    width: max-content;
+    &:hover {
+    }
+    &:active {
+    }
+    &-orange {
+        color: $white;
+        background: #cc7f31;
+        padding: 10px 40px;
+        &:hover {
+        }
+    }
+}

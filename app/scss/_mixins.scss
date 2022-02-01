@@ -1,0 +1,43 @@
+// calc(210px + (295 - 210) * ((100vw - 320px) / (1920 - 320)))
+
+$maxWidthContainer: 1400;
+
+@mixin adaptiv($property, $startSize, $minSize, $type: 1, $maxWidth: 1920, $minWidth: 320) {
+   @if $type==2 {
+      #{$property}: calc(
+         #{$minSize +
+            px} +
+            (#{$startSize} - #{$minSize}) *
+            ((100vw - #{$minWidth + px}) / (#{$maxWidth} - #{$minWidth}))
+      );
+   } @else {
+      #{$property}: $startSize + px;
+      @media (max-width: #{$maxWidthContainer + px}) {
+         #{$property}: calc(
+            #{$minSize + px} + (#{$startSize} - #{$minSize}) * ((100vw - #{$minWidth + px}) /
+                     (#{$maxWidthContainer} - #{$minWidth}))
+         );
+      }
+   }
+}
+
+%imgCover {
+   & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+}
+
+%imgContain {
+   & img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+   }
+}
+%itemCenter {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}

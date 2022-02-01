@@ -1,0 +1,29 @@
+$black: #000000;
+$white: #ffffff;
+$beige: #fff8ea;
+$orange: #cc7f31;
+$red: #c74a2e;
+$gray: #bdbdbd;
+
+h1,
+.h1 {
+   font-size: 38px;
+   font-weight: bold;
+   @media (max-width: 575.98px) {
+      font-size: 24px;
+   }
+   span {
+      color: $red;
+   }
+}
+.h2,
+h2 {
+   font-size: 36px;
+   font-weight: 600;
+   @media (max-width: 575.98px) {
+      font-size: 24px;
+   }
+   span {
+      color: $red;
+   }
+}
