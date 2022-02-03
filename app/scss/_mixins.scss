@@ -21,6 +21,14 @@ $maxWidthContainer: 1400;
    }
 }
 
+@mixin centering($vertical,$verticalValue,$translateY,$horizontal,$horizontalValue,$translateX) {
+   position: absolute;
+   #{$vertical}: $verticalValue;
+   #{$horizontal}: $horizontalValue;
+   transform: translate($translateX,$translateY);
+}
+
+
 %imgCover {
    & img {
       width: 100%;

@@ -13,7 +13,14 @@
     }
     &-orange {
         color: $white;
-        background: #cc7f31;
+        background: $orange;
+        padding: 10px 40px;
+        &:hover {
+        }
+    }
+    &-orange {
+        color: $white;
+        background: $red;
         padding: 10px 40px;
         &:hover {
         }
