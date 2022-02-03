@@ -457,7 +457,7 @@
       box-shadow: 0px 2px 14px 2px rgba(0, 0, 0, 0.12);
       border-radius: 5px;
       padding: 24px;
-      padding-right: 42px;
+      padding-right: 65px;
       &:not(:last-child) {
          margin-bottom: 20px;
       }
@@ -520,12 +520,12 @@
    &__services-list {
       display: flex;
       flex-wrap: wrap;
-      max-width: 410px;
+      max-width: 521px;
    }
    &__services-item {
       color: $orange;
       &:not(:last-child) {
-         margin-right: 8px;
+         margin-right: 5px;
       }
    }
    &__services-more-btn {
@@ -533,6 +533,9 @@
       background-color: $orange;
       color: $white;
       border-radius: 50%;
+      &--active {
+         transform: rotate(180deg);
+      }
    }
 
    &__call {
@@ -555,7 +558,8 @@
       &::after {
          width: calc(100% + 40px);
          height: calc(100% + 40px);
-      }&-icon {
+      }
+      &-icon {
          font-size: 48px;
       }
    }
