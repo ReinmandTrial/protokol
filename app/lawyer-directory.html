@@ -12,10 +12,11 @@
 	<div class="wrapper lawyer">
 		<main class="main">
 			<div class="content">
+
         <section class="search-lawyer">
           <div class="container">
+            <h1 class="lawyer__main-title">Каталог юристов</h1>
             <div class="search-lawyer__content">
-              <h1 class="lawyer__main-title">Каталог юристов</h1>
               <div class="search-lawyer__text-block">
                 <h2 class="search-lawyer__title">Поиск по специализации</h2>
                 <p class="search-lawyer__desc">Воспользуйтесь автоподсказкой для поиска юриста по специализации в нашем каталоге</p>
@@ -36,648 +37,832 @@
             </div>
           </div>
         </section>
+
         <section class="lawyer__main">
           <div class="container">
-            <div class="lawyer__filter">
-              <div class="lawyer__filter-content">
-                <div class="lawyer__filter-title">Сортировать за</div>
-                <ul class="lawyer__filter-list">
-                  <li class="lawyer__filter-item">
-                    <button class="lawyer__filter-btn lawyer__filter-btn--selected" type="button">
+
+            <aside class="search-by-adaptive-lawyer">
+              <div class="search-by-adaptive-lawyer__title-wrap">
+                <h2 class="search-by-adaptive-lawyer__title">Дополнительные фильтры</h2>
+                <svg class="search-by-adaptive-lawyer__more-plus" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11 7V11M11 11V15M11 11H15M11 11H7" stroke="#CC7F31" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" stroke="#CC7F31" stroke-width="2"/>
+                </svg>
+              </div>
+            </aside>
+
+            <div class="filter-lawyer">
+              <div class="filter-lawyer__content">
+                <div class="filter-lawyer__title">Сортировать за</div>
+                <ul class="filter-lawyer__list">
+                  <li class="filter-lawyer__item">
+                    <button class="filter-lawyer__btn filter-lawyer__btn--selected" type="button">
                       Слониками
-                      <span class="lawyer__filter-triangle icon icon-triangle"></span>
+                      <span class="filter-lawyer__triangle icon icon-triangle"></span>
                     </button>
                   </li>
                 </ul>
               </div>
             </div>
+
             <div class="lawyer__main-content">
-              <aside class="search-by-adaptive">
-                <div class="search-by-adaptive__title-wrap">
-                  <h2 class="search-by-adaptive__title">Дополнительные фильтры</h2>
-                  <svg class="search-by-adaptive__more-plus" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M11 7V11M11 11V15M11 11H15M11 11H7" stroke="#CC7F31" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" stroke="#CC7F31" stroke-width="2"/>
-                  </svg>
-                </div>
-              </aside>
-              <aside class="search-by">
-                <h2 class="search-by__title">Поиск по:</h2>
-                <ul class="search-by__list">
-                  <li class="search-by__item">
-                    <button class="search-by__btn">
+
+              <aside class="search-by-lawyer">
+                <h2 class="search-by-lawyer__title">Поиск по:</h2>
+                <ul class="search-by-lawyer__list">
+                  <li class="search-by-lawyer__item">
+                    <button class="search-by-lawyer__btn">
                       ФИО юриста или компании
-                      <span class="search-by__triangle icon icon-triangle"></span>
+                      <span class="search-by-lawyer__triangle icon icon-triangle"></span>
                     </button>
                   </li>
-                  <li class="search-by__item">
-                    <button class="search-by__btn">
+                  <li class="search-by-lawyer__item">
+                    <button class="search-by-lawyer__btn">
                       Основным услугам
-                      <span class="search-by__triangle icon icon-triangle"></span>
+                      <span class="search-by-lawyer__triangle icon icon-triangle"></span>
                     </button>
                   </li>
-                  <li class="search-by__item">
-                    <button class="search-by__btn">
+                  <li class="search-by-lawyer__item">
+                    <button class="search-by-lawyer__btn">
                       Статус юриста
-                      <span class="search-by__triangle icon icon-triangle"></span>
+                      <span class="search-by-lawyer__triangle icon icon-triangle"></span>
                     </button>
                   </li>
                 </ul>
               </aside>
-              <div class="lawyers">
-                <div class="laywers__content">
-                  <ul class="lawyers__list">
-                    <li class="lawyers__item">
-                      <div class="lawyers__info-main">
-                        <div class="lawyers__figure">
-                          <div class="lawyers__img-wrap">
-                            <img class="lawyers__img lawyers__online-text" src="./images/advocate.jpg" alt="Фотография адвоката">
-                          </div>
-                          <p class="lawyers__online-text">Online</p>
+
+              <div class="cards-lawyer">
+                <ul class="cards-lawyer__list">
+                  <li class="cards-lawyer__item">
+                    <div class="cards-lawyer__info-main">
+                      <div class="cards-lawyer__figure">
+                        <div class="cards-lawyer__img-wrap">
+                          <img class="cards-lawyer__img cards-lawyer__online" src="./images/advocate.jpg" alt="Фотография адвоката">
                         </div>
-                        <div class="lawyers__text-block">
-                          <p class="lawyers__name">Адвокат Криволапов Денис Андрійович</p>
-                          <div class="lawyers__services">
-                            <p class="lawyers__services-title">Основные услуги:</p>
-                            <ul class="lawyers__services-list">
-                              <li class="lawyers__services-item">Устная консультация бесплатно/</li>
-                              <li class="lawyers__services-item">Видеоконсультация/</li>
-                              <li class="lawyers__services-item">Адвокатский запрос</li>
-                            </ul>
-                          </div>
+                        <p class="cards-lawyer__online-text">Online</p>
+                        <div class="cards-lawyer__services cards-lawyer__services--apperance">
+                          <p class="cards-lawyer__services-title">
+                            Основные услуги:
+                          </p>
+                          <button class="cards-lawyer__services-more-btn icon icon-triangle" type="button" aria-label="Раскрыть все основные услуги"></button>
                         </div>
-                        <button class="lawyers__call" type="button">
-                          <span class="lawyers__call-icon lawyers__call-icon icon icon-phone-call"></span>
+                      </div>
+                      <div class="cards-lawyer__text-block">
+                        <p class="cards-lawyer__name">Адвокат Криволапов Денис Андрійович</p>
+                        <div class="cards-lawyer__grade">
+                          <div class="cards-lawyer__grade-icon icon icon-rating"></div>
+                          4.9
+                        </div>
+                        <p class="cards-lawyer__progress-rating cards-lawyer__progress-rating--appearance">
+                          <span class="cards-lawyer__progress-rating--text">Рейтинг:</span>
+                          <span class="cards-lawyer__progress-rating--orange">0</span>
+                        </p>
+                        <div class="cards-lawyer__services">
+                          <p class="cards-lawyer__services-title">Основные услуги:</p>
+                          <ul class="cards-lawyer__services-list">
+                            <li class="cards-lawyer__services-item">Устная консультация бесплатно/</li>
+                            <li class="cards-lawyer__services-item">Видеоконсультация/</li>
+                            <li class="cards-lawyer__services-item">Адвокатский запрос</li>
+                          </ul>
+                        </div>
+                        <button class="cards-lawyer__phone cards-lawyer__phone--apperance" type="button">
+                          <span class="cards-lawyer__phone-icon icon icon-phone-call"></span>
                         </button>
                       </div>
-                      <div class="lawyers__info-popularity">
-                        <ul class="lawyers__info-popularity-list">
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-rating"></div>
-                            4.9
-                          </li>
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-consultations"></div>
-                            0
-                          </li>
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-secure-transactions"></div>
-                            79
-                          </li>
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-calls"></div>
-                            0
-                          </li>
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-publications"></div>
-                            79
-                          </li>
-                        </ul>
-                        <p class="lawyers__rating">
-                          <span class="lawyers__rating-text">Рейтинг:</span>
-                          <span class="lawyers__rating--orange">0</span>
-                        </p>
+                      <button class="cards-lawyer__phone" type="button">
+                        <span class="cards-lawyer__phone-icon icon icon-phone-call"></span>
+                      </button>
+                    </div>
+                    <div class="cards-lawyer__progress">
+                      <ul class="cards-lawyer__progress-list">
+                        <li class="cards-lawyer__progress-item cards-lawyer__progress-item--hidden">
+                          <div class="cards-lawyer__progress-icon icon icon-rating"></div>
+                          4.9
+                        </li>
+                        <li class="cards-lawyer__progress-item">
+                          <div class="cards-lawyer__progress-icon icon icon-consultations"></div>
+                          0
+                        </li>
+                        <li class="cards-lawyer__progress-item">
+                          <div class="cards-lawyer__progress-icon icon icon-secure-transactions"></div>
+                          79
+                        </li>
+                        <li class="cards-lawyer__progress-item">
+                          <div class="cards-lawyer__progress-icon icon icon-calls"></div>
+                          0
+                        </li>
+                        <li class="cards-lawyer__progress-item">
+                          <div class="cards-lawyer__progress-icon icon icon-publications"></div>
+                          79
+                        </li>
+                      </ul>
+                      <p class="cards-lawyer__progress-rating">
+                        <span class="cards-lawyer__progress-rating--text">Рейтинг:</span>
+                        <span class="cards-lawyer__progress-rating--orange">0</span>
+                      </p>
+                    </div>
+                  </li>
+                  <li class="cards-lawyer__item">
+                    <div class="cards-lawyer__info-main">
+                      <div class="cards-lawyer__figure">
+                        <div class="cards-lawyer__img-wrap">
+                          <img class="cards-lawyer__img cards-lawyer__online" src="./images/advocate.jpg" alt="Фотография адвоката">
+                        </div>
+                        <p class="cards-lawyer__online-text">Online</p>
+                        <div class="cards-lawyer__services cards-lawyer__services--apperance">
+                          <p class="cards-lawyer__services-title">
+                            Основные услуги:
+                          </p>
+                          <button class="cards-lawyer__services-more-btn icon icon-triangle" type="button" aria-label="Раскрыть все основные услуги"></button>
+                        </div>
                       </div>
-                    </li>
-                    <li class="lawyers__item">
-                      <div class="lawyers__info-main">
-                        <div class="lawyers__figure">
-                          <div class="lawyers__img-wrap">
-                            <img class="lawyers__img lawyers__online-text" src="./images/advocate.jpg" alt="Фотография адвоката">
-                          </div>
-                          <p class="lawyers__online-text">Online</p>
+                      <div class="cards-lawyer__text-block">
+                        <p class="cards-lawyer__name">Адвокат Криволапов Денис Андрійович</p>
+                        <div class="cards-lawyer__grade">
+                          <div class="cards-lawyer__grade-icon icon icon-rating"></div>
+                          4.9
                         </div>
-                        <div class="lawyers__text-block">
-                          <p class="lawyers__name">Адвокат Криволапов Денис Андрійович</p>
-                          <div class="lawyers__services">
-                            <p class="lawyers__services-title">Основные услуги:</p>
-                            <ul class="lawyers__services-list">
-                              <li class="lawyers__services-item">Устная консультация бесплатно/</li>
-                              <li class="lawyers__services-item">Видеоконсультация/</li>
-                              <li class="lawyers__services-item">Адвокатский запрос</li>
-                              <li class="lawyers__services-item">
-                                <button class="lawyers__services-more-btn icon icon-triangle" type="button" aria-label="Раскрыть все основные услуги"></button>
-                              </li>
-                            </ul>
-                          </div>
+                        <p class="cards-lawyer__progress-rating cards-lawyer__progress-rating--appearance">
+                          <span class="cards-lawyer__progress-rating--text">Рейтинг:</span>
+                          <span class="cards-lawyer__progress-rating--orange">0</span>
+                        </p>
+                        <div class="cards-lawyer__services">
+                          <p class="cards-lawyer__services-title">Основные услуги:</p>
+                          <ul class="cards-lawyer__services-list">
+                            <li class="cards-lawyer__services-item">Устная консультация бесплатно/</li>
+                            <li class="cards-lawyer__services-item">Видеоконсультация/</li>
+                            <li class="cards-lawyer__services-item">Адвокатский запрос</li>
+                            <li class="cards-lawyer__services-item">
+                              <button class="cards-lawyer__services-more-btn icon icon-triangle" type="button" aria-label="Раскрыть все основные услуги"></button>
+                            </li>
+                          </ul>
                         </div>
-                        <button class="lawyers__call" type="button">
-                          <span class="lawyers__call-icon icon icon-phone-call"></span>
+                        <button class="cards-lawyer__phone cards-lawyer__phone--apperance" type="button">
+                          <span class="cards-lawyer__phone-icon icon icon-phone-call"></span>
                         </button>
                       </div>
-                      <div class="lawyers__info-popularity">
-                        <ul class="lawyers__info-popularity-list">
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-rating"></div>
-                            4.9
-                          </li>
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-consultations"></div>
-                            0
-                          </li>
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-secure-transactions"></div>
-                            79
-                          </li>
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-calls"></div>
-                            0
-                          </li>
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-publications"></div>
-                            79
-                          </li>
-                        </ul>
-                        <p class="lawyers__rating">
-                          <span class="lawyers__rating-text">Рейтинг:</span>
-                          <span class="lawyers__rating--orange">0</span>
-                        </p>
+                      <button class="cards-lawyer__phone" type="button">
+                        <span class="cards-lawyer__phone-icon icon icon-phone-call"></span>
+                      </button>
+                    </div>
+                    <div class="cards-lawyer__progress">
+                      <ul class="cards-lawyer__progress-list">
+                        <li class="cards-lawyer__progress-item cards-lawyer__progress-item--hidden">
+                          <div class="cards-lawyer__progress-icon icon icon-rating"></div>
+                          4.9
+                        </li>
+                        <li class="cards-lawyer__progress-item">
+                          <div class="cards-lawyer__progress-icon icon icon-consultations"></div>
+                          0
+                        </li>
+                        <li class="cards-lawyer__progress-item">
+                          <div class="cards-lawyer__progress-icon icon icon-secure-transactions"></div>
+                          79
+                        </li>
+                        <li class="cards-lawyer__progress-item">
+                          <div class="cards-lawyer__progress-icon icon icon-calls"></div>
+                          0
+                        </li>
+                        <li class="cards-lawyer__progress-item">
+                          <div class="cards-lawyer__progress-icon icon icon-publications"></div>
+                          79
+                        </li>
+                      </ul>
+                      <p class="cards-lawyer__progress-rating">
+                        <span class="cards-lawyer__progress-rating--text">Рейтинг:</span>
+                        <span class="cards-lawyer__progress-rating--orange">0</span>
+                      </p>
+                    </div>
+                  </li>
+                  <li class="cards-lawyer__item">
+                    <div class="cards-lawyer__info-main">
+                      <div class="cards-lawyer__figure">
+                        <div class="cards-lawyer__img-wrap">
+                          <img class="cards-lawyer__img cards-lawyer__online" src="./images/advocate.jpg" alt="Фотография адвоката">
+                        </div>
+                        <p class="cards-lawyer__online-text">Online</p>
+                        <div class="cards-lawyer__services cards-lawyer__services--apperance">
+                          <p class="cards-lawyer__services-title">
+                            Основные услуги:
+                          </p>
+                          <button class="cards-lawyer__services-more-btn icon icon-triangle" type="button" aria-label="Раскрыть все основные услуги"></button>
+                        </div>
                       </div>
-                    </li>
-                    <li class="lawyers__item">
-                      <div class="lawyers__info-main">
-                        <div class="lawyers__figure">
-                          <div class="lawyers__img-wrap">
-                            <img class="lawyers__img lawyers__online-text" src="./images/advocate.jpg" alt="Фотография адвоката">
-                          </div>
-                          <p class="lawyers__online-text">Online</p>
+                      <div class="cards-lawyer__text-block">
+                        <p class="cards-lawyer__name">Адвокат Криволапов Денис Андрійович</p>
+                        <div class="cards-lawyer__grade">
+                          <div class="cards-lawyer__grade-icon icon icon-rating"></div>
+                          4.9
                         </div>
-                        <div class="lawyers__text-block">
-                          <p class="lawyers__name">Адвокат Криволапов Денис Андрійович</p>
-                          <div class="lawyers__services">
-                            <p class="lawyers__services-title">Основные услуги:</p>
-                            <ul class="lawyers__services-list">
-                              <li class="lawyers__services-item">Устная консультация бесплатно/</li>
-                              <li class="lawyers__services-item">Видеоконсультация/</li>
-                              <li class="lawyers__services-item">Адвокатский запрос</li>
-                              <li class="lawyers__services-item">Командировка/</li>
-                              <li class="lawyers__services-item">Представительство интересов/</li>
-                              <li class="lawyers__services-item">Подготовка иска и другого документа/</li>
-                              <li class="lawyers__services-item">Выполнения поручений/</li>
-                              <li class="lawyers__services-item">Письменная консультация/</li>
-                              <li class="lawyers__services-item">Подготовка договора/</li>
-                              <li class="lawyers__services-item">Адвокатский запрос/</li>
-                              <li class="lawyers__services-item">Почасовая работа/</li>
-                              <li class="lawyers__services-item">Абонентское обслуживание</li>
-                              <li class="lawyers__services-item">
-                                <button class="lawyers__services-more-btn lawyers__services-more-btn--active icon icon-triangle" type="button" aria-label="Раскрыть все основные услуги"></button>
-                              </li>
-                            </ul>
-                          </div>
+                        <p class="cards-lawyer__progress-rating cards-lawyer__progress-rating--appearance">
+                          <span class="cards-lawyer__progress-rating--text">Рейтинг:</span>
+                          <span class="cards-lawyer__progress-rating--orange">0</span>
+                        </p>
+                        <div class="cards-lawyer__services">
+                          <p class="cards-lawyer__services-title">Основные услуги:</p>
+                          <ul class="cards-lawyer__services-list">
+                            <li class="cards-lawyer__services-item">Устная консультация бесплатно/</li>
+                            <li class="cards-lawyer__services-item">Видеоконсультация/</li>
+                            <li class="cards-lawyer__services-item">Адвокатский запрос</li>
+                            <li class="cards-lawyer__services-item">Командировка/</li>
+                            <li class="cards-lawyer__services-item">Представительство интересов/</li>
+                            <li class="cards-lawyer__services-item">Подготовка иска и другого документа/</li>
+                            <li class="cards-lawyer__services-item">Выполнения поручений/</li>
+                            <li class="cards-lawyer__services-item">Письменная консультация/</li>
+                            <li class="cards-lawyer__services-item">Подготовка договора/</li>
+                            <li class="cards-lawyer__services-item">Адвокатский запрос/</li>
+                            <li class="cards-lawyer__services-item">Почасовая работа/</li>
+                            <li class="cards-lawyer__services-item">Абонентское обслуживание</li>
+                            <li class="cards-lawyer__services-item">
+                              <button class="cards-lawyer__services-more-btn cards-lawyer__services-more-btn--active icon icon-triangle" type="button" aria-label="Раскрыть все основные услуги"></button>
+                            </li>
+                          </ul>
                         </div>
-                        <button class="lawyers__call" type="button">
-                          <span class="lawyers__call-icon icon icon-phone-call"></span>
+                        <button class="cards-lawyer__phone cards-lawyer__phone--apperance" type="button">
+                          <span class="cards-lawyer__phone-icon icon icon-phone-call"></span>
                         </button>
                       </div>
-                      <div class="lawyers__info-popularity">
-                        <ul class="lawyers__info-popularity-list">
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-rating"></div>
-                            4.9
-                          </li>
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-consultations"></div>
-                            0
-                          </li>
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-secure-transactions"></div>
-                            79
-                          </li>
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-calls"></div>
-                            0
-                          </li>
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-publications"></div>
-                            79
-                          </li>
-                        </ul>
-                        <p class="lawyers__rating">
-                          <span class="lawyers__rating-text">Рейтинг:</span>
-                          <span class="lawyers__rating--orange">0</span>
-                        </p>
+                      <button class="cards-lawyer__phone" type="button">
+                        <span class="cards-lawyer__phone-icon icon icon-phone-call"></span>
+                      </button>
+                    </div>
+                    <div class="cards-lawyer__progress">
+                      <ul class="cards-lawyer__progress-list">
+                        <li class="cards-lawyer__progress-item cards-lawyer__progress-item--hidden">
+                          <div class="cards-lawyer__progress-icon icon icon-rating"></div>
+                          4.9
+                        </li>
+                        <li class="cards-lawyer__progress-item">
+                          <div class="cards-lawyer__progress-icon icon icon-consultations"></div>
+                          0
+                        </li>
+                        <li class="cards-lawyer__progress-item">
+                          <div class="cards-lawyer__progress-icon icon icon-secure-transactions"></div>
+                          79
+                        </li>
+                        <li class="cards-lawyer__progress-item">
+                          <div class="cards-lawyer__progress-icon icon icon-calls"></div>
+                          0
+                        </li>
+                        <li class="cards-lawyer__progress-item">
+                          <div class="cards-lawyer__progress-icon icon icon-publications"></div>
+                          79
+                        </li>
+                      </ul>
+                      <p class="cards-lawyer__progress-rating">
+                        <span class="cards-lawyer__progress-rating--text">Рейтинг:</span>
+                        <span class="cards-lawyer__progress-rating--orange">0</span>
+                      </p>
+                    </div>
+                  </li>
+                  <li class="cards-lawyer__item">
+                    <div class="cards-lawyer__info-main">
+                      <div class="cards-lawyer__figure">
+                        <div class="cards-lawyer__img-wrap">
+                          <img class="cards-lawyer__img cards-lawyer__online" src="./images/advocate.jpg" alt="Фотография адвоката">
+                        </div>
+                        <p class="cards-lawyer__online-text">Online</p>
+                        <div class="cards-lawyer__services cards-lawyer__services--apperance">
+                          <p class="cards-lawyer__services-title">
+                            Основные услуги:
+                          </p>
+                          <button class="cards-lawyer__services-more-btn icon icon-triangle" type="button" aria-label="Раскрыть все основные услуги"></button>
+                        </div>
                       </div>
-                    </li>
-                    <li class="lawyers__item">
-                      <div class="lawyers__info-main">
-                        <div class="lawyers__figure">
-                          <div class="lawyers__img-wrap">
-                            <img class="lawyers__img lawyers__online-text" src="./images/advocate.jpg" alt="Фотография адвоката">
-                          </div>
-                          <p class="lawyers__online-text">Online</p>
+                      <div class="cards-lawyer__text-block">
+                        <p class="cards-lawyer__name">Адвокат Криволапов Денис Андрійович</p>
+                        <div class="cards-lawyer__grade">
+                          <div class="cards-lawyer__grade-icon icon icon-rating"></div>
+                          4.9
                         </div>
-                        <div class="lawyers__text-block">
-                          <p class="lawyers__name">Адвокат Криволапов Денис Андрійович</p>
-                          <div class="lawyers__services">
-                            <p class="lawyers__services-title">Основные услуги:</p>
-                            <ul class="lawyers__services-list">
-                              <li class="lawyers__services-item">Устная консультация бесплатно/</li>
-                              <li class="lawyers__services-item">Видеоконсультация/</li>
-                              <li class="lawyers__services-item">Адвокатский запрос</li>
-                              <li class="lawyers__services-item">
-                                <button class="lawyers__services-more-btn icon icon-triangle" type="button" aria-label="Раскрыть все основные услуги"></button>
-                              </li>
-                            </ul>
-                          </div>
+                        <p class="cards-lawyer__progress-rating cards-lawyer__progress-rating--appearance">
+                          <span class="cards-lawyer__progress-rating--text">Рейтинг:</span>
+                          <span class="cards-lawyer__progress-rating--orange">0</span>
+                        </p>
+                        <div class="cards-lawyer__services">
+                          <p class="cards-lawyer__services-title">Основные услуги:</p>
+                          <ul class="cards-lawyer__services-list">
+                            <li class="cards-lawyer__services-item">Устная консультация бесплатно/</li>
+                            <li class="cards-lawyer__services-item">Видеоконсультация/</li>
+                            <li class="cards-lawyer__services-item">Адвокатский запрос</li>
+                          </ul>
                         </div>
-                        <button class="lawyers__call" type="button">
-                          <span class="lawyers__call-icon icon icon-phone-call"></span>
+                        <button class="cards-lawyer__phone cards-lawyer__phone--apperance" type="button">
+                          <span class="cards-lawyer__phone-icon icon icon-phone-call"></span>
                         </button>
                       </div>
-                      <div class="lawyers__info-popularity">
-                        <ul class="lawyers__info-popularity-list">
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-rating"></div>
-                            4.9
-                          </li>
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-consultations"></div>
-                            0
-                          </li>
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-secure-transactions"></div>
-                            79
-                          </li>
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-calls"></div>
-                            0
-                          </li>
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-publications"></div>
-                            79
-                          </li>
-                        </ul>
-                        <p class="lawyers__rating">
-                          <span class="lawyers__rating-text">Рейтинг:</span>
-                          <span class="lawyers__rating--orange">0</span>
-                        </p>
+                      <button class="cards-lawyer__phone" type="button">
+                        <span class="cards-lawyer__phone-icon icon icon-phone-call"></span>
+                      </button>
+                    </div>
+                    <div class="cards-lawyer__progress">
+                      <ul class="cards-lawyer__progress-list">
+                        <li class="cards-lawyer__progress-item cards-lawyer__progress-item--hidden">
+                          <div class="cards-lawyer__progress-icon icon icon-rating"></div>
+                          4.9
+                        </li>
+                        <li class="cards-lawyer__progress-item">
+                          <div class="cards-lawyer__progress-icon icon icon-consultations"></div>
+                          0
+                        </li>
+                        <li class="cards-lawyer__progress-item">
+                          <div class="cards-lawyer__progress-icon icon icon-secure-transactions"></div>
+                          79
+                        </li>
+                        <li class="cards-lawyer__progress-item">
+                          <div class="cards-lawyer__progress-icon icon icon-calls"></div>
+                          0
+                        </li>
+                        <li class="cards-lawyer__progress-item">
+                          <div class="cards-lawyer__progress-icon icon icon-publications"></div>
+                          79
+                        </li>
+                      </ul>
+                      <p class="cards-lawyer__progress-rating">
+                        <span class="cards-lawyer__progress-rating--text">Рейтинг:</span>
+                        <span class="cards-lawyer__progress-rating--orange">0</span>
+                      </p>
+                    </div>
+                  </li>
+                  <li class="cards-lawyer__item">
+                    <div class="cards-lawyer__info-main">
+                      <div class="cards-lawyer__figure">
+                        <div class="cards-lawyer__img-wrap">
+                          <img class="cards-lawyer__img cards-lawyer__online" src="./images/advocate.jpg" alt="Фотография адвоката">
+                        </div>
+                        <p class="cards-lawyer__online-text">Online</p>
+                        <div class="cards-lawyer__services cards-lawyer__services--apperance">
+                          <p class="cards-lawyer__services-title">
+                            Основные услуги:
+                          </p>
+                          <button class="cards-lawyer__services-more-btn icon icon-triangle" type="button" aria-label="Раскрыть все основные услуги"></button>
+                        </div>
                       </div>
-                    </li>
-                    <li class="lawyers__item">
-                      <div class="lawyers__info-main">
-                        <div class="lawyers__figure">
-                          <div class="lawyers__img-wrap">
-                            <img class="lawyers__img lawyers__online-text" src="./images/advocate.jpg" alt="Фотография адвоката">
-                          </div>
-                          <p class="lawyers__online-text">Online</p>
+                      <div class="cards-lawyer__text-block">
+                        <p class="cards-lawyer__name">Адвокат Криволапов Денис Андрійович</p>
+                        <div class="cards-lawyer__grade">
+                          <div class="cards-lawyer__grade-icon icon icon-rating"></div>
+                          4.9
                         </div>
-                        <div class="lawyers__text-block">
-                          <p class="lawyers__name">Адвокат Криволапов Денис Андрійович</p>
-                          <div class="lawyers__services">
-                            <p class="lawyers__services-title">Основные услуги:</p>
-                            <ul class="lawyers__services-list">
-                              <li class="lawyers__services-item">Устная консультация бесплатно/</li>
-                              <li class="lawyers__services-item">Видеоконсультация/</li>
-                              <li class="lawyers__services-item">Адвокатский запрос</li>
-                            </ul>
-                          </div>
+                        <p class="cards-lawyer__progress-rating cards-lawyer__progress-rating--appearance">
+                          <span class="cards-lawyer__progress-rating--text">Рейтинг:</span>
+                          <span class="cards-lawyer__progress-rating--orange">0</span>
+                        </p>
+                        <div class="cards-lawyer__services">
+                          <p class="cards-lawyer__services-title">Основные услуги:</p>
+                          <ul class="cards-lawyer__services-list">
+                            <li class="cards-lawyer__services-item">Устная консультация бесплатно/</li>
+                            <li class="cards-lawyer__services-item">Видеоконсультация/</li>
+                            <li class="cards-lawyer__services-item">Адвокатский запрос</li>
+                            <li class="cards-lawyer__services-item">
+                              <button class="cards-lawyer__services-more-btn icon icon-triangle" type="button" aria-label="Раскрыть все основные услуги"></button>
+                            </li>
+                          </ul>
                         </div>
-                        <button class="lawyers__call" type="button">
-                          <span class="lawyers__call-icon icon icon-phone-call"></span>
+                        <button class="cards-lawyer__phone cards-lawyer__phone--apperance" type="button">
+                          <span class="cards-lawyer__phone-icon icon icon-phone-call"></span>
                         </button>
                       </div>
-                      <div class="lawyers__info-popularity">
-                        <ul class="lawyers__info-popularity-list">
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-rating"></div>
-                            4.9
-                          </li>
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-consultations"></div>
-                            0
-                          </li>
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-secure-transactions"></div>
-                            79
-                          </li>
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-calls"></div>
-                            0
-                          </li>
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-publications"></div>
-                            79
-                          </li>
-                        </ul>
-                        <p class="lawyers__rating">
-                          <span class="lawyers__rating-text">Рейтинг:</span>
-                          <span class="lawyers__rating--orange">0</span>
-                        </p>
+                      <button class="cards-lawyer__phone" type="button">
+                        <span class="cards-lawyer__phone-icon icon icon-phone-call"></span>
+                      </button>
+                    </div>
+                    <div class="cards-lawyer__progress">
+                      <ul class="cards-lawyer__progress-list">
+                        <li class="cards-lawyer__progress-item cards-lawyer__progress-item--hidden">
+                          <div class="cards-lawyer__progress-icon icon icon-rating"></div>
+                          4.9
+                        </li>
+                        <li class="cards-lawyer__progress-item">
+                          <div class="cards-lawyer__progress-icon icon icon-consultations"></div>
+                          0
+                        </li>
+                        <li class="cards-lawyer__progress-item">
+                          <div class="cards-lawyer__progress-icon icon icon-secure-transactions"></div>
+                          79
+                        </li>
+                        <li class="cards-lawyer__progress-item">
+                          <div class="cards-lawyer__progress-icon icon icon-calls"></div>
+                          0
+                        </li>
+                        <li class="cards-lawyer__progress-item">
+                          <div class="cards-lawyer__progress-icon icon icon-publications"></div>
+                          79
+                        </li>
+                      </ul>
+                      <p class="cards-lawyer__progress-rating">
+                        <span class="cards-lawyer__progress-rating--text">Рейтинг:</span>
+                        <span class="cards-lawyer__progress-rating--orange">0</span>
+                      </p>
+                    </div>
+                  </li>
+                  <li class="cards-lawyer__item">
+                    <div class="cards-lawyer__info-main">
+                      <div class="cards-lawyer__figure">
+                        <div class="cards-lawyer__img-wrap">
+                          <img class="cards-lawyer__img cards-lawyer__online" src="./images/advocate.jpg" alt="Фотография адвоката">
+                        </div>
+                        <p class="cards-lawyer__online-text">Online</p>
+                        <div class="cards-lawyer__services cards-lawyer__services--apperance">
+                          <p class="cards-lawyer__services-title">
+                            Основные услуги:
+                          </p>
+                          <button class="cards-lawyer__services-more-btn icon icon-triangle" type="button" aria-label="Раскрыть все основные услуги"></button>
+                        </div>
                       </div>
-                    </li>
-                    <li class="lawyers__item">
-                      <div class="lawyers__info-main">
-                        <div class="lawyers__figure">
-                          <div class="lawyers__img-wrap">
-                            <img class="lawyers__img lawyers__online-text" src="./images/advocate.jpg" alt="Фотография адвоката">
-                          </div>
-                          <p class="lawyers__online-text">Online</p>
+                      <div class="cards-lawyer__text-block">
+                        <p class="cards-lawyer__name">Адвокат Криволапов Денис Андрійович</p>
+                        <div class="cards-lawyer__grade">
+                          <div class="cards-lawyer__grade-icon icon icon-rating"></div>
+                          4.9
                         </div>
-                        <div class="lawyers__text-block">
-                          <p class="lawyers__name">Адвокат Криволапов Денис Андрійович</p>
-                          <div class="lawyers__services">
-                            <p class="lawyers__services-title">Основные услуги:</p>
-                            <ul class="lawyers__services-list">
-                              <li class="lawyers__services-item">Устная консультация бесплатно/</li>
-                              <li class="lawyers__services-item">Видеоконсультация/</li>
-                              <li class="lawyers__services-item">Адвокатский запрос</li>
-                              <li class="lawyers__services-item">
-                                <button class="lawyers__services-more-btn icon icon-triangle" type="button" aria-label="Раскрыть все основные услуги"></button>
-                              </li>
-                            </ul>
-                          </div>
+                        <p class="cards-lawyer__progress-rating cards-lawyer__progress-rating--appearance">
+                          <span class="cards-lawyer__progress-rating--text">Рейтинг:</span>
+                          <span class="cards-lawyer__progress-rating--orange">0</span>
+                        </p>
+                        <div class="cards-lawyer__services">
+                          <p class="cards-lawyer__services-title">Основные услуги:</p>
+                          <ul class="cards-lawyer__services-list">
+                            <li class="cards-lawyer__services-item">Устная консультация бесплатно/</li>
+                            <li class="cards-lawyer__services-item">Видеоконсультация/</li>
+                            <li class="cards-lawyer__services-item">Адвокатский запрос</li>
+                          </ul>
                         </div>
-                        <button class="lawyers__call" type="button">
-                          <span class="lawyers__call-icon icon icon-phone-call"></span>
+                        <button class="cards-lawyer__phone cards-lawyer__phone--apperance" type="button">
+                          <span class="cards-lawyer__phone-icon icon icon-phone-call"></span>
                         </button>
                       </div>
-                      <div class="lawyers__info-popularity">
-                        <ul class="lawyers__info-popularity-list">
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-rating"></div>
-                            4.9
-                          </li>
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-consultations"></div>
-                            0
-                          </li>
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-secure-transactions"></div>
-                            79
-                          </li>
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-calls"></div>
-                            0
-                          </li>
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-publications"></div>
-                            79
-                          </li>
-                        </ul>
-                        <p class="lawyers__rating">
-                          <span class="lawyers__rating-text">Рейтинг:</span>
-                          <span class="lawyers__rating--orange">0</span>
-                        </p>
+                      <button class="cards-lawyer__phone" type="button">
+                        <span class="cards-lawyer__phone-icon icon icon-phone-call"></span>
+                      </button>
+                    </div>
+                    <div class="cards-lawyer__progress">
+                      <ul class="cards-lawyer__progress-list">
+                        <li class="cards-lawyer__progress-item cards-lawyer__progress-item--hidden">
+                          <div class="cards-lawyer__progress-icon icon icon-rating"></div>
+                          4.9
+                        </li>
+                        <li class="cards-lawyer__progress-item">
+                          <div class="cards-lawyer__progress-icon icon icon-consultations"></div>
+                          0
+                        </li>
+                        <li class="cards-lawyer__progress-item">
+                          <div class="cards-lawyer__progress-icon icon icon-secure-transactions"></div>
+                          79
+                        </li>
+                        <li class="cards-lawyer__progress-item">
+                          <div class="cards-lawyer__progress-icon icon icon-calls"></div>
+                          0
+                        </li>
+                        <li class="cards-lawyer__progress-item">
+                          <div class="cards-lawyer__progress-icon icon icon-publications"></div>
+                          79
+                        </li>
+                      </ul>
+                      <p class="cards-lawyer__progress-rating">
+                        <span class="cards-lawyer__progress-rating--text">Рейтинг:</span>
+                        <span class="cards-lawyer__progress-rating--orange">0</span>
+                      </p>
+                    </div>
+                  </li>
+                  <li class="cards-lawyer__item">
+                    <div class="cards-lawyer__info-main">
+                      <div class="cards-lawyer__figure">
+                        <div class="cards-lawyer__img-wrap">
+                          <img class="cards-lawyer__img cards-lawyer__online" src="./images/advocate.jpg" alt="Фотография адвоката">
+                        </div>
+                        <p class="cards-lawyer__online-text">Online</p>
+                        <div class="cards-lawyer__services cards-lawyer__services--apperance">
+                          <p class="cards-lawyer__services-title">
+                            Основные услуги:
+                          </p>
+                          <button class="cards-lawyer__services-more-btn icon icon-triangle" type="button" aria-label="Раскрыть все основные услуги"></button>
+                        </div>
                       </div>
-                    </li>
-                    <li class="lawyers__item">
-                      <div class="lawyers__info-main">
-                        <div class="lawyers__figure">
-                          <div class="lawyers__img-wrap">
-                            <img class="lawyers__img lawyers__online-text" src="./images/advocate.jpg" alt="Фотография адвоката">
-                          </div>
-                          <p class="lawyers__online-text">Online</p>
+                      <div class="cards-lawyer__text-block">
+                        <p class="cards-lawyer__name">Адвокат Криволапов Денис Андрійович</p>
+                        <div class="cards-lawyer__grade">
+                          <div class="cards-lawyer__grade-icon icon icon-rating"></div>
+                          4.9
                         </div>
-                        <div class="lawyers__text-block">
-                          <p class="lawyers__name">Адвокат Криволапов Денис Андрійович</p>
-                          <div class="lawyers__services">
-                            <p class="lawyers__services-title">Основные услуги:</p>
-                            <ul class="lawyers__services-list">
-                              <li class="lawyers__services-item">Устная консультация бесплатно/</li>
-                              <li class="lawyers__services-item">Видеоконсультация/</li>
-                              <li class="lawyers__services-item">Адвокатский запрос</li>
-                            </ul>
-                          </div>
+                        <p class="cards-lawyer__progress-rating cards-lawyer__progress-rating--appearance">
+                          <span class="cards-lawyer__progress-rating--text">Рейтинг:</span>
+                          <span class="cards-lawyer__progress-rating--orange">0</span>
+                        </p>
+                        <div class="cards-lawyer__services">
+                          <p class="cards-lawyer__services-title">Основные услуги:</p>
+                          <ul class="cards-lawyer__services-list">
+                            <li class="cards-lawyer__services-item">Устная консультация бесплатно/</li>
+                            <li class="cards-lawyer__services-item">Видеоконсультация/</li>
+                            <li class="cards-lawyer__services-item">Адвокатский запрос</li>
+                            <li class="cards-lawyer__services-item">
+                              <button class="cards-lawyer__services-more-btn icon icon-triangle" type="button" aria-label="Раскрыть все основные услуги"></button>
+                            </li>
+                          </ul>
                         </div>
-                        <button class="lawyers__call" type="button">
-                          <span class="lawyers__call-icon icon icon-phone-call"></span>
+                        <button class="cards-lawyer__phone cards-lawyer__phone--apperance" type="button">
+                          <span class="cards-lawyer__phone-icon icon icon-phone-call"></span>
                         </button>
                       </div>
-                      <div class="lawyers__info-popularity">
-                        <ul class="lawyers__info-popularity-list">
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-rating"></div>
-                            4.9
-                          </li>
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-consultations"></div>
-                            0
-                          </li>
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-secure-transactions"></div>
-                            79
-                          </li>
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-calls"></div>
-                            0
-                          </li>
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-publications"></div>
-                            79
-                          </li>
-                        </ul>
-                        <p class="lawyers__rating">
-                          <span class="lawyers__rating-text">Рейтинг:</span>
-                          <span class="lawyers__rating--orange">0</span>
-                        </p>
+                      <button class="cards-lawyer__phone" type="button">
+                        <span class="cards-lawyer__phone-icon icon icon-phone-call"></span>
+                      </button>
+                    </div>
+                    <div class="cards-lawyer__progress">
+                      <ul class="cards-lawyer__progress-list">
+                        <li class="cards-lawyer__progress-item cards-lawyer__progress-item--hidden">
+                          <div class="cards-lawyer__progress-icon icon icon-rating"></div>
+                          4.9
+                        </li>
+                        <li class="cards-lawyer__progress-item">
+                          <div class="cards-lawyer__progress-icon icon icon-consultations"></div>
+                          0
+                        </li>
+                        <li class="cards-lawyer__progress-item">
+                          <div class="cards-lawyer__progress-icon icon icon-secure-transactions"></div>
+                          79
+                        </li>
+                        <li class="cards-lawyer__progress-item">
+                          <div class="cards-lawyer__progress-icon icon icon-calls"></div>
+                          0
+                        </li>
+                        <li class="cards-lawyer__progress-item">
+                          <div class="cards-lawyer__progress-icon icon icon-publications"></div>
+                          79
+                        </li>
+                      </ul>
+                      <p class="cards-lawyer__progress-rating">
+                        <span class="cards-lawyer__progress-rating--text">Рейтинг:</span>
+                        <span class="cards-lawyer__progress-rating--orange">0</span>
+                      </p>
+                    </div>
+                  </li>
+                  <li class="cards-lawyer__item">
+                    <div class="cards-lawyer__info-main">
+                      <div class="cards-lawyer__figure">
+                        <div class="cards-lawyer__img-wrap">
+                          <img class="cards-lawyer__img cards-lawyer__online" src="./images/advocate.jpg" alt="Фотография адвоката">
+                        </div>
+                        <p class="cards-lawyer__online-text">Online</p>
+                        <div class="cards-lawyer__services cards-lawyer__services--apperance">
+                          <p class="cards-lawyer__services-title">
+                            Основные услуги:
+                          </p>
+                          <button class="cards-lawyer__services-more-btn icon icon-triangle" type="button" aria-label="Раскрыть все основные услуги"></button>
+                        </div>
                       </div>
-                    </li>
-                    <li class="lawyers__item">
-                      <div class="lawyers__info-main">
-                        <div class="lawyers__figure">
-                          <div class="lawyers__img-wrap">
-                            <img class="lawyers__img lawyers__online-text" src="./images/advocate.jpg" alt="Фотография адвоката">
-                          </div>
-                          <p class="lawyers__online-text">Online</p>
+                      <div class="cards-lawyer__text-block">
+                        <p class="cards-lawyer__name">Адвокат Криволапов Денис Андрійович</p>
+                        <div class="cards-lawyer__grade">
+                          <div class="cards-lawyer__grade-icon icon icon-rating"></div>
+                          4.9
                         </div>
-                        <div class="lawyers__text-block">
-                          <p class="lawyers__name">Адвокат Криволапов Денис Андрійович</p>
-                          <div class="lawyers__services">
-                            <p class="lawyers__services-title">Основные услуги:</p>
-                            <ul class="lawyers__services-list">
-                              <li class="lawyers__services-item">Устная консультация бесплатно/</li>
-                              <li class="lawyers__services-item">Видеоконсультация/</li>
-                              <li class="lawyers__services-item">Адвокатский запрос</li>
-                              <li class="lawyers__services-item">
-                                <button class="lawyers__services-more-btn icon icon-triangle" type="button" aria-label="Раскрыть все основные услуги"></button>
-                              </li>
-                            </ul>
-                          </div>
+                        <p class="cards-lawyer__progress-rating cards-lawyer__progress-rating--appearance">
+                          <span class="cards-lawyer__progress-rating--text">Рейтинг:</span>
+                          <span class="cards-lawyer__progress-rating--orange">0</span>
+                        </p>
+                        <div class="cards-lawyer__services">
+                          <p class="cards-lawyer__services-title">Основные услуги:</p>
+                          <ul class="cards-lawyer__services-list">
+                            <li class="cards-lawyer__services-item">Устная консультация бесплатно/</li>
+                            <li class="cards-lawyer__services-item">Видеоконсультация/</li>
+                            <li class="cards-lawyer__services-item">Адвокатский запрос</li>
+                          </ul>
                         </div>
-                        <button class="lawyers__call" type="button">
-                          <span class="lawyers__call-icon icon icon-phone-call"></span>
+                        <button class="cards-lawyer__phone cards-lawyer__phone--apperance" type="button">
+                          <span class="cards-lawyer__phone-icon icon icon-phone-call"></span>
                         </button>
                       </div>
-                      <div class="lawyers__info-popularity">
-                        <ul class="lawyers__info-popularity-list">
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-rating"></div>
-                            4.9
-                          </li>
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-consultations"></div>
-                            0
-                          </li>
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-secure-transactions"></div>
-                            79
-                          </li>
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-calls"></div>
-                            0
-                          </li>
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-publications"></div>
-                            79
-                          </li>
-                        </ul>
-                        <p class="lawyers__rating">
-                          <span class="lawyers__rating-text">Рейтинг:</span>
-                          <span class="lawyers__rating--orange">0</span>
-                        </p>
+                      <button class="cards-lawyer__phone" type="button">
+                        <span class="cards-lawyer__phone-icon icon icon-phone-call"></span>
+                      </button>
+                    </div>
+                    <div class="cards-lawyer__progress">
+                      <ul class="cards-lawyer__progress-list">
+                        <li class="cards-lawyer__progress-item cards-lawyer__progress-item--hidden">
+                          <div class="cards-lawyer__progress-icon icon icon-rating"></div>
+                          4.9
+                        </li>
+                        <li class="cards-lawyer__progress-item">
+                          <div class="cards-lawyer__progress-icon icon icon-consultations"></div>
+                          0
+                        </li>
+                        <li class="cards-lawyer__progress-item">
+                          <div class="cards-lawyer__progress-icon icon icon-secure-transactions"></div>
+                          79
+                        </li>
+                        <li class="cards-lawyer__progress-item">
+                          <div class="cards-lawyer__progress-icon icon icon-calls"></div>
+                          0
+                        </li>
+                        <li class="cards-lawyer__progress-item">
+                          <div class="cards-lawyer__progress-icon icon icon-publications"></div>
+                          79
+                        </li>
+                      </ul>
+                      <p class="cards-lawyer__progress-rating">
+                        <span class="cards-lawyer__progress-rating--text">Рейтинг:</span>
+                        <span class="cards-lawyer__progress-rating--orange">0</span>
+                      </p>
+                    </div>
+                  </li>
+                  <li class="cards-lawyer__item">
+                    <div class="cards-lawyer__info-main">
+                      <div class="cards-lawyer__figure">
+                        <div class="cards-lawyer__img-wrap">
+                          <img class="cards-lawyer__img cards-lawyer__online" src="./images/advocate.jpg" alt="Фотография адвоката">
+                        </div>
+                        <p class="cards-lawyer__online-text">Online</p>
+                        <div class="cards-lawyer__services cards-lawyer__services--apperance">
+                          <p class="cards-lawyer__services-title">
+                            Основные услуги:
+                          </p>
+                          <button class="cards-lawyer__services-more-btn icon icon-triangle" type="button" aria-label="Раскрыть все основные услуги"></button>
+                        </div>
                       </div>
-                    </li>
-                    <li class="lawyers__item">
-                      <div class="lawyers__info-main">
-                        <div class="lawyers__figure">
-                          <div class="lawyers__img-wrap">
-                            <img class="lawyers__img lawyers__online-text" src="./images/advocate.jpg" alt="Фотография адвоката">
-                          </div>
-                          <p class="lawyers__online-text">Online</p>
+                      <div class="cards-lawyer__text-block">
+                        <p class="cards-lawyer__name">Адвокат Криволапов Денис Андрійович</p>
+                        <div class="cards-lawyer__grade">
+                          <div class="cards-lawyer__grade-icon icon icon-rating"></div>
+                          4.9
                         </div>
-                        <div class="lawyers__text-block">
-                          <p class="lawyers__name">Адвокат Криволапов Денис Андрійович</p>
-                          <div class="lawyers__services">
-                            <p class="lawyers__services-title">Основные услуги:</p>
-                            <ul class="lawyers__services-list">
-                              <li class="lawyers__services-item">Устная консультация бесплатно/</li>
-                              <li class="lawyers__services-item">Видеоконсультация/</li>
-                              <li class="lawyers__services-item">Адвокатский запрос</li>
-                            </ul>
-                          </div>
+                        <p class="cards-lawyer__progress-rating cards-lawyer__progress-rating--appearance">
+                          <span class="cards-lawyer__progress-rating--text">Рейтинг:</span>
+                          <span class="cards-lawyer__progress-rating--orange">0</span>
+                        </p>
+                        <div class="cards-lawyer__services">
+                          <p class="cards-lawyer__services-title">Основные услуги:</p>
+                          <ul class="cards-lawyer__services-list">
+                            <li class="cards-lawyer__services-item">Устная консультация бесплатно/</li>
+                            <li class="cards-lawyer__services-item">Видеоконсультация/</li>
+                            <li class="cards-lawyer__services-item">Адвокатский запрос</li>
+                            <li class="cards-lawyer__services-item">
+                              <button class="cards-lawyer__services-more-btn icon icon-triangle" type="button" aria-label="Раскрыть все основные услуги"></button>
+                            </li>
+                          </ul>
                         </div>
-                        <button class="lawyers__call" type="button">
-                          <span class="lawyers__call-icon icon icon-phone-call"></span>
+                        <button class="cards-lawyer__phone cards-lawyer__phone--apperance" type="button">
+                          <span class="cards-lawyer__phone-icon icon icon-phone-call"></span>
                         </button>
                       </div>
-                      <div class="lawyers__info-popularity">
-                        <ul class="lawyers__info-popularity-list">
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-rating"></div>
-                            4.9
-                          </li>
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-consultations"></div>
-                            0
-                          </li>
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-secure-transactions"></div>
-                            79
-                          </li>
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-calls"></div>
-                            0
-                          </li>
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-publications"></div>
-                            79
-                          </li>
-                        </ul>
-                        <p class="lawyers__rating">
-                          <span class="lawyers__rating-text">Рейтинг:</span>
-                          <span class="lawyers__rating--orange">0</span>
-                        </p>
+                      <button class="cards-lawyer__phone" type="button">
+                        <span class="cards-lawyer__phone-icon icon icon-phone-call"></span>
+                      </button>
+                    </div>
+                    <div class="cards-lawyer__progress">
+                      <ul class="cards-lawyer__progress-list">
+                        <li class="cards-lawyer__progress-item cards-lawyer__progress-item--hidden">
+                          <div class="cards-lawyer__progress-icon icon icon-rating"></div>
+                          4.9
+                        </li>
+                        <li class="cards-lawyer__progress-item">
+                          <div class="cards-lawyer__progress-icon icon icon-consultations"></div>
+                          0
+                        </li>
+                        <li class="cards-lawyer__progress-item">
+                          <div class="cards-lawyer__progress-icon icon icon-secure-transactions"></div>
+                          79
+                        </li>
+                        <li class="cards-lawyer__progress-item">
+                          <div class="cards-lawyer__progress-icon icon icon-calls"></div>
+                          0
+                        </li>
+                        <li class="cards-lawyer__progress-item">
+                          <div class="cards-lawyer__progress-icon icon icon-publications"></div>
+                          79
+                        </li>
+                      </ul>
+                      <p class="cards-lawyer__progress-rating">
+                        <span class="cards-lawyer__progress-rating--text">Рейтинг:</span>
+                        <span class="cards-lawyer__progress-rating--orange">0</span>
+                      </p>
+                    </div>
+                  </li>
+                  <li class="cards-lawyer__item">
+                    <div class="cards-lawyer__info-main">
+                      <div class="cards-lawyer__figure">
+                        <div class="cards-lawyer__img-wrap">
+                          <img class="cards-lawyer__img cards-lawyer__online" src="./images/advocate.jpg" alt="Фотография адвоката">
+                        </div>
+                        <p class="cards-lawyer__online-text">Online</p>
+                        <div class="cards-lawyer__services cards-lawyer__services--apperance">
+                          <p class="cards-lawyer__services-title">
+                            Основные услуги:
+                          </p>
+                          <button class="cards-lawyer__services-more-btn icon icon-triangle" type="button" aria-label="Раскрыть все основные услуги"></button>
+                        </div>
                       </div>
-                    </li>
-                    <li class="lawyers__item">
-                      <div class="lawyers__info-main">
-                        <div class="lawyers__figure">
-                          <div class="lawyers__img-wrap">
-                            <img class="lawyers__img lawyers__online-text" src="./images/advocate.jpg" alt="Фотография адвоката">
-                          </div>
-                          <p class="lawyers__online-text">Online</p>
+                      <div class="cards-lawyer__text-block">
+                        <p class="cards-lawyer__name">Адвокат Криволапов Денис Андрійович</p>
+                        <div class="cards-lawyer__grade">
+                          <div class="cards-lawyer__grade-icon icon icon-rating"></div>
+                          4.9
                         </div>
-                        <div class="lawyers__text-block">
-                          <p class="lawyers__name">Адвокат Криволапов Денис Андрійович</p>
-                          <div class="lawyers__services">
-                            <p class="lawyers__services-title">Основные услуги:</p>
-                            <ul class="lawyers__services-list">
-                              <li class="lawyers__services-item">Устная консультация бесплатно/</li>
-                              <li class="lawyers__services-item">Видеоконсультация/</li>
-                              <li class="lawyers__services-item">Адвокатский запрос</li>
-                              <li class="lawyers__services-item">
-                                <button class="lawyers__services-more-btn icon icon-triangle" type="button" aria-label="Раскрыть все основные услуги"></button>
-                              </li>
-                            </ul>
-                          </div>
+                        <p class="cards-lawyer__progress-rating cards-lawyer__progress-rating--appearance">
+                          <span class="cards-lawyer__progress-rating--text">Рейтинг:</span>
+                          <span class="cards-lawyer__progress-rating--orange">0</span>
+                        </p>
+                        <div class="cards-lawyer__services">
+                          <p class="cards-lawyer__services-title">Основные услуги:</p>
+                          <ul class="cards-lawyer__services-list">
+                            <li class="cards-lawyer__services-item">Устная консультация бесплатно/</li>
+                            <li class="cards-lawyer__services-item">Видеоконсультация/</li>
+                            <li class="cards-lawyer__services-item">Адвокатский запрос</li>
+                          </ul>
                         </div>
-                        <button class="lawyers__call" type="button">
-                          <span class="lawyers__call-icon icon icon-phone-call"></span>
+                        <button class="cards-lawyer__phone cards-lawyer__phone--apperance" type="button">
+                          <span class="cards-lawyer__phone-icon icon icon-phone-call"></span>
                         </button>
                       </div>
-                      <div class="lawyers__info-popularity">
-                        <ul class="lawyers__info-popularity-list">
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-rating"></div>
-                            4.9
-                          </li>
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-consultations"></div>
-                            0
-                          </li>
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-secure-transactions"></div>
-                            79
-                          </li>
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-calls"></div>
-                            0
-                          </li>
-                          <li class="lawyers__info-popularity-item">
-                            <div class="lawyers__info-popularity-icon icon icon-publications"></div>
-                            79
-                          </li>
-                        </ul>
-                        <p class="lawyers__rating">
-                          <span class="lawyers__rating-text">Рейтинг:</span>
-                          <span class="lawyers__rating--orange">0</span>
-                        </p>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
+                      <button class="cards-lawyer__phone" type="button">
+                        <span class="cards-lawyer__phone-icon icon icon-phone-call"></span>
+                      </button>
+                    </div>
+                    <div class="cards-lawyer__progress">
+                      <ul class="cards-lawyer__progress-list">
+                        <li class="cards-lawyer__progress-item cards-lawyer__progress-item--hidden">
+                          <div class="cards-lawyer__progress-icon icon icon-rating"></div>
+                          4.9
+                        </li>
+                        <li class="cards-lawyer__progress-item">
+                          <div class="cards-lawyer__progress-icon icon icon-consultations"></div>
+                          0
+                        </li>
+                        <li class="cards-lawyer__progress-item">
+                          <div class="cards-lawyer__progress-icon icon icon-secure-transactions"></div>
+                          79
+                        </li>
+                        <li class="cards-lawyer__progress-item">
+                          <div class="cards-lawyer__progress-icon icon icon-calls"></div>
+                          0
+                        </li>
+                        <li class="cards-lawyer__progress-item">
+                          <div class="cards-lawyer__progress-icon icon icon-publications"></div>
+                          79
+                        </li>
+                      </ul>
+                      <p class="cards-lawyer__progress-rating">
+                        <span class="cards-lawyer__progress-rating--text">Рейтинг:</span>
+                        <span class="cards-lawyer__progress-rating--orange">0</span>
+                      </p>
+                    </div>
+                  </li>
+                </ul>
               </div>
+
             </div>
           </div>
         </section>
-        <div class="lawyer__bottom">
-          <button class="lawyer__more-btn" type="button">
-            <span class="lawyer__more-btn-refresh icon icon-refresh"></span>
-            Показать еще 10 юристов
-          </button>
-          <hr class="lawyer__hr">
-          <div class="lawyer__pagintation">
-            <ul class="lawyer__pagintation-list">
-              <li class="lawyer__pagintation-item">
-                <button class="lawyer__pagintation-btn lawyer__pagintation-btn--active" type="button">1</button>
-              </li>
-              <li class="lawyer__pagintation-item">
-                <button class="lawyer__pagintation-btn" type="button">2</button>
-              </li>
-              <li class="lawyer__pagintation-item">
-                <button class="lawyer__pagintation-btn" type="button">3</button>
-              </li>
-              <li class="lawyer__pagintation-item">
-                <button class="lawyer__pagintation-btn" type="button">4</button>
-              </li>
-              <li class="lawyer__pagintation-item">
-                <button class="lawyer__pagintation-btn" type="button">5</button>
-              </li>
-              <li class="lawyer__pagintation-item">
-                <button class="lawyer__pagintation-btn" type="button">6</button>
-              </li>
-              <li class="lawyer__pagintation-item">
-                <button class="lawyer__pagintation-btn" type="button">7</button>
-              </li>
-              <li class="lawyer__pagintation-item">
-                <button class="lawyer__pagintation-btn" type="button">...</button>
-              </li>
-              <li class="lawyer__pagintation-item">
-                <button class="lawyer__pagintation-btn" type="button">200</button>
-              </li>
-            </ul>
+
+        <div class="bottom-lawyer">
+          <div class="container">
+            <div class="bottom-lawyer__content">
+              <button class="bottom-lawyer__more-btn" type="button">
+                <span class="bottom-lawyer__more-btn-refresh icon icon-refresh"></span>
+                Показать еще 10 юристов
+              </button>
+              <hr class="bottom-lawyer__hr">
+              <div class="bottom-lawyer__pagintation">
+                <div class="bottom-lawyer__pagintation-prev">
+                  <button class="bottom-lawyer__pagintation-btn-arrow icon icon-arrow " type="button" disabled></button>
+                </div>
+                <ul class="bottom-lawyer__pagintation-list">
+                  <li class="bottom-lawyer__pagintation-item">
+                    <button class="bottom-lawyer__pagintation-btn bottom-lawyer__pagintation-btn--active" type="button">1</button>
+                  </li>
+                  <li class="bottom-lawyer__pagintation-item">
+                    <button class="bottom-lawyer__pagintation-btn" type="button">2</button>
+                  </li>
+                  <li class="bottom-lawyer__pagintation-item">
+                    <button class="bottom-lawyer__pagintation-btn" type="button">3</button>
+                  </li>
+                  <li class="bottom-lawyer__pagintation-item">
+                    <button class="bottom-lawyer__pagintation-btn" type="button">4</button>
+                  </li>
+                  <li class="bottom-lawyer__pagintation-item bottom-lawyer__pagintation-item--hidden">
+                    <button class="bottom-lawyer__pagintation-btn" type="button">5</button>
+                  </li>
+                  <li class="bottom-lawyer__pagintation-item bottom-lawyer__pagintation-item--hidden">
+                    <button class="bottom-lawyer__pagintation-btn" type="button">6</button>
+                  </li>
+                  <li class="bottom-lawyer__pagintation-item bottom-lawyer__pagintation-item--hidden">
+                    <button class="bottom-lawyer__pagintation-btn" type="button">7</button>
+                  </li>
+                  <li class="bottom-lawyer__pagintation-item">
+                    <button class="bottom-lawyer__pagintation-btn" type="button">...</button>
+                  </li>
+                  <li class="bottom-lawyer__pagintation-item">
+                    <button class="bottom-lawyer__pagintation-btn" type="button">200</button>
+                  </li>
+                </ul>
+                <div class="bottom-lawyer__pagintation-next">
+                  <button class="bottom-lawyer__pagintation-btn-arrow icon icon-arrow " type="button"></button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+
 			</div>
 		</main>
 	</div>
