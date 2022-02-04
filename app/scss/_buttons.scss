@@ -18,10 +18,13 @@
         &:hover {
         }
     }
-    &-orange {
+    &-red {
         color: $white;
         background: $red;
         padding: 10px 40px;
+        &:disabled {
+            opacity: 0.75;
+        }
         &:hover {
         }
     }

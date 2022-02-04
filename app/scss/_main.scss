@@ -275,18 +275,41 @@
    }
 }
 
-
-
 .lawyer {
    .container {
       padding: 0 5px;
    }
    font-size: 14px;
    font-weight: 600;
-   h1,h2,h3,h4,h5,h6,strong {
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   h6,
+   strong {
       font-weight: 600;
    }
    &__main {
+      @media (max-width: 1199.98px) {
+         padding-top: 50px;
+         &.hide {
+            position: relative;
+            &::before {
+               content: "";
+               position: absolute;
+               top: 0;
+               left: 0;
+               width: 100%;
+               height: 100%;
+               background: rgba(0, 0, 0, 0.75);
+               z-index: 40;
+            }
+         }
+      }
+      @media (max-width: 575.98px) {
+         padding-top: 24px;
+      }
       &-content {
          display: flex;
          align-items: flex-start;
@@ -304,15 +327,18 @@
       padding: 24px;
       box-shadow: 0px 2px 14px 2px rgba($black, 0.12);
       border-radius: 5px;
-      margin-bottom: 104px;
+      margin-bottom: 80px;
+      @media (max-width: 1199.98px) {
+         margin-bottom: 30px;
+      }
       @media (max-width: 575.98px) {
          padding: 20px 10px;
-         margin-bottom: 32px;
+         margin-bottom: 8px;
       }
    }
    .lawyer__main-title {
       font-size: 24px;
-      padding: 0 24px;
+      // padding: 0 24px;
       margin-bottom: 32px;
       @media (max-width: 575.98px) {
          font-size: 20px;
@@ -329,7 +355,7 @@
    }
    &__desc {
       font-size: 14px;
-      margin-bottom: 32px; 
+      margin-bottom: 32px;
       color: #333;
       @media (max-width: 575.98px) {
          font-weight: 400;
@@ -352,6 +378,7 @@
       align-items: flex-start;
       @media (max-width: 575.98px) {
          flex-direction: column;
+         row-gap: 20px;
       }
    }
    &__input-wrap {
@@ -361,33 +388,66 @@
       align-items: center;
       font-size: 14px;
       font-weight: 400;
-      padding: 0 8px;
-      border: 1px solid $gray;
-      border-radius: 4px;
       margin-right: 24px;
       @media (max-width: 575.98px) {
          margin: 0;
          margin-top: 20px;
+         width: 100%;
+      }
+      &.active {
+         .search-lawyer__clue-list {
+            display: block;
+         }
+      }
+      &.fill {
+         .search-lawyer__btn-clear {
+            display: block;
+         }
+         .search-lawyer__input {
+            border-color: $orange;
+            & + .search-lawyer__search-icon {
+               color: $gray;
+            }
+         }
       }
    }
    &__search-icon {
       font-size: 20px;
       color: $orange;
-      margin-right: 4px;
+      position: absolute;
+      top: 8px;
+      left: 8px;
+   }
+   &__btn-clear {
+      font-size: 20px;
+      position: absolute;
+      top: 7px;
+      right: 7px;
+      display: none;
    }
    &__input {
-      padding: 8px 0px;
+      border-radius: 4px;
+      border: 1px solid $gray;
+      padding: 7px 7px 7px 32px;
       padding-bottom: 9px;
       width: 100%;
-      line-height: 1;
+      line-height: 19px;
+      font-size: 14px;
       &::placeholder {
          color: $gray;
+      }
+      &:focus {
+         border-color: $orange;
+         & + .search-lawyer__search-icon {
+            color: $gray;
+         }
       }
    }
    &__clue-list {
       position: absolute;
       top: calc(100% + 4px);
-      left: 0;
+      left: -1px;
+      right: -1px;
       max-height: 190px;
       overflow: auto;
       font-size: 14px;
@@ -395,23 +455,29 @@
       background-color: $white;
       border: 1px solid $gray;
       border-radius: 4px;
+      width: stretch;
+      width: calc(100% + 2px);
+      display: none;
+      z-index: 10;
    }
-   &__clue-item {}
+   &__clue-item {
+   }
    &__clue-btn {
-      text-align-last: left;
+      // text-align-last: left;
+      text-align: left;
       width: 100%;
-      transition: background-color .2s ease-in-out, color .2s ease-in-out, font-weight .2s ease-in-out;
+      // transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out, font-weight 0.1s ease-in-out;
       padding: 4px 8px;
       &:hover,
       &:focus-visible {
          background-color: $orange2;
          color: $white;
       }
-      &:active {
-         background-color: transparent;
-         color: $black;
-         font-weight: 700;
-      }
+      // &:active {
+      //    background-color: transparent;
+      //    color: $black;
+      //    font-weight: 700;
+      // }
       &--search {
          color: $red;
       }
@@ -430,37 +496,62 @@
 }
 
 .filter-lawyer {
-   width: fit-content;
-   margin-left: auto;
    margin-bottom: 20px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   column-gap: 40px;
    @media (max-width: 575.98px) {
       margin-bottom: 12px;
+      flex-direction: column;
+      row-gap: 12px;
    }
-   &__content {
-   margin-left: auto;
-   display: flex;
-   justify-content: flex-end;
-   align-items: flex-start;
-   font-weight: 400;
+   &__tags {
    }
-   &__title {
+
+   &__sort {
+      flex: none;
+      width: max-content;
+      margin-left: auto;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+      font-weight: 400;
+   }
+   &__sort-title {
       margin-right: 8px;
       padding: 8px 0;
       @media (max-width: 575.98px) {
          display: none;
       }
    }
-   &__select {
+   &__sort-select {
       width: 158px;
+      position: relative;
+      &.active {
+         .filter-lawyer__sort-triangle {
+            transform: rotate(180deg);
+         }
+         .filter-lawyer__sort-list {
+            display: flex;
+         }
+      }
    }
-   &__list {
+   &__sort-list {
       display: flex;
       flex-direction: column;
       border: 1px solid $orange;
       border-radius: 4px;
+      display: none;
+      position: absolute;
+      top: calc(100% + 4px);
+      left: 0;
+      right: 0;
+      background: $white;
+      z-index: 10;
    }
-   &__btn {
-      transition: background-color .2s ease-in-out, color .2s ease-in-out;
+   &__sort-btn {
+      transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
       width: 100%;
       padding: 8px;
       text-align-last: left;
@@ -471,25 +562,57 @@
          background-color: $red;
       }
    }
-   &__selected {
+   &__sort-selected {
       display: flex;
       align-items: center;
       width: 100%;
       padding: 8px 10px;
-      margin-bottom: 4px;
       border: 1px solid $orange;
       border-radius: 4px;
-      &--active {
-         .filter-lawyer__triangle {
-            transform: rotate(180deg);
-         }
-      }
-
+      column-gap: 10px;
    }
-   &__triangle {
+   &__sort-triangle {
       font-size: 20px;
       color: $red;
       margin-left: auto;
+   }
+}
+.filter-lawyer-tags {
+   display: flex;
+   column-gap: 20px;
+   row-gap: 15px;
+   flex-wrap: wrap;
+   @media (max-width: 575.98px) {
+      gap: 12px;
+   }
+   &__item {
+      padding: 6px 12px;
+      border: 1px solid $gray;
+      border-radius: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 5px;
+      font-size: 14px;
+   }
+
+   &__item-clear {
+      border-color: $red;
+      background: $red;
+      color: $white;
+      padding: 6px 14px;
+      @media (max-width: 575.98px) {
+         margin-right: 100%;
+      }
+   }
+
+   &__item-text {
+   }
+
+   &__item-btn {
+      transform: translateY(1px);
+      font-size: 16px;
+      color: $red;
    }
 }
 
@@ -502,6 +625,13 @@
       padding: 24px 0;
       @media (max-width: 1199.98px) {
          display: none;
+         width: stretch;
+         position: absolute;
+         top: calc(100% + 4px);
+         background: $white;
+         left: 0;
+         margin-right: unset;
+         z-index: 50;
       }
       &__title {
          padding: 0 13px;
@@ -515,6 +645,14 @@
       }
       &__item {
          border-bottom: 1px solid #e0e0e0;
+         &.active {
+            .search-by-lawyer__triangle {
+               transform: rotate(180deg);
+            }
+            .search-by-lawyer__form {
+               display: block;
+            }
+         }
       }
       &__btn {
          color: $red;
@@ -522,11 +660,6 @@
          align-items: center;
          width: 100%;
          padding: 13px;
-         &--active {
-            .search-by-lawyer__triangle {
-               transform: rotate(180deg);
-            }
-         }
       }
       &__triangle {
          color: $red;
@@ -535,26 +668,52 @@
       }
       &__form {
          margin-bottom: 13px;
+         display: none;
       }
       &__input-wrap {
          margin: 0 12px;
-         border-radius: 4px;
-         border: 1px solid $gray;
+         position: relative;
+         &.fill {
+            .search-by-lawyer__search-clear {
+               display: block;
+            }
+         }
       }
       &__search-icon {
          font-size: 20px;
          color: $orange;
          margin-right: 10px;
+         position: absolute;
+         top: 50%;
+         transform: translateY(-50%);
+         left: 7px;
+      }
+      &__search-clear {
+         font-size: 20px;
+         position: absolute;
+         top: 50%;
+         transform: translateY(-50%);
+         right: 7px;
+         display: none;
       }
       &__input {
+         flex: 1 1 auto;
+         border-radius: 4px;
+         border: 1px solid $gray;
+         padding: 7px 10px 7px 38px;
          &-wrap {
-            padding: 8px 6px;
             display: flex;
             align-items: flex-start;
             margin-bottom: 12px;
          }
          &::placeholder {
             color: $gray3;
+         }
+         &:focus {
+            border-color: $orange;
+            & + .search-by-lawyer__search-icon {
+               color: $gray;
+            }
          }
       }
       &__delete {
@@ -564,10 +723,11 @@
          &-wrap {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 6px;
             font-size: 12px;
             max-height: 260px;
-            margin-left: 12px;
+            // margin-left: 12px;
+            padding: 0 6px;
             overflow: auto;
             &--full-name {
                max-height: 260px;
@@ -584,9 +744,13 @@
       &__label {
          cursor: pointer;
          border-radius: 4px;
+         padding: 3px 6px;
       }
       &__label:hover {
          background-color: #fff8ea;
+         .search-by-lawyer__value::before {
+            border-color: #333333;
+         }
       }
       &__value {
          position: relative;
@@ -599,15 +763,15 @@
          }
       }
       &__value::before {
-         content: '';
-         @include centering(top,50%,-50%,left,0,0);
+         content: "";
+         @include centering(top, 50%, -50%, left, 0, 0);
          width: 20px;
          height: 20px;
          border: 1px solid $gray;
          border-radius: 4px;
       }
       &__checkbox:checked + &__value::before {
-         content: url('../images/svg-icons/checked.svg');
+         content: url("../images/svg-icons/checked.svg");
          background-color: $green;
          border-color: $green;
       }
@@ -615,12 +779,32 @@
    &-adaptive-lawyer {
       width: 100%;
       margin-bottom: 32px;
-      @media (min-width: 1200.98px) {
+      position: relative;
+      z-index: 50;
+      @media (min-width: 1200px) {
          display: none;
+      }
+      @media (max-width: 575.98px) {
+         margin-left: 10px;
+         margin-right: 10px;
+         width: stretch;
+      }
+      &.active {
+         .search-by-adaptive-lawyer__more-plus {
+            display: none;
+         }
+         .search-by-adaptive-lawyer__more-minus {
+            display: block;
+         }
+         .search-by-lawyer {
+            display: block;
+         }
       }
       &__title {
          font-size: 16px;
+
          &-wrap {
+            background: $white;
             box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.08);
             border-radius: 5px;
             padding: 12px 9px;
@@ -633,12 +817,41 @@
          width: 20px;
          height: 20px;
       }
+      &__more-minus {
+         width: 20px;
+         height: 20px;
+         display: none;
+      }
    }
 }
 
+.checkbox {
+   position: relative;
+}
+.checkbox-none,
+.radio-none {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   overflow: hidden;
+   clip: rect(0 0 0 0);
+}
+.checkbox-style {
+   display: block;
+   cursor: pointer;
+   width: 20px;
+   height: 20px;
+   border: 1px solid $gray;
+   border-radius: 4px;
+}
+.checkbox-none:checked + .checkbox-style {
+   content: url("../images/svg-icons/checked.svg");
+   background-color: $green;
+   border-color: $green;
+}
 .cards-lawyer {
    margin: 0 auto;
-   flex-grow: 1;  
+   flex-grow: 1;
    margin-bottom: 60px;
    @media (max-width: 575.98px) {
       margin-bottom: 20px;
@@ -646,6 +859,12 @@
    &__list {
       display: flex;
       flex-direction: column;
+
+      &.for-check {
+         .cards-lawyer__item-check {
+            display: block;
+         }
+      }
    }
    &__item {
       box-shadow: 0px 2px 14px 2px rgba(0, 0, 0, 0.12);
@@ -654,8 +873,9 @@
       padding-right: 40px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;  
+      justify-content: space-between;
       min-height: 292px;
+      position: relative;
       &:not(:last-child) {
          margin-bottom: 32px;
       }
@@ -667,6 +887,16 @@
             margin-bottom: 20px;
          }
          padding: 25px 10px 20px;
+      }
+   }
+   &__item-check {
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      display: none;
+      @media (max-width: 575.98px) {
+         left: unset;
+         right: 2px;
       }
    }
 
@@ -757,11 +987,11 @@
       margin-bottom: 6px;
       text-decoration-color: $black;
       &::after {
-         content: '';
+         content: "";
          width: 100%;
          height: 1px;
          background-color: $black;
-         @include centering(bottom,0,0,left,50%,-50%)
+         @include centering(bottom, 0, 0, left, 50%, -50%);
       }
       @media (max-width: 767.98px) {
          margin: 0;
@@ -817,10 +1047,10 @@
       border-radius: 50%;
       &::before,
       &::after {
-         content: '';
+         content: "";
          border: 1px solid $green;
          border-radius: 50%;
-         @include centering(top,50%,-50%,left,50%,-50%)
+         @include centering(top, 50%, -50%, left, 50%, -50%);
       }
       &::before {
          width: calc(100% - 20px);
@@ -886,16 +1116,17 @@
             background-color: #232323;
             width: max-content;
             z-index: 1;
-            @include centering(top,0,calc(-100% - 7px),left,50%,-50%);
+            @include centering(top, 0, calc(-100% - 7px), left, 50%, -16%);
          }
          &::after {
-            border: 7px solid transparent; border-top: 8px solid #232323;
-            @include centering(top,7px,-100%,left,20%,-20%);
+            border: 7px solid transparent;
+            border-top: 8px solid #232323;
+            @include centering(top, 7px, -100%, left, 20%, -20%);
          }
-         @include tooltip('consultations','Количество консультаций');
-         @include tooltip('secure-transactions','Количество договоров / безопасных сделок');
-         @include tooltip('calls','Количество звонков');
-         @include tooltip('publications','Количество публикаций');
+         @include tooltip("consultations", "Количество консультаций");
+         @include tooltip("secure-transactions", "Количество договоров / безопасных сделок");
+         @include tooltip("calls", "Количество звонков");
+         @include tooltip("publications", "Количество публикаций");
       }
       &-icon {
          font-size: 40px;
@@ -952,7 +1183,6 @@
          display: none;
       }
    }
-
 }
 
 .bottom-lawyer {
@@ -988,7 +1218,7 @@
          }
       }
       &:hover &-refresh {
-         animation: rotate-lawyer .8s ease-in-out 1;
+         animation: rotate-lawyer 0.8s ease-in-out 1;
       }
    }
    &__hr {
@@ -1034,8 +1264,8 @@
          margin-left: auto;
       }
       &-btn {
-         background: #EFEFEF;
-         border: 1px solid #BDBDBD;
+         background: #efefef;
+         border: 1px solid #bdbdbd;
          border-radius: 6px;
          width: 38px;
          padding-bottom: 2px;
@@ -1051,9 +1281,274 @@
             font-size: 24px;
             color: $red;
             &:disabled {
-               opacity: .5;
+               opacity: 0.5;
             }
          }
       }
+   }
+}
+
+.lawyers-found {
+   margin-bottom: 41px;
+   @media (max-width: 575.98px) {
+      margin-right: 10px;
+      margin-left: 10px;
+   }
+   &__head {
+      margin-bottom: 32px;
+      display: flex;
+      column-gap: 42px;
+      align-items: center;
+      @media (max-width: 575.98px) {
+         margin-bottom: 12px;
+      }
+   }
+
+   &__title {
+      font-size: 22px;
+      font-weight: 600;
+      @media (max-width: 575.98px) {
+         font-size: 16px;
+      }
+   }
+
+   &__btn-question {
+      padding: 7px 37px;
+      flex: none;
+      @media (max-width: 575.98px) {
+         padding: 7px 28px;
+         font-size: 14px;
+      }
+      &--desktop {
+         @media (max-width: 575.98px) {
+            display: none;
+         }
+      }
+      &--mobile {
+         width: max-content;
+         margin: 12px auto 0;
+         @media (min-width: 576px) {
+            display: none;
+         }
+      }
+   }
+
+   &__wrap {
+   }
+
+   &__item {
+      padding: 19px 8px 19px 12px;
+      border-radius: 4px;
+      background: $beige;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @media (max-width: 575.98px) {
+         padding: 12px 24px 12px 12px;
+         position: relative;
+      }
+   }
+
+   &__item-text {
+      font-size: 16px;
+      font-weight: 400;
+      @media (max-width: 575.98px) {
+         font-size: 14px;
+      }
+   }
+
+   &__btn-clear {
+      font-size: 24px;
+      color: $red;
+      @media (max-width: 575.98px) {
+         position: absolute;
+         top: 2px;
+         right: 2px;
+      }
+   }
+}
+
+.lawyers-question {
+   margin-bottom: 80px;
+   @media (max-width: 575.98px) {
+      margin-right: 10px;
+      margin-left: 10px;
+   }
+   &__advice {
+      padding-left: calc((100vw - 1170px) / 2);
+      padding-top: 12px;
+      padding-right: 63px;
+      padding-bottom: 12px;
+      background: $beige;
+      margin-left: calc((-100vw + 1170px) / 2);
+      width: fit-content;
+      margin-bottom: 48px;
+      @media (max-width: 1200.98px) {
+         padding-left: 15px;
+         margin-left: -15px;
+      }
+      @media (max-width: 575.98px) {
+         margin-bottom: 42px;
+      }
+   }
+
+   &__advice-wrap {
+      padding-left: 84px;
+      position: relative;
+      padding-top: 9px;
+      padding-bottom: 9px;
+      max-width: 505px;
+      @media (max-width: 575.98px) {
+         padding-top: unset;
+         padding-bottom: unset;
+      }
+      &::before {
+         content: "";
+         position: absolute;
+         left: 4px;
+         top: 50%;
+         transform: translateY(-50%);
+         width: 52px;
+         height: 52px;
+         background: url("../images/info.svg") 100% 100% / cover no-repeat;
+      }
+      &::after {
+         content: "";
+         position: absolute;
+         width: 4px;
+         height: 100%;
+         top: 0;
+         bottom: 0;
+         left: 66px;
+         background: $orange;
+      }
+   }
+
+   &__advice-title {
+      font-size: 18px;
+      margin-bottom: 11px;
+      color: $orange;
+   }
+
+   &__advice-descr {
+      font-size: 14px;
+      font-weight: 600;
+   }
+
+   &__title {
+      display: flex;
+      align-items: flex-end;
+      column-gap: 12px;
+      font-size: 20px;
+      margin-bottom: 7px;
+      @media (max-width: 575.98px) {
+         margin-bottom: 14px;
+         font-size: 16px;
+      }
+      &::before {
+         flex: none;
+         content: "";
+         width: 40px;
+         height: 52px;
+         background: url("../images/elephant-orange.png") 100% 100% / cover no-repeat;
+         display: inline-block;
+      }
+   }
+
+   &__message {
+      max-width: 780px;
+      @media (max-width: 575.98px) {
+         position: relative;
+         padding-top: 46px;
+      }
+   }
+
+   &__textarea {
+      background: #efefef;
+      width: 100%;
+      border: 1px solid $gray;
+      border-radius: 4px;
+      min-height: 148px;
+      margin-bottom: 20px;
+      padding: 12px;
+      font-size: 14px;
+      font-weight: 400;
+      @media (max-width: 575.98px) {
+         margin-bottom: 14px;
+      }
+      &::placeholder {
+         color: #828282;
+      }
+   }
+
+   &__message-nav {
+      display: flex;
+      column-gap: 20px;
+      justify-content: space-between;
+      @media (max-width: 575.98px) {
+         flex-direction: column;
+         row-gap: 22px;
+         align-items: center;
+      }
+   }
+
+   &__btn-send-to-selected {
+      font-size: 16px;
+      @media (max-width: 575.98px) {
+         min-width: 285px;
+         padding-left: 20px;
+         padding-right: 20px;
+      }
+   }
+
+   &__btn-sunmit-first {
+      font-size: 16px;
+      @media (max-width: 575.98px) {
+         min-width: 285px;
+         padding-left: 20px;
+         padding-right: 20px;
+      }
+   }
+
+   &__btn {
+      flex: none;
+      position: relative;
+      @media (max-width: 575.98px) {
+         width: 38px;
+         height: 38px;
+      }
+      &::before {
+         font-size: 12px;
+         padding: 3px 6px;
+         color: $white;
+         background-color: #232323;
+         width: max-content;
+         z-index: 1;
+         @include centering(top, 0, calc(-100% - 7px), left, 50%, -80%);
+      }
+      &::after {
+         border: 7px solid transparent;
+         border-top: 8px solid #232323;
+         @include centering(top, 7px, -100%, left, 50%, -20%);
+      }
+      @include tooltip("voice", "Запишите вопрос голосом");
+      @include tooltip("file", "Добавить файл");
+      &--voice {
+         @media (max-width: 575.98px) {
+            position: absolute;
+            top: 0;
+            right: 58px;
+         }
+      }
+      &--file {
+         @media (max-width: 575.98px) {
+            position: absolute;
+            top: 0;
+            right: 0;
+         }
+      }
+   }
+
+   &__btn-file {
    }
 }
