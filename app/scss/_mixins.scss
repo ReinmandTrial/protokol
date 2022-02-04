@@ -27,7 +27,18 @@ $maxWidthContainer: 1400;
    #{$horizontal}: $horizontalValue;
    transform: translate($translateX,$translateY);
 }
-
+@mixin tooltip($name,$desc) {
+   &--#{$name}:hover {
+      &::before {
+         content: '#{$desc}';
+      }
+   }
+   &--#{$name}:hover {
+      &::after {
+        content: '';
+      }
+   }
+}
 
 %imgCover {
    & img {
