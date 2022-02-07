@@ -1622,6 +1622,9 @@
          align-items: flex-end;
          &--order1 {
             order: 1;
+            @media (max-width: 575.98px) {
+               margin-right: 100%;
+            }
          }
          &--order2 {
             order: 2;
@@ -1781,13 +1784,13 @@
    &__sidebar {
       margin-top: 10px;
       @media (max-width: 767.98px) {
-         display: none;           
+         display: none;
       }
    }
    &__advertising {
       width: 100%;
       padding-bottom: 200%;
-      background: url('../images/article-banner.jpg') no-repeat center / cover;
+      background: url("../images/article-banner.jpg") no-repeat center / cover;
       object-fit: cover;
    }
    &__desc {
@@ -1862,7 +1865,7 @@
       padding-left: 50px;
       color: $red;
       @media (max-width: 575.98px) {
-         padding-left: 35px;  
+         padding-left: 35px;
       }
       @media (max-width: 374.98px) {
          order: 1;
@@ -1947,9 +1950,11 @@
       margin-bottom: 60px;
       background-color: $beige;
       @media (max-width: 575.98px) {
-         font-size: 16px;  
+         font-size: 16px;
          padding: 24px 15px;
          margin-bottom: 32px;
+         margin-left: -15px;
+         margin-right: -15px;
       }
       &-title {
          font-size: 20px;
@@ -1985,7 +1990,7 @@
       }
       &-title {
          @media (max-width: 575.98px) {
-            font-size: 16px;      
+            font-size: 16px;
          }
       }
       &-textarea {
@@ -2008,6 +2013,7 @@
          margin-left: auto;
          @media (max-width: 575.98px) {
             margin: 0 auto;
+            font-size: 14px;
          }
       }
    }
@@ -2054,7 +2060,7 @@
    }
    &__list {
       display: grid;
-      grid-template-columns: repeat(2, minmax(auto,540px));
+      grid-template-columns: repeat(2, minmax(auto, 540px));
       justify-content: space-between;
       gap: 28px 10px;
       @media (max-width: 767.98px) {
@@ -2068,7 +2074,7 @@
       display: flex;
       gap: 24px;
       &::after {
-         content: '';
+         content: "";
          position: absolute;
          bottom: -14px;
          left: 0;
@@ -2079,7 +2085,7 @@
       &:nth-child(odd)::after {
          width: calc(100% + 100px);
       }
-      @media (max-width: 1199.98px) {
+      @media (max-width: 991.98px) {
          flex-direction: column;
          gap: 8px;
       }
@@ -2092,10 +2098,17 @@
          }
       }
       &-img {
-         min-width: 180px;
-         max-height: 300px;
+         width: 180px;
+         height: 140px;
          border-radius: 4px;
          object-fit: cover;
+         @media (max-width: 991.98px) {
+            width: 100%;
+            height: 300px;
+         }
+         @media (max-width: 575.98px) {
+            height: 140px;
+         }
       }
       &-content {
          font-size: 12px;
