@@ -1620,11 +1620,13 @@
       &-item {
          display: flex;
          align-items: flex-end;
-         &--order1 {
-            order: 1;
-         }
-         &--order2 {
-            order: 2;
+         @media (max-width: 575.98px) {
+            &--order1 {
+               order: 1;
+            }
+            &--order2 {
+               order: 2;
+            }
          }
       }
       &-date-icon {
@@ -1897,6 +1899,10 @@
       font-weight: 400;
       padding: 9px 20px;
       @media (max-width: 575.98px) {
+         padding-top: 7px;
+         padding-bottom: 7px;
+      }
+      @media (max-width: 575.98px) {
          font-size: 14px;
          width: 183px;
          &--hide {
@@ -2002,11 +2008,14 @@
          }
       }
       &-btn {
-         font-style: 16px;
+         font-size: 16px;
          padding: 9px 20px;
          font-weight: 400;
          margin-left: auto;
          @media (max-width: 575.98px) {
+            font-size: 14px;
+            padding-top: 7px;
+            padding-bottom: 7px;
             margin: 0 auto;
          }
       }
