@@ -3,9 +3,9 @@
 @font-face {
   font-family: '#{$icomoon-font-family}';
   src:
-    url('../fonts/icons/#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?smwi4c') format('truetype'),
-    url('../fonts/icons/#{$icomoon-font-path}/#{$icomoon-font-family}.woff?smwi4c') format('woff'),
-    url('../fonts/icons/#{$icomoon-font-path}/#{$icomoon-font-family}.svg?smwi4c##{$icomoon-font-family}') format('svg');
+    url('../fonts/icons/#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?3demzx') format('truetype'),
+    url('../fonts/icons/#{$icomoon-font-path}/#{$icomoon-font-family}.woff?3demzx') format('woff'),
+    url('../fonts/icons/#{$icomoon-font-path}/#{$icomoon-font-family}.svg?3demzx##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -26,14 +26,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-clock {
-  &:before {
-    content: $icon-clock; 
-  }
-}
 .icon-star {
   &:before {
     content: $icon-star; 
+  }
+}
+.icon-clock {
+  &:before {
+    content: $icon-clock; 
   }
 }
 .icon-google .path1 {
