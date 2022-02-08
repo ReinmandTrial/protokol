@@ -57,10 +57,6 @@
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr
   }
-
-  .article-hero__content .article-hero__sidebar {
-    display: none
-  }
 }
 
 @media (max-width: 767.98px) {

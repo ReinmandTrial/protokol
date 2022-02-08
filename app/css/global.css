@@ -230,50 +230,7 @@ button {
   content: ""
 }
 
-.icon-triangle:before {
-  content: ""
-}
-
-h1,
-.h1 {
-  font-size: 38px;
-  font-weight: bold
-}
-
-@media (max-width: 575.98px) {
-
-  h1,
-  .h1 {
-    font-size: 24px
-  }
-}
-
-h1 span,
-.h1 span {
-  color: #c74a2e
-}
-
-.h2,
-h2 {
-  font-size: 36px;
-  font-weight: 600
-}
-
-@media (max-width: 575.98px) {
-
-  .h2,
-  h2 {
-    font-size: 24px
-  }
-}
-
-.h2 span,
-h2 span {
-  color: #c74a2e
-}
-
-html,
-body {
+.article {
   height: 100%;
   font-family: "Open Sans";
   font-weight: normal;
@@ -287,31 +244,14 @@ textarea {
   resize: none
 }
 
-.wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  min-height: 100%
-}
-
-.main {
+.article {
   -webkit-box-flex: 1;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
   position: relative
 }
 
-.footer {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto
-}
-
-.container {
+.new-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0px 15px;
@@ -336,77 +276,6 @@ textarea {
   position: absolute;
   white-space: nowrap;
   width: 0px
-}
-
-.popup {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 99999;
-  width: 100vw;
-  height: 100%;
-  min-height: 100%;
-  overflow-y: auto
-}
-
-.popup__body {
-  background: rgba(0, 0, 0, 0.75);
-  width: 100%;
-  min-height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  overflow: hidden
-}
-
-.popup__content {
-  background: #fff;
-  position: relative
-}
-
-.popup .popup-close {
-  cursor: pointer;
-  font-size: 18px;
-  width: 32px;
-  height: 32px;
-  position: absolute;
-  top: 14px;
-  right: 12px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center
-}
-
-.btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  text-align: center;
-  font-weight: 600;
-  border-radius: 4px;
-  font-size: 18px;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content
 }
 
 .btn-orange {
