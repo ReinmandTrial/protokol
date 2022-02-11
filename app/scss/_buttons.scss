@@ -14,18 +14,28 @@
     &-orange {
         color: $white;
         background: $orange;
-        padding: 10px 40px;
-        &:hover {
-        }
+        padding: 9px 39px;
+        border: 1px solid $orange;
     }
     &-red {
         color: $white;
         background: $red;
-        padding: 10px 40px;
+        padding: 9px 39px;
+        border: 1px solid $red;
         &:disabled {
             opacity: 0.75;
         }
-        &:hover {
-        }
+    }
+    &-red2 {
+        color: $white;
+        background: $red2;
+        border: 1px solid $red2;
+        padding: 9px 39px;
+    }
+    &-red-transparent {
+        color: #333;
+        background: transparent;
+        padding: 9px 39px;
+        border: 1px solid  $red;
     }
 }

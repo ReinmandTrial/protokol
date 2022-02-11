@@ -3,9 +3,9 @@
 @font-face {
   font-family: '#{$icomoon-font-family}';
   src:
-    url('../fonts/icons/#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?3demzx') format('truetype'),
-    url('../fonts/icons/#{$icomoon-font-path}/#{$icomoon-font-family}.woff?3demzx') format('woff'),
-    url('../fonts/icons/#{$icomoon-font-path}/#{$icomoon-font-family}.svg?3demzx##{$icomoon-font-family}') format('svg');
+    url('../fonts/icons/#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?ou20nd') format('truetype'),
+    url('../fonts/icons/#{$icomoon-font-path}/#{$icomoon-font-family}.woff?ou20nd') format('woff'),
+    url('../fonts/icons/#{$icomoon-font-path}/#{$icomoon-font-family}.svg?ou20nd##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -26,6 +26,26 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-long-arrow {
+  &:before {
+    content: $icon-long-arrow; 
+  }
+}
+.icon-doc-print {
+  &:before {
+    content: $icon-doc-print; 
+  }
+}
+.icon-comment-text {
+  &:before {
+    content: $icon-comment-text; 
+  }
+}
+.icon-eye {
+  &:before {
+    content: $icon-eye; 
+  }
+}
 .icon-star {
   &:before {
     content: $icon-star; 
@@ -111,11 +131,6 @@
 .icon-publications {
   &:before {
     content: $icon-publications; 
-  }
-}
-.icon-rating {
-  &:before {
-    content: $icon-rating; 
   }
 }
 .icon-refresh {
