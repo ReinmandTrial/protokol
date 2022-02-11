@@ -207,6 +207,7 @@
 .article select {
   font: inherit;
   outline: none;
+  box-sizing: border-box;
 }
 .new-container {
   max-width: 1200px;
