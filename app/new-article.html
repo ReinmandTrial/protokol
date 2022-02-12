@@ -31,15 +31,15 @@
                   <strong class="article-hero__info-title">На прочтение:&nbsp;</strong>
                   <p class="article-hero__info-desc">3 мин</p>
                 </li>
-                <li class="article-hero__info-item">
+                <li class="article-hero__info-item article-hero__info-item--order">
                   <div class="article-hero__info-icon-elephant icon icon-elephant"></div>
                   <p class="article-hero__info-desc">123</p>
                 </li>
-                <li class="article-hero__info-item">
+                <li class="article-hero__info-item article-hero__info-item--font">
                   <span class="article-hero__info-icon-comment icon icon-comment-text"></span>
                   <p class="article-hero__info-desc">123</p>
                 </li>
-                <li class="article-hero__info-item">
+                <li class="article-hero__info-item article-hero__info-item--font">
                   <span class="article-hero__info-icon-eye icon icon-eye"></span>
                   <p class="article-hero__info-desc">12345</p>
                 </li>
@@ -49,6 +49,19 @@
             <div class="article-hero__content">
               <div class="article-hero__img-wrap">
                 <img class="article-hero__img" src="./images/article-man.jpg" alt="Фотография человека">
+              </div>
+              <div class="article-adversting-wrap-mobile">
+                <img class="article-adversting-img" src="https://via.placeholder.com/300x600" alt="Реклама">                                  
+              </div>
+              <div class="article-hero__desc-wrap-mobile">
+                <p class="article-hero__desc">Президент України Порошенко П. О. отримав згоду Верховної Ради України і призначив на посаду Генерального прокурора України Ярему Віталія Григоровича. За згоду на призначення Яреми В. Г. проголосувало 329 депутатів ВРУ. ВРУ також звільнив Ярему В. Г. з посади першого віце – прем’єр- мінстра з питань силового блоку в уряді Яценюка А. П. В свою чергу Порошенко П. О. звільнив в. о. генерального прокурора України Махніцького О.І. та призначив його радником.</p>
+                <p class="article-hero__desc">Відповідно до стаття 122 Конституції України «прокуратуру України очолює Генеральний прокурор України, який призначається на посаду та звільняється з посади за згодою Верховної Ради України Президентом України. Верховна Рада України може висловити недовіру Генеральному прокуророві України, що має наслідком його відставку з посади.</p>
+                <p class="article-hero__desc">Строк повноважень Генерального прокурора України - п'ять років.»</p>
+                <p class="article-hero__desc">
+                  <a class="article-hero__desc-link" href="#">
+                    З іншою інформацією про Ярему В. Г. можливо ознайомитись в розділі "ЮД", підрозділ - "Персона" за цим посиланням.
+                  </a>
+                </p>
               </div>
               <div class="article-hero__desc-wrap">
                 <p class="article-hero__desc">Президент України Порошенко П. О. отримав згоду Верховної Ради України і призначив на посаду Генерального прокурора України Ярему Віталія Григоровича. За згоду на призначення Яреми В. Г. проголосувало 329 депутатів ВРУ. ВРУ також звільнив Ярему В. Г. з посади першого віце – прем’єр- мінстра з питань силового блоку в уряді Яценюка А. П. В свою чергу Порошенко П. О. звільнив в. о. генерального прокурора України Махніцького О.І. та призначив його.</p>
@@ -70,6 +83,9 @@
               </div>
               <div class="article-adversting-wrap article-hero__adversting-wrap">
                 <img class="article-adversting-img" src="https://via.placeholder.com/870x250" alt="Фотография">                                  
+              </div>
+              <div class="article-adversting-wrap-mobile">
+                <img class="article-adversting-img" src="https://via.placeholder.com/300x250" alt="Реклама">                                  
               </div>
             </div>
             <div class="article-hero__influence">
@@ -93,23 +109,23 @@
               </ul>
               <ul class="article-hero__social">
                 <li class="article-hero__social-item">
-                  <a class="article-hero__soical-link" href="#">
-                    <img class="article-hero__soical-img" src="./images/facebook-new.png" alt="Facebook">
+                  <a class="article-hero__social-link" href="#">
+                    <img class="article-hero__social-img" src="./images/facebook-new.png" alt="Facebook">
                   </a>
                 </li>
                 <li class="article-hero__social-item">
-                  <a class="article-hero__soical-link" href="#">
-                    <img class="article-hero__soical-img" src="./images/telegram.png" alt="Telegram">
+                  <a class="article-hero__social-link" href="#">
+                    <img class="article-hero__social-img" src="./images/telegram.png" alt="Telegram">
                   </a>
                 </li>
                 <li class="article-hero__social-item">
-                  <a class="article-hero__soical-link" href="#">
-                    <img class="article-hero__soical-img" src="./images/viber.png" alt="Viber">
+                  <a class="article-hero__social-link" href="#">
+                    <img class="article-hero__social-img" src="./images/viber.png" alt="Viber">
                   </a>
                 </li>
                 <li class="article-hero__social-item">
-                  <a class="article-hero__soical-link" href="#">
-                    <img class="article-hero__soical-img" src="./images/youtube-new.png" alt="Youtube">
+                  <a class="article-hero__social-link" href="#">
+                    <img class="article-hero__social-img" src="./images/youtube-new.png" alt="Youtube">
                   </a>
                 </li>
               </ul>
@@ -164,7 +180,10 @@
           </div>
           <section class="article-other">
             <div class="article-other__news">
-              <h2 class="article-other__news-title">Другие новости:</h2>
+              <div class="article-other__news-title-wrap">
+                <h2 class="article-other__news-title">Другие новости:</h2>
+                <a class="article-other__news-more-link" href="#">Смотреть все новости</a>
+              </div>
               <ul class="article-other__news-list">
                 <li class="article-other__news-item">
                   <div class="article-other__news-item-content">
@@ -335,6 +354,7 @@
                   </div>
                 </li>
               </ul>
+              <a class="article-other__news-more-link article-other__news-more-link--mobile" href="#">Смотреть все новости</a>
             </div>
             <div class="article-other__social">
               <h2 class="article-other__social-title">Мы в социальных сетях:</h2>
