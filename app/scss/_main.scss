@@ -1567,9 +1567,15 @@
 
 
 .article {
-   display: flex;
+   display: grid;
+   grid-template-columns: 1fr 300px;
    gap: 30px;
    font-size: 14px;
+   &-adversting {
+      &-wrap {
+         max-width: 870px;
+      }
+   }
 }
 
 .article-hero {
@@ -1586,6 +1592,7 @@
       border-radius: 70px;
    }
    &__info {
+      color: $gray3;
       &-wrap {
          display: flex;
          flex-wrap: wrap;
@@ -1650,19 +1657,18 @@
    }
    &__img {
       &-wrap {
-         max-width: 870px;
-         margin: 16px 0;
-         &--float {
-            float: left;
-            margin: 0;
-            margin-right: 12px;
-         }
+         float: left;
+         margin: 0;
+         margin-right: 12px;
       }
    }
    &__desc {
       font-size: 14px;
-      &:not(:last-child) {
-         margin-bottom: 8px;
+      margin-bottom: 8px;
+   }
+   &__adversting {
+      &-wrap {
+         margin: 16px 0;   
       }
    }
    &__influence {
@@ -1818,12 +1824,18 @@
       &-item {
          position: relative;
          font-size: 12px;
-         &-content {
-         }
          &-title {
             font-size: 12px;
             font-weight: 400;
             margin-bottom: 16px;
+         }
+         &:nth-child(even) {
+            display: flex;
+            justify-content: flex-end;
+            padding-left: 10px;
+         }
+         &:nth-child(odd) {
+            padding-right: 10px;
          }
          &:not(:nth-child(-n+2))::before {
             content: '';
@@ -1843,7 +1855,7 @@
             margin-right: 8px;
          }
          width: 100%;
-         height: 100px;
+         height: 100%;
          object-fit: cover;
          border-radius: 4px;
       }
@@ -1871,7 +1883,6 @@
             color: $gray3;
             margin-right: 8px;
          }
-         &-value {}
       }
       &-info {
          display: flex;
@@ -1888,6 +1899,7 @@
       }
    }
    &__social {
+      margin-bottom: 60px;
       &-title {
          font-size: 18px;
          font-weight: 600;
@@ -1935,8 +1947,46 @@
    gap: 32px;
    &__adversting {
       &-wrap {
-         min-width: 300px;
+         max-width: 300px;
       }
-      &-img {}
+      &-img {
+         object-fit: cover;
+      }
+   }
+}
+
+.article-without-advertising {
+   grid-template-columns: 1fr;
+   .article-sidebar,
+   .article-adversting-wrap,
+   .article-hero__advertising-btn {
+      display: none;
+   }
+   .article-hero__content {
+      margin-bottom: 24px;
+   }
+   .article-other__news {
+      &-item {
+         &-title {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 13px;
+         }
+      }
+      &-img {
+         &-wrap {
+            width: 180px;
+            height: 140px;
+            margin-right: 24px;
+         }
+      }
+      &-text-block {
+         max-width: 545px;
+      }
+      &-author {
+         &-wrap {
+            margin-bottom: 16px;
+         }
+      }
    }
 }
