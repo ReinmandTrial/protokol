@@ -1567,8 +1567,7 @@
 
 
 .article {
-   display: grid;
-   grid-template-columns: 1fr 300px;
+   display: flex;
    gap: 30px;
    font-size: 14px;
    &-adversting {
@@ -1943,6 +1942,8 @@
 
 .article-sidebar {
    display: flex;
+   flex: none;
+   width: 300px;
    flex-direction: column;
    gap: 32px;
    &__adversting {
@@ -1956,7 +1957,7 @@
 }
 
 .article-without-advertising {
-   grid-template-columns: 1fr;
+   flex: 1 1 auto;
    .article-sidebar,
    .article-adversting-wrap,
    .article-hero__advertising-btn {
