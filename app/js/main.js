@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }, 1000);
   document.querySelectorAll('.js-write-answer').forEach((btn) => {
     btn.addEventListener('click', (e) => {
-      if(document.querySelector('.js-review-form')) {
+      if (document.querySelector('.js-review-form')) {
         document.querySelector('.js-review-form').remove()
       }
       const form = document.createElement('form')
@@ -30,11 +30,11 @@ document.addEventListener("DOMContentLoaded", () => {
           e.target.closest('.js-review-form').remove()
         })
       })
-      document.querySelectorAll('.js-review-submit').forEach((btnSubmit) => {
-        btnSubmit.addEventListener('click', (e) => {
-          e.target.closest('.js-review-form').remove()
-        })
-      })
+      // document.querySelectorAll('.js-review-submit').forEach((btnSubmit) => {
+      //   btnSubmit.addEventListener('click', (e) => {
+      //     e.target.closest('.js-review-form').remove()
+      //   })
+      // })
     })
   })
 });
