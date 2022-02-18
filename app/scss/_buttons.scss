@@ -38,4 +38,10 @@
         padding: 9px 39px;
         border: 1px solid  $red;
     }
+    &-orange-transparent {
+        color: #333;
+        background: transparent;
+        padding: 9px 39px;
+        border: 1px solid  $orange;
+    }
 }

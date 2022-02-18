@@ -57,7 +57,7 @@ textarea {
 	border-radius: 4px;
 
 	&__title {
-		margin-top: -1px;
+		margin: -1px;
 		border-radius: 4px;
 		text-transform: uppercase;
 		font-size: 18px;
@@ -362,20 +362,14 @@ textarea {
 	gap: 30px;
 	align-items: center;
 	position: relative;
+	@media (max-width: 575.98px) {
+		font-size: 12px;
+	}
 	&.active {
 
 		.search-mini__submit-btn {
 			display: block;
 		}
-
-		.search-mini__input {
-			border-color: $orange2;
-		}
-
-		.search-mini__magnifier-icon {
-			color: $gray;
-		}
-
 		.search-mini__input {
 			width: 370px;
 		}
@@ -400,17 +394,19 @@ textarea {
 		width: 120px;
 		background-color: $white;
 		transition: width .2s ease-in-out, border-color .2s ease-in-out;
-
 		&:focus {
 			border-color: $orange2;
 		}
 
-		&:focus~.search__magnifier-icon {
+		&:focus~.search-mini__magnifier-icon {
 			color: $gray;
 		}
 
 		&::placeholder {
 			color: $gray;
+		}
+		@media (max-width: 575.98px) {
+			height: 32px;
 		}
 	}
 
@@ -422,6 +418,9 @@ textarea {
 		top: 50%;
 		transform: translateY(-50%);
 		transition: color .2s ease-in-out;
+		@media (max-width: 575.98px) {
+			font-size: 24px;
+		}
 	}
 
 	&__submit-btn {
@@ -668,6 +667,7 @@ textarea {
 		font-size: 20px;
 		font-weight: 400;
 		margin-bottom: 8px;
+		color: $black;
 		& + .dropdown__list {
 			margin-top: 32px;
 		}
@@ -715,6 +715,11 @@ textarea {
 	}
 
 	&__head {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 10px;
+		padding-bottom: 2px;
 		border-bottom: 1px solid #e0e0e0;
 
 		@media (max-width: 575.98px) {
@@ -725,10 +730,6 @@ textarea {
 	&__btn {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
-		gap: 4px;
-		text-align: left;
-		width: 100%;
 	}
 
 	&__body {
@@ -1070,6 +1071,31 @@ textarea {
 
 	&:hover &__refresh {
 		animation: rotate-lawyer 0.8s ease-in-out 1;
+	}
+}
+.favorite {
+	&__btn {
+		display: none;
+		font-size: 14px;
+		font-weight: 400;
+		padding: 9.5px 12px;
+		&.active {
+			 display: block;
+		}
+		@media (max-width: 575.98px) {
+			&.active {
+			display: none;
+			}
+		}
+		&--mobile {
+			@media (max-width: 575.98px) {
+				&.active {
+					display: block;
+				}
+			}
+			margin: 0 auto;
+			padding: 9.5px 11px;
+	 }
 	}
 }
 

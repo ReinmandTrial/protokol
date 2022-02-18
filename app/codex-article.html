@@ -34,7 +34,10 @@
             <span class="print__icon icon icon-printer"></span>
           </button>
         </div>
-        <button class="codex-article-hero__interaction-btn btn btn-red" type="button">Добавить в избранное</button>
+        <div class="favorite">
+          <button class="favorite__btn active btn btn-red" type="button">Добавить в избранное</button>
+          <button class="favorite__btn btn btn-orange" type="button">Удалить с избраного</button>
+        </div>
       </div>
       <div class="codex-article-hero__content">
         <div class="codex-article-hero__text-wrap">
@@ -110,8 +113,10 @@
           <span class="small-pagination__btn-arrow"></span>
         </button>
       </div>
-      <button class="codex-article-hero__favorite-btn-mobile btn btn-red-transparent" type="button">Добавить в
-        избранное</button>
+      <div class="codex-article-hero__favorite-mobile favorite">
+        <button class="favorite__btn favorite__btn--mobile active btn btn-red-transparent" type="button">Добавить в избранное</button>
+        <button class="favorite__btn favorite__btn--mobile btn btn-orange-transparent" type="button">Удалить с избраного</button>
+      </div>  
       <div class="codex-article-hero__mini-dropdown mini-dropdown">
         <div class="mini-dropdown__head">
           <button class="mini-dropdown__btn">
