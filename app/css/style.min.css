@@ -66,12 +66,11 @@ a :focus {
 
 button,
 input {
-  border: unset;
+  border: unset
 }
 
 input,
 textarea {
-  border: unset;
   background: transparent
 }
 
@@ -369,7 +368,7 @@ body {
   font-style: normal;
   font-size: 18px;
   color: #000;
-  overflow-x: hidden;
+  overflow-x: hidden
 }
 
 textarea {
@@ -492,6 +491,7 @@ textarea {
 }
 
 .our-services__item-desc {
+  margin: 0;
   font-size: 14px
 }
 
@@ -801,6 +801,9 @@ textarea {
 }
 
 .search__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -811,6 +814,10 @@ textarea {
 }
 
 .search__item-btn {
+  background: transparent;
+  padding: unset;
+  cursor: pointer;
+  border: unset;
   font-size: 14px;
   padding: 8px;
   width: 100%;
@@ -871,6 +878,7 @@ textarea {
 }
 
 .search-mini__input {
+  outline: none;
   border: 1px solid #bdbdbd;
   height: 38px;
   border-radius: 4px;
@@ -1027,7 +1035,17 @@ textarea {
   background-color: #fff
 }
 
+.sort__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .sort__item-btn {
+  background: transparent;
+  padding: unset;
+  cursor: pointer;
+  border: unset;
   width: 100%;
   text-align: left;
   padding: 8px;
@@ -1087,10 +1105,6 @@ textarea {
 }
 
 .pagintation__btn {
-  background: transparent;
-  padding: unset;
-  cursor: pointer;
-  border: unset;
   background: #efefef;
   border: 1px solid #bdbdbd;
   border-radius: 6px;
@@ -1110,10 +1124,6 @@ textarea {
 }
 
 .pagintation__btn-arrow {
-  background: transparent;
-  padding: unset;
-  cursor: pointer;
-  border: unset;
   font-size: 24px;
   color: #c74a2e
 }
@@ -1142,10 +1152,6 @@ textarea {
 }
 
 .small-pagination__btn {
-  background: transparent;
-  padding: unset;
-  cursor: pointer;
-  border: unset;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1210,7 +1216,6 @@ textarea {
 }
 
 .small-pagination__text {
-  margin: 0;
   font-style: italic;
   color: #828282
 }
@@ -1453,6 +1458,10 @@ textarea {
 }
 
 .mini-dropdown__btn {
+  background: transparent;
+  padding: unset;
+  cursor: pointer;
+  border: unset;
   text-align: left;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1495,6 +1504,9 @@ textarea {
 }
 
 .mini-dropdown__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
   padding-top: 24px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1572,6 +1584,7 @@ textarea {
 }
 
 .roster .roster__head-title {
+  margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1610,12 +1623,16 @@ textarea {
 }
 
 .roster .roster__body-title {
+  margin: 0;
   font-size: 16px;
   font-weight: 400;
   color: #828282
 }
 
 .roster .roster__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1645,7 +1662,6 @@ textarea {
 }
 
 .social__title {
-  margin: 0;
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 20px
@@ -1659,9 +1675,6 @@ textarea {
 }
 
 .social__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1759,10 +1772,6 @@ textarea {
   color: #c74a2e
 }
 
-.comment__text {
-  margin: 0;
-}
-
 .comment__text-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1799,11 +1808,6 @@ textarea {
 }
 
 .more-btn {
-  border: unset;
-  outline: none;
-  background: transparent;
-  padding: unset;
-  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1850,27 +1854,27 @@ textarea {
 }
 
 @media (max-width: 575.98px) {
-  .favorite__btn.active {
+  .favorite {
     display: none
   }
 }
 
-.favorite__btn--mobile {
-  margin: 0 auto;
-  padding: 9.5px 11px
+.favorite--mobile {
+  display: none
 }
 
 @media (max-width: 575.98px) {
-  .favorite__btn--mobile.active {
+  .favorite--mobile {
     display: block
   }
 }
 
+.favorite--mobile .favorite__btn {
+  margin: 0 auto;
+  padding: 9.5px 11px
+}
+
 .print__btn {
-  background: transparent;
-  padding: unset;
-  cursor: pointer;
-  border: unset;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
