@@ -3444,3 +3444,463 @@
       }
    }
 }
+
+.call {
+   font-size: 18px;
+   padding-bottom: 42px;
+   color: #333;
+   .call-about-call {
+      display: none;
+      position: fixed;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba($black, .75);
+      &.active {
+         display: block;
+      }
+      &__content {
+         position: fixed;
+         z-index: 2;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%,-50%);
+         display: flex;
+         flex-direction: column;
+         width: 1059px;
+         padding: 162px 140px;
+         background: $white;
+         border-radius: 4px;
+      }
+      &__label {
+         font-weight: 600;
+         margin-bottom: 8px;
+      }
+      &__input {
+         &-wrap {
+            position: relative;
+            margin-bottom: 16px;
+            &.active {
+               .call-about-call__delete {
+                  display: block;
+               }
+               .call-about-call__input {
+                  border-color: #eb5757;
+               }
+            }
+         }
+         font-size: 14px;
+         width: 100%;
+         padding: 16px 12px;
+         background-color: #efefef;
+         border: 1px solid $gray;
+         border-radius: 4px;
+         transition: border-color .2s ease-in-out;
+         &::placeholder {
+            color: $gray3;
+         }
+      }
+      &__delete {
+         display: none;
+         position: absolute;
+         right: 16px;
+         top: 50%;
+         transform: translateY(-50%);
+         font-size: 18px;
+      }
+      &__btn {
+         font-size: 18px;
+         font-weight: 600;
+         padding: 9px 39px;
+         align-self: center;
+      }
+   }
+   .call-outgoing {
+      display: none;
+      position: fixed;
+      z-index: 3;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #191919;
+      color: $white;
+      &.active {
+         display: block;
+      }
+      &__content {
+         position: fixed;
+         z-index: 2;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%,-50%);
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+      }
+      &__title {
+         margin-bottom: 90px;
+      }
+      .phone-call {
+         padding: 40px;
+         border-width: 2px;
+         &::before {
+            border-width: 2px;
+         }
+      }
+      .phone-call__icon {
+         font-size: 100px;
+         padding: 30px;
+         border-width: 3px;
+      }
+   }
+   .call-talk {
+      display: none;
+      position: fixed;
+      z-index: 3;
+      top: 0;
+      left: 0;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      width: 100vw;
+      height: 100%;
+      background: #191919;
+      color: $white;
+      &.active {
+         display: flex;
+      }
+      &__content {
+         position: relative;
+         width: 100%;
+      }
+      &__companion,
+      &__me {
+         img,video,iframe {
+            width: 100%;
+            height: 100%;
+            max-height: calc(100vh - 168px);
+            object-fit: cover;
+         }
+      }
+      &__me {
+         position: absolute;
+         right: 20px;
+         bottom: 0;
+         max-width: 320px;
+      }
+      &__name {
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         display: inline-block;
+         font-weight: 400;
+         padding: 6px 12px;
+         background-color: rgba($black, .6);
+      }
+      &__menu {
+         position: absolute;
+         bottom: 20px;
+         left: 50%;
+         transform: translateX(-50%);
+         display: flex;
+         align-items: center;
+         gap: 20px;
+         font-size: 0;
+         &-icon {
+            display: inline-block;
+            width: 44px;
+            height: 44px;
+            background-repeat: no-repeat;
+            background-size:  contain;
+            background-position: center;
+            &--1 {
+               background-image: url('../images/talk-chat.svg');
+            }
+            &--2 {
+               background-image: url('../images/talk-webcam.svg');
+            }
+            &--3 {
+               background-image: url('../images/talk-micro.svg');
+            }
+            &--4 {
+               background-image: url('../images/talk-end.svg');
+            }
+         }
+      }
+      .call-take__messenger {
+         display: none;
+         position: absolute;
+         bottom: 0;
+         right: 20px;
+         z-index: 10;
+         border-radius: 4px;
+         background-color: $white;
+         color: #333;
+         &.active {
+            display: block;
+         }
+         &-top {
+            padding: 10px 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid #e0e0e0;
+         }
+         &-avatar {
+            width: 32px;
+            height: 32px;
+            margin-right: 12px;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+         }
+         &-avatar-img {
+            border-radius: 50%;
+         }
+         &-name {
+            font-weight: 700;
+            margin-right: 24px;
+         }
+         &-hire-btn {
+            font-size: 14px;
+            font-weight: 600;
+            padding: 6px 15px;
+            margin-right: 22px;
+            border-radius: 17px;
+         }
+         &-close {
+            position: relative;
+            width: 22px;
+            height: 22px;
+            background-color: #efefef;
+            border-radius: 50%;
+            &::before,
+            &::after {
+               content: '';
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%) rotate(45deg);
+               width: 11px;
+               height: 2px;
+               background-color: $red;
+            }
+            &::after {
+               transform: translate(-50%) rotate(-45deg);
+            }
+         }
+         &-head {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 48px;
+            padding: 14px 18px;
+            border-bottom: 1px solid #e0e0e0;
+         }
+         &-section-btn {
+            position: relative;
+            font-size: 14px;
+            font-weight: 600;
+            &.active {
+               &::before {
+                  content: '';
+                  position: absolute;
+                  z-index: 1;
+                  bottom: -15px;
+                  left: 0%;
+                  width: 100%;
+                  height: 3px;
+                  background-color: $red;
+               }
+               color: $red;
+
+            }
+         }
+         &-body {
+            height: 243px;
+            max-height: 443px;
+            overflow-y: auto;
+         }
+         &-chat {
+         }
+         &-files {
+         }
+         &-treaty {
+         }
+         &-form {
+            padding: 10px 16px;
+            padding-top: 0;
+         }
+         &-input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #efefef;
+            border-radius: 2px;
+            &::placeholder {
+               color: $gray3;
+            }
+         }
+         &-submit-btn {
+            position: relative;
+            z-index: 1;
+            display: block;
+            margin-top: -22px;
+            margin-left: auto;
+            width: 40px;
+            height: 40px;
+            background: url('../images/call-send.svg') no-repeat center / contain;
+         }
+      }
+   }
+   &-hero {
+      margin-bottom: 120px;
+      display: flex;
+      justify-content: space-between;
+      &__content {
+         margin-top: 100px;
+         max-width: 570px;
+      }
+      &__title {
+         font-size: 36px;
+         font-weight: 700;
+         margin-bottom: 40px;
+      }
+      &__img-wrap {
+         width: 462px;
+         margin-top: -20px;
+         margin-right: -50px;
+      }
+      &__img {
+         padding-bottom: 105%;
+         background: url('../images/call-hero.svg') no-repeat center / cover;
+      }
+   }
+   &-video {
+      margin-bottom: 135px;
+      &__title {
+         font-size: 36px;
+         font-weight: 600;
+         margin-bottom: 80px;
+         &--red {
+            color: $red;
+         }
+      }
+      &__list {
+         display: flex;
+         flex-wrap: wrap;
+         gap: 33px;
+         margin-bottom: 24px;
+      }
+      &__item {
+         position: relative;
+         flex-basis: calc(33.33% - 22px);
+         min-height: 220px;
+         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+         border-radius: 4px;
+         &.off {
+            .call-video__item-info {
+               display: none;
+            }
+            .call-video__item-call::before {
+               border-color: $gray;
+            }
+            .phone-call__icon {
+               color: $gray;
+               border-color: $gray;
+            }
+         }
+         &-img {
+            &-wrap {
+               position: absolute;
+               top: 0;
+               bottom: 0;
+               left: 0;
+               right: 0;
+            }
+            &-wrap img,
+            &-wrap video,
+            &-wrap iframe {
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+               border-radius: 4px;
+            }
+         }
+         &-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 8px;
+            background: rgba($black, .75);
+            border-radius: 4px;
+            &-text {
+               display: flex;
+               flex-direction: column;
+               gap: 8px;
+            }
+
+         }
+         &-employment {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 11px;
+            color: $white;
+         }
+         &-online-icon {
+            width: 10px;
+            height: 10px;
+            background-color: $green2;
+            border-radius: 50%;
+         }
+         &-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: $red;
+         }
+         &-call {
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
+         }
+      }
+      &__link {
+         display: flex;
+         justify-content: flex-end;
+         align-items: center;
+         font-weight: 600;
+         margin-bottom: 53px;
+         color: $black;
+         &-text {
+            text-decoration: underline;
+            text-decoration-color: $red;
+            margin-right: 4px;
+         }
+         &-arrow {
+            width: 17px;
+            height: 6px;
+            background: url('../images/call-arrow.svg') no-repeat center / contain;
+         }
+      }
+      &__list-menu {
+         display: flex;
+         flex-direction: column;
+         gap: 20px;
+      }
+      &__pagintation {
+         .pagintation__list {
+            gap: 20px;
+         }
+         .pagintation__btn--active {
+            background: #efefef;
+            color: $black;
+            border-color: $red;
+         }
+      }
+   }
+}

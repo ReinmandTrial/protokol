@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="call">
+        <div class="call-about-call">
+          <form class="call-about-call__content">
+            <label class="call-about-call__label" for="call-about-input">Два слова - про що Ваш дзвінок</label>
+            <div class="call-about-call__input-wrap">
+              <textarea id="call-about-input" class="call-about-call__input" rows="1" placeholder="Введите текст"></textarea>
+              <button class="call-about-call__delete icon icon-close" type="button">
+              </button>
+            </div>
+            <button class="call-about-call__btn btn btn-red" type="submit">Відправити</button>
+          </form>
+        </div>
+        <div class="call-outgoing">
+          <div class="call-outgoing__content">
+            <h2 class="call-outgoing__title">Очікуйте з’єднання</h2>
+            <button class="call-outgoing__btn phone-call" type="button">
+              <span class="phone-call__icon icon icon-phone-call"></span>
+            </button>
+          </div>
+        </div>
+        <div class="call-talk active">
+          <div class="call-talk__content">
+            <div class="call-talk__companion">
+                <strong class="call-talk__name">Екатерина Корженко</strong>
+                <img class="call-talk__img" src="./images/talk-woman.jpg" alt="Лицо обеседник">
+            </div>
+            <div class="call-talk__me">
+                <strong class="call-talk__name">Никита Тонконоженко</strong>
+                <img class="call-talk__img" src="./images/talk-man1.jpg" alt="Моё лицо">
+            </div>
+            <div class="call-take__messenger active">
+              <div class="call-take__messenger-top">
+                <div class="call-take__messenger-avatar">
+                  <img class="call-take__messenger-avatar-img" src="./images/call-avatar.jpg" alt="Аватар">
+                </div>
+                <strong class="call-take__messenger-name">Екатерина Корженко</strong>
+                <button class="call-take__messenger-hire-btn  btn btn-red" type="button">Нанять юриста</button>
+                <div class="call-take__messenger-close"></div>
+              </div>
+              <div class="call-take__messenger-head">
+                <button class="call-take__messenger-section-btn active" type="button">Чат</button>
+                <button class="call-take__messenger-section-btn" type="button">Файлы</button>
+                <button class="call-take__messenger-section-btn" type="button">Договор</button>
+              </div>
+              <div class="call-take__messenger-body">
+                <div class="call-take__messenger-chat"></div>
+                <div class="call-take__messenger-files"></div>
+                <div class="call-take__messenger-treaty"></div>
+              </div>
+              <form class="call-take__messenger-form">
+                <textarea class="call-take__messenger-input" placeholder="Напишите ваше сообщение..."></textarea>
+                <button class="call-take__messenger-submit-btn icon icon-send" type="submit"></button>
+              </form>
+            </div>
+          </div>
+          <ul class="call-talk__menu">
+            <li class="call-talk__menu-item">
+              <button class="call-talk__menu-btn" type="button">
+                <span class="call-talk__menu-icon call-talk__menu-icon--1"></span>
+              </button>
+            </li>
+            <li class="call-talk__menu-item">
+              <button class="call-talk__menu-btn" type="button">
+                <span class="call-talk__menu-icon call-talk__menu-icon--2"></span>
+              </button>
+            </li>
+            <li class="call-talk__menu-item">
+              <button class="call-talk__menu-btn" type="button">
+                <span class="call-talk__menu-icon call-talk__menu-icon--3"></span>
+              </button>
+            </li>
+            <li class="call-talk__menu-item">
+              <button class="call-talk__menu-btn" type="button">
+                <span class="call-talk__menu-icon call-talk__menu-icon--4"></span>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <section class="call-hero">
+          <div class="call-hero__content">
+            <h1 class="call-hero__title">Відеозв’язок з юристом - бистро та ефективно</h1>
+            <p class="call-hero__desc">Почніть відеоконсультацію з юристом за лічені хвилини без завантаження додатків. Скористайтеся можливістю бистрого спілкування з юристом за Вашим питанням</p>
+          </div>
+          <div class="call-hero__img-wrap">
+            <div class="call-hero__img"></div>
+          </div>
+        </section>
+        <section class="call-video">
+          <h2 class="call-video__title">
+            “Дивися 
+            <span class="call-video__title--red">в очі </span>
+            юристу”
+          </h2>
+          <ul class="call-video__list">
+            <li class="call-video__item">
+              <div class="call-video__item-img-wrap">
+                <img src="./images/call-woman.jpg" alt="Фотография Юриста">
+              </div>
+              <div class="call-video__item-info">
+                <div class="call-video__item-info-text">
+                  <div class="call-video__item-employment">
+                    <span class="call-video__item-online-icon"></span>
+                    <p class="call-video__item-online-text">Готов отвечать прямо сейчас</p>
+                  </div>
+                  <strong class="call-video__item-name">Кірюшин Артем Андрійович</strong>
+                </div>
+              </div>
+              <button class="call-video__item-call phone-call" type="button">
+                <span class="phone-call__icon icon icon-phone-call"></span>
+              </button>
+            </li>
+            <li class="call-video__item">
+              <div class="call-video__item-img-wrap">
+                <img src="./images/call-woman.jpg" alt="Фотография Юриста">
+              </div>
+              <div class="call-video__item-info">
+                <div class="call-video__item-info-text">
+                  <div class="call-video__item-employment">
+                    <span class="call-video__item-online-icon"></span>
+                    <p class="call-video__item-online-text">Готов отвечать прямо сейчас</p>
+                  </div>
+                  <strong class="call-video__item-name">Кірюшин Артем Андрійович</strong>
+                </div>
+              </div>
+              <button class="call-video__item-call phone-call" type="button">
+                <span class="phone-call__icon icon icon-phone-call"></span>
+              </button>
+            </li>
+            <li class="call-video__item off">
+              <div class="call-video__item-img-wrap">
+                <img src="./images/call-no-online.jpg" alt="Фотография Юриста">
+              </div>
+              <div class="call-video__item-info">
+                <div class="call-video__item-info-text">
+                  <div class="call-video__item-employment">
+                    <span class="call-video__item-online-icon"></span>
+                    <p class="call-video__item-online-text">Готов отвечать прямо сейчас</p>
+                  </div>
+                  <strong class="call-video__item-name">Кірюшин Артем Андрійович</strong>
+                </div>
+              </div>
+              <button class="call-video__item-call phone-call" type="button">
+                <span class="phone-call__icon icon icon-phone-call"></span>
+              </button>
+            </li>
+            <li class="call-video__item">
+              <div class="call-video__item-img-wrap">
+                <img src="./images/call-woman.jpg" alt="Фотография Юриста">
+              </div>
+              <div class="call-video__item-info">
+                <div class="call-video__item-info-text">
+                  <div class="call-video__item-employment">
+                    <span class="call-video__item-online-icon"></span>
+                    <p class="call-video__item-online-text">Готов отвечать прямо сейчас</p>
+                  </div>
+                  <strong class="call-video__item-name">Кірюшин Артем Андрійович</strong>
+                </div>
+              </div>
+              <button class="call-video__item-call phone-call" type="button">
+                <span class="phone-call__icon icon icon-phone-call"></span>
+              </button>
+            </li>
+            <li class="call-video__item">
+              <div class="call-video__item-img-wrap">
+                <img src="./images/call-woman.jpg" alt="Фотография Юриста">
+              </div>
+              <div class="call-video__item-info">
+                <div class="call-video__item-info-text">
+                  <div class="call-video__item-employment">
+                    <span class="call-video__item-online-icon"></span>
+                    <p class="call-video__item-online-text">Готов отвечать прямо сейчас</p>
+                  </div>
+                  <strong class="call-video__item-name">Кірюшин Артем Андрійович</strong>
+                </div>
+              </div>
+              <button class="call-video__item-call phone-call" type="button">
+                <span class="phone-call__icon icon icon-phone-call"></span>
+              </button>
+            </li>
+            <li class="call-video__item off">
+              <div class="call-video__item-img-wrap">
+                <img src="./images/call-no-online.jpg" alt="Фотография Юриста">
+              </div>
+              <div class="call-video__item-info">
+                <div class="call-video__item-info-text">
+                  <div class="call-video__item-employment">
+                    <span class="call-video__item-online-icon"></span>
+                    <p class="call-video__item-online-text">Готов отвечать прямо сейчас</p>
+                  </div>
+                  <strong class="call-video__item-name">Кірюшин Артем Андрійович</strong>
+                </div>
+              </div>
+              <button class="call-video__item-call phone-call" type="button">
+                <span class="phone-call__icon icon icon-phone-call"></span>
+              </button>
+            </li>
+          </ul>
+          <a class="call-video__link" href="#">
+            <span class="call-video__link-text">Каталог юристов</span>
+            <span class="call-video__link-arrow"></span>
+          </a>
+          <div class="call-video__list-menu">
+            <button class="call-video__more-btn more-btn" type="button">
+              <span class="more-btn__refresh icon icon-refresh"></span>
+              Показати ще 6 юристів онлайн
+            </button>
+            <hr class="hr">
+            <div class="call-video__pagintation pagintation">
+              <div class="pagintation__prev">
+                <button class="pagintation__btn-arrow icon icon-arrow " type="button" disabled></button>
+              </div>
+              <ul class="pagintation__list">
+                <li class="pagintation__item">
+                  <button class="pagintation__btn pagintation__btn--active" type="button">1</button>
+                </li>
+                <li class="pagintation__item">
+                  <button class="pagintation__btn" type="button">2</button>
+                </li>
+                <li class="pagintation__item">
+                  <button class="pagintation__btn" type="button">3</button>
+                </li>
+                <li class="pagintation__item">
+                  <button class="pagintation__btn" type="button">4</button>
+                </li>
+                <li class="pagintation__item hide">
+                  <button class="pagintation__btn" type="button">5</button>
+                </li>
+                <li class="pagintation__item hide">
+                  <button class="pagintation__btn" type="button">6</button>
+                </li>
+                <li class="pagintation__item hide">
+                  <button class="pagintation__btn" type="button">7</button>
+                </li>
+                <li class="pagintation__item">
+                  <button class="pagintation__btn" type="button">...</button>
+                </li>
+                <li class="pagintation__item">
+                  <button class="pagintation__btn" type="button">200</button>
+                </li>
+              </ul>
+              <div class="pagintation__next">
+                <button class="pagintation__btn-arrow icon icon-arrow " type="button"></button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

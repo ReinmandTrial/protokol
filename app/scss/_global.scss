@@ -521,7 +521,7 @@ textarea {
 	width: 100%;
 	font-size: 14px;
 	font-weight: 400;
-
+	color: $black;
 	&__list {
 		display: flex;
 		gap: 16px;
@@ -1119,6 +1119,50 @@ textarea {
 	&__icon {
 		font-size: 32px;
 		transform: translateY(2px);
+	}
+}
+
+.hr {
+	border: none;
+	width: 100vw;
+	height: 1px;
+	background-color: #e0e0e0;
+}
+
+@keyframes call-anim {
+	from {
+		transform: scale(1.1);
+	}
+
+	to {
+		transform: scale(1.275);
+	}
+}
+
+.phone-call {
+	position: relative;
+	padding: 5px;
+	border: 1px solid $white;
+	border-radius: 50%;
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border: 1px solid $green2;
+		border-radius: 50%;
+		animation: call-anim 1s ease-in-out infinite alternate-reverse;
+	}
+	&__icon {
+		display: inline-block;
+		font-size: 38px;
+		color: $green2;
+		padding: 4px;
+		background-color: $white;
+		border: 1px solid $green2;
+		border-radius: 50%;
 	}
 }
 
