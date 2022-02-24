@@ -1,19 +1,19 @@
 <svg width="242" height="166" viewBox="0 0 242 166" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M126.583 163H0V157V151H126.583V163Z" fill="#D26830"/>
-<path d="M10 151H12L16 157H14L10 151Z" fill="white"/>
-<path d="M14 151H16L20 157H18L14 151Z" fill="white"/>
-<path d="M14 157H16L12 163H10L14 157Z" fill="white"/>
-<path d="M18 157H20L16 163H14L18 157Z" fill="white"/>
+<path d="M126.651 163H0V157V151H126.651V163Z" fill="#D26830"/>
+<path d="M10.0059 151H12.0069L16.0091 157H14.008L10.0059 151Z" fill="white"/>
+<path d="M14.0073 151H16.0084L20.0106 157H18.0095L14.0073 151Z" fill="white"/>
+<path d="M14.008 157H16.0091L12.0069 163H10.0059L14.008 157Z" fill="white"/>
+<path d="M18.0095 157H20.0106L16.0084 163H14.0073L18.0095 157Z" fill="white"/>
 <g filter="url(#filter0_d_1_6213)">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M125.786 150.2C162.72 150.2 192.66 120.114 192.66 83C192.66 45.8865 162.72 15.8 125.786 15.8C88.8531 15.8 58.9127 45.8865 58.9127 83C58.9127 120.114 88.8531 150.2 125.786 150.2ZM125.786 163C169.755 163 205.398 127.183 205.398 83C205.398 38.8172 169.755 3 125.786 3C81.8182 3 46.1748 38.8172 46.1748 83C46.1748 127.183 81.8182 163 125.786 163Z" fill="url(#paint0_linear_1_6213)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M125.854 150.2C162.807 150.2 192.764 120.114 192.764 83C192.764 45.8865 162.807 15.8 125.854 15.8C88.9009 15.8 58.9444 45.8865 58.9444 83C58.9444 120.114 88.9009 150.2 125.854 150.2ZM125.854 163C169.846 163 205.509 127.183 205.509 83C205.509 38.8172 169.846 3 125.854 3C81.8622 3 46.1997 38.8172 46.1997 83C46.1997 127.183 81.8622 163 125.854 163Z" fill="url(#paint0_linear_1_6213)"/>
 </g>
-<path d="M119 151L241.87 151L238 157L241.87 163L119 163L119 151Z" fill="#CA522F"/>
-<path d="M239 163.073L237 163.049L233.074 157L235.074 157.024L239 163.073Z" fill="white"/>
-<path d="M235.074 157.024L233.074 157L237.148 151.049L239.148 151.074L235.074 157.024Z" fill="white"/>
-<path d="M235 163.073L233 163.049L229.074 157L231.074 157.024L235 163.073Z" fill="white"/>
-<path d="M231.074 157.024L229.074 157L233.148 151.049L235.148 151.074L231.074 157.024Z" fill="white"/>
+<path d="M119.064 151L242 151L238.128 157L242 163L119.064 163L119.064 151Z" fill="#CA522F"/>
+<path d="M239.128 163.073L237.127 163.049L233.2 157L235.201 157.024L239.128 163.073Z" fill="white"/>
+<path d="M235.201 157.024L233.2 157L237.276 151.049L239.277 151.074L235.201 157.024Z" fill="white"/>
+<path d="M235.126 163.073L233.125 163.049L229.197 157L231.198 157.024L235.126 163.073Z" fill="white"/>
+<path d="M231.198 157.024L229.197 157L233.273 151.049L235.274 151.074L231.198 157.024Z" fill="white"/>
 <defs>
-<filter id="filter0_d_1_6213" x="39.1748" y="0" width="166.223" height="166" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_d_1_6213" x="39.1997" y="0" width="166.309" height="166" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dx="-4"/>
@@ -23,8 +23,9 @@
 <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_6213"/>
 <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_6213" result="shape"/>
 </filter>
-<linearGradient id="paint0_linear_1_6213" x1="201" y1="66" x2="58.2208" y2="124.538" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint0_linear_1_6213" x1="201.108" y1="66" x2="58.2743" y2="124.592" gradientUnits="userSpaceOnUse">
 <stop stop-color="#D26830"/>
+<stop offset="1" stop-color="#C74A2E"/>
 <stop offset="1" stop-color="#C74A2E"/>
 </linearGradient>
 </defs>

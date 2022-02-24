@@ -3449,7 +3449,7 @@
    font-size: 18px;
    padding-bottom: 42px;
    color: #333;
-   .call-about-call {
+   &-about-call {
       display: none;
       position: fixed;
       z-index: 2;
@@ -3457,16 +3457,13 @@
       left: 0;
       right: 0;
       bottom: 0;
+      align-items: center;
+      justify-content: center;
       background: rgba($black, .75);
       &.active {
-         display: block;
+         display: flex;
       }
       &__content {
-         position: fixed;
-         z-index: 2;
-         top: 50%;
-         left: 50%;
-         transform: translate(-50%,-50%);
          display: flex;
          flex-direction: column;
          width: 1059px;
@@ -3493,11 +3490,16 @@
          }
          font-size: 14px;
          width: 100%;
-         padding: 16px 12px;
+         padding: 14px 12px;
          background-color: #efefef;
          border: 1px solid $gray;
          border-radius: 4px;
          transition: border-color .2s ease-in-out;
+         color: inherit;
+         transition: border-color .2s ease-in-out;
+         &:focus {
+            border-color: #eb5757;
+         }
          &::placeholder {
             color: $gray3;
          }
@@ -3517,7 +3519,7 @@
          align-self: center;
       }
    }
-   .call-outgoing {
+   &-outgoing {
       display: none;
       position: fixed;
       z-index: 3;
@@ -3525,17 +3527,14 @@
       left: 0;
       right: 0;
       bottom: 0;
+      align-items: center;
+      justify-content: center;
       background: #191919;
       color: $white;
       &.active {
-         display: block;
+         display: flex;
       }
       &__content {
-         position: fixed;
-         z-index: 2;
-         top: 50%;
-         left: 50%;
-         transform: translate(-50%,-50%);
          display: flex;
          flex-direction: column;
          align-items: center;
@@ -3556,92 +3555,133 @@
          border-width: 3px;
       }
    }
-   .call-talk {
+   &-talk {
       display: none;
       position: fixed;
       z-index: 3;
       top: 0;
       left: 0;
-      flex-direction: column;
-      align-items: center;
+      right: 0;
+      bottom: 0;
       justify-content: center;
+      align-items: center;
       font-size: 14px;
-      width: 100vw;
-      height: 100%;
       background: #191919;
       color: $white;
+      padding: 84px 0;
       &.active {
          display: flex;
       }
+      &__completion {
+         display: none;
+         color: #333;
+         position: fixed;
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         z-index: 20;
+         align-items: center;
+         justify-content: center;
+         background-color: rgba($black, .75);
+         &.active {
+            display: flex;
+         }
+         &-content {
+            position: relative;
+            max-width: 290px;
+            display: flex;
+            flex-direction: column;
+            padding: 32px 24px;
+            background-color: $white;
+            border-radius: 8px;
+         }
+         &-close {
+            position: absolute;
+            right: 8px;
+            top: 8px;
+            width: 18px;
+            height: 18px;
+            background-color: #efefef;
+            border-radius: 50%;
+            &::before,
+            &::after {
+               content: '';
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%) rotate(45deg);
+               width: 9px;
+               height: 1.5px;
+               background-color: $red;
+            }
+            &::after {
+               transform: translate(-50%) rotate(-45deg);
+            }
+         }
+         &-desc {
+            font-size: 12px;
+            margin-bottom: 18px;
+         }
+         &-btn {
+            font-size: 14px;
+            font-weight: 600;
+            padding: 10px 0;
+            width: 100%;
+         }
+      }
+      &__time {
+         position: absolute;
+         top: 32px;
+         left: 20px;
+         font-size: 16px;
+         font-weight: 600;
+      }
       &__content {
          position: relative;
+         max-height: 100%;
+         height: 100%;
          width: 100%;
       }
       &__companion,
       &__me {
-         img,video,iframe {
+         img,video,iframe {   
             width: 100%;
             height: 100%;
-            max-height: calc(100vh - 168px);
+            max-height: 100%;
             object-fit: cover;
          }
       }
-      &__me {
+      &__companion {
+         display: flex;
+         width: 100%;
+         max-height: 100%;
+         height: 100%;
+      }
+      &__modals {
          position: absolute;
          right: 20px;
          bottom: 0;
+         width: 100%;
+         display: flex;
+         align-items: flex-end;
+         justify-content: flex-end;
+         gap: 20px;
+         height: 100%;
+      }
+      &__me {
+         position: relative;
          max-width: 320px;
       }
-      &__name {
-         position: absolute;
-         bottom: 0;
-         left: 0;
-         display: inline-block;
-         font-weight: 400;
-         padding: 6px 12px;
-         background-color: rgba($black, .6);
-      }
-      &__menu {
-         position: absolute;
-         bottom: 20px;
-         left: 50%;
-         transform: translateX(-50%);
-         display: flex;
-         align-items: center;
-         gap: 20px;
-         font-size: 0;
-         &-icon {
-            display: inline-block;
-            width: 44px;
-            height: 44px;
-            background-repeat: no-repeat;
-            background-size:  contain;
-            background-position: center;
-            &--1 {
-               background-image: url('../images/talk-chat.svg');
-            }
-            &--2 {
-               background-image: url('../images/talk-webcam.svg');
-            }
-            &--3 {
-               background-image: url('../images/talk-micro.svg');
-            }
-            &--4 {
-               background-image: url('../images/talk-end.svg');
-            }
-         }
-      }
-      .call-take__messenger {
+      &__messenger {
          display: none;
-         position: absolute;
-         bottom: 0;
-         right: 20px;
-         z-index: 10;
          border-radius: 4px;
          background-color: $white;
          color: #333;
+         max-height: 100%;
          &.active {
-            display: block;
+            display: flex;
+            flex-direction: column;
          }
          &-top {
             padding: 10px 16px;
@@ -3719,27 +3759,41 @@
             }
          }
          &-body {
-            height: 243px;
-            max-height: 443px;
             overflow-y: auto;
          }
-         &-chat {
-         }
-         &-files {
-         }
-         &-treaty {
+         &-body>* {
+            display: none;
+            padding: 16px;
+            padding-right: 3px;
+            padding-bottom: 0px;
+            flex-direction: column;
+            align-self: flex-start;
+            gap: 16px;
+            &>*:nth-child(odd) {
+               align-self: flex-end;
+            }
+            &.active {
+               display: flex;
+            }
          }
          &-form {
-            padding: 10px 16px;
-            padding-top: 0;
+            padding: 16px;
+            padding-bottom: 10px;
          }
          &-input {
             width: 100%;
             padding: 12px;
             border: 1px solid #efefef;
             border-radius: 2px;
+            color: inherit;
+            transition: border-color .2s ease-in-out;
+            &:focus {
+            }
             &::placeholder {
                color: $gray3;
+            }
+            &.active {
+               border-color: $red;
             }
          }
          &-submit-btn {
@@ -3752,6 +3806,163 @@
             height: 40px;
             background: url('../images/call-send.svg') no-repeat center / contain;
          }
+      }
+      &__name {
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         display: inline-block;
+         font-weight: 400;
+         padding: 6px 12px;
+         background-color: rgba($black, .6);
+      }
+      &__menu {
+         position: absolute;
+         bottom: 20px;
+         left: 50%;
+         transform: translateX(-50%);
+            display: flex;
+         align-items: center;
+         gap: 20px;
+         font-size: 0;
+         &-icon {
+            display: inline-block;
+            width: 44px;
+            height: 44px;
+            background-repeat: no-repeat;
+            background-size:  contain;
+            background-position: center;
+            &--1 {
+               background-image: url('../images/talk-chat.svg');
+            }
+            &--2 {
+               background-image: url('../images/talk-webcam.svg');
+            }
+            &--3 {
+               background-image: url('../images/talk-micro.svg');
+            }
+            &--4 {
+               background-image: url('../images/talk-end.svg');
+            }
+         }
+      }
+   }
+   &-review {
+      display: none;
+      position: fixed;
+      z-index: 4;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      justify-content: center;
+      align-items: center;
+      background-color: $black;
+      &.active {
+         display: flex;
+      }
+      &__content {
+         position: relative;
+         display: flex;
+         flex-direction: column;
+         padding: 28px 74px;
+         max-width: 704px;
+         background-color: $white;
+         border-radius: 4px;
+      }
+      &__close {
+         position: absolute;
+         top: 16px;
+         right: 16px;
+         width: 22px;
+         height: 22px;
+         background-color: #efefef;
+         border-radius: 50%;
+         &::before,
+         &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%) rotate(45deg);
+            width: 10px;
+            height: 1px;
+            background-color: $red;
+         }
+         &::after {
+            transform: translate(-50%) rotate(-45deg);
+         }
+      }
+      &__title {
+         font-size: 20px;
+         font-weight: 400;
+         margin-bottom: 40px;
+      }
+      &__list {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         margin-bottom: 10px;
+         color: $black;
+      }
+      &__radio {
+         &-label {
+            cursor: pointer;
+            display: block;
+         }
+         &:checked + .call-review__radio-custom {
+            background-color: $orange;
+            color: $white;
+         }
+         &-custom {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            width: 38px;
+            height: 38px;
+            border: 2px solid $orange;
+            border-radius: 50%;
+            transition: color .2s ease-in-out, background-color .2s ease-in-out;
+         }
+      }
+      &__btn-desc {
+         &-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            color: $black;
+         }
+         font-size: 10px;
+      }
+      &__label {
+         font-size: 16px;
+         font-weight: 400;
+         margin-bottom: 4px;
+      }  
+      &__input {
+         padding: 11px 14px;
+         height: 140px;
+         font-size: 14px;
+         margin-bottom: 32px;
+         border: 1px solid $gray;
+         background-color: #efefef;
+         color: inherit;
+         border-radius: 4px;
+         transition: border-color .2s ease-in-out;
+         &:focus {
+            border-color: $red;
+         }
+         &::placeholder {
+            color: $gray3;
+         }
+      }
+      &__btn {
+         align-self: center;
+         font-size: 14px;
+         font-weight: 600;
+         padding: 14px 58px;
       }
    }
    &-hero {
@@ -3901,6 +4112,310 @@
             color: $black;
             border-color: $red;
          }
+      }
+   }
+   &-explanation {
+      padding: 60px 100vw;
+      margin: 0 -100vw;
+      margin-bottom: 120px;
+      background-color: #fff8ea;
+      &__title {
+         font-size: 36px;
+         font-weight: 600;
+         margin-bottom: 80px;
+      }
+      &__list {
+         display: flex;
+         justify-content: center;
+      }
+      &__item {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         margin-left: -11px;
+         &:first-child,
+         &:last-child {
+            margin-left: 0;
+         }
+         &:last-child {
+            transform: translateY(-1px);
+            margin-left: -14px;
+         }
+         &-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: 600;
+            color: $black;
+            min-width: 242px;
+            min-height: 160px;
+            margin-bottom: 32px;
+            @for $i from 1 through 5 {
+               &--#{$i} {
+                  background: url('../images/call-ellipse-#{$i}.svg') no-repeat center / contain;
+               }
+             }
+         }
+      }
+      &__desc {
+         &-list {
+            display: flex;
+            flex-direction: column;
+            gap: 11px;
+            height: 100%;
+         }
+         &-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 11px;
+            &:not(:first-child) {
+               margin-top: auto;
+            }
+         }
+         &-icon {
+            transform: translateY(5px);
+            min-width: 12px;
+            min-height: 12px;
+            background-color: #fdc571;
+            border-radius: 50%;
+            &--1 {
+               background-color: #FDC571;
+            }
+            &--2 {
+               background-color: #E8A55F;
+            }
+            &--3 {
+               background-color: #F4B565;
+            }
+            &--4 {
+               background-color: #D98734;
+            }
+            &--5 {
+               background-color: #ECA756;
+            }
+            &--6 {
+               background-color: #CC5E1F;
+            }
+            &--7 {
+               background-color: #E08C42;
+            }
+            &--8 {
+               background-color: #C34F0C;
+            }
+            &--9 {
+               background-color: #ECA756;
+            }
+            &--10 {
+               background-color: #CC5E1F;
+            }
+         }
+         font-size: 16px;
+         max-width: 176px;
+      }
+   }
+   &-about {
+      &__title {
+         font-size: 36px;
+         font-weight: 600;
+         margin-bottom: 80px;
+         color: $black;
+      }
+      &__list {
+         display: flex;
+         flex-direction: column;
+         gap: 20px;
+      }
+      &__item {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         &-title {
+            font-size: 36px;
+            font-weight: 60;
+            color: $black;
+         }
+         &-desc {
+            font-size: 18px;
+            max-width: 643px;
+         }
+         &:nth-child(even) {
+            &>.call-about__img-wrap {
+               order: 1;
+            }
+         }
+      }
+      &__img {
+         object-fit: cover;
+      }
+      &__text {
+         display: flex;
+         flex-direction: column;
+         gap: 20px;
+      }
+   }
+}
+
+.call-lawyer {
+   color: #333;
+   font-size: 16px;
+   padding-bottom: 121px;
+   &.online {
+      .call-lawyer-menu__network-on {
+         display: block;
+      }
+      .call-lawyer-menu__network-off {
+         display: none;
+      }
+      .call-lawyer-hero__btn-icon--on {
+         display: block;
+      }
+      .call-lawyer-hero__btn-icon--off {
+         display: none;
+      }
+   }
+   .call-lawyer-incoming {
+      display: none;
+      position: fixed;
+      z-index: 3;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      align-items: center;
+      justify-content: center;
+      background: rgba($black, 0.9);
+      color: $white;
+      &.active {
+         display: flex;
+      }
+      &__content {
+      }
+      &__title {
+         display: flex;
+         flex-direction: column;
+         gap: 15px;
+         text-align: center;
+         font-size: 24px;
+         font-weight: 600;
+         margin-bottom: 66px;
+      }
+      &__name {
+         color: $white;
+      }
+      &__btn-wrap {
+         display: flex;
+         align-items: center;
+         gap: 152px;
+      }
+      &__btn {
+         padding: 21px;
+         border-width: 2px;
+         &::before {
+            border-width: 2px;
+         }
+      }
+      .phone-call__icon {
+         font-size: 53px;
+         padding: 16px;
+         border-width: 3px;
+      }
+   }
+   &-hero {
+      &__content {
+         display: flex;
+         align-items: center;
+         gap: 40px;
+      }
+      &__info {
+         display: grid;
+         grid-template-columns: repeat(3, auto);
+         align-items: center;
+         gap: 13px;
+      }
+      &__icon {
+         width: 52px;
+         height: 52px;
+         background: url('../images/info2.svg') no-repeat center / contain;
+      }
+      &__line {
+         width: 4px;
+         height: 100%;
+         background-color: $orange;
+      }
+      &__desc {
+         font-size: 18px;
+         font-weight: 700;
+         max-width: 388px;
+      }
+      &__btn {
+         &-icon {
+            display: block;
+            width: 80px;
+            height: 80px;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            &--off {
+               background-image: url('../images/call-btn-off.svg');
+            }
+            &--on {
+               display: none;
+               background-image: url('../images/call-btn-on.svg');
+            }
+         }
+      }
+   }
+   &-menu {
+      display: flex;
+      align-items: center;
+      gap: 85px;
+      padding: 0 100vw;
+      margin: 0 -100vw;
+      padding-top: 12px;
+      padding-bottom: 14px;
+      margin-bottom: 66px;
+      color: $white;
+      background-color: #232323;
+      &__nav {
+         margin-right: auto;
+      }
+      &__list {
+         display: flex;
+         align-items: center;
+         gap: 40px;
+      }
+      &__btn {
+         &.active {
+            position: relative;
+            &::before {
+               content: '';
+               position: absolute;
+               bottom: -3px;
+               left: 0;
+               width: 100%;
+               height: 2px;
+               background-color: $red;
+            }
+            .call-lawyer-menu__excess {
+               display: none;
+            }
+         }
+      }
+      &__btn--value {
+         color: #ff0000;
+      }
+      &__network {
+         &-on {
+            color: $green;
+            display: none;
+         }
+         &-off {
+            color: #ff0000;
+         }
+      }
+      &__profile {
+         font-weight: 600;
       }
    }
 }
