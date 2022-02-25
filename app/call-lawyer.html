@@ -12,7 +12,7 @@
 <body>
   <div class="container">
     <div class="row">
-      <div class="call-lawyer">
+      <div class="call-lawyer online">
         <div class="call-lawyer-incoming">
           <div class="call-lawyer-incoming__content">
             <h2 class="call-lawyer-incoming__title">
@@ -27,9 +27,21 @@
                 <span class="phone-call__icon icon icon-phone-call"></span>
               </button>
             </div>
+            <p class="call-lawyer-incoming__text active">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar tristique est, in lorem erat urna. Hendrerit ultrices duis neque, eu. Egestas feugiat eget sollicitudin egestas dignissim ullamcorper aliquam nibh. Tincidunt et varius odio orci mus. Non sed ipsum nibh phasellus non aliquet. Elementum volutpat laoreet vitae at eros egestas fermentum. In cras dignissim nibh aliquet pulvinar sagittis consectetur. 
+            </p>
           </div>
         </div>
         <div class="call-lawyer-menu">
+          <div class="call-lawyer-menu__top">
+            <a class="call-lawyer-menu__profile" href="#">
+              <span class="call-lawyer-menu__profile-icon icon icon-elephant"></span>
+              Мій профайл
+            </a>
+            <div class="call-lawyer-menu__network">
+              <span class="call-lawyer-menu__network-off">Offline</span>
+              <span class="call-lawyer-menu__network-on">Online</span>
+            </div>
+          </div>
           <nav class="call-lawyer-menu__nav">
             <ul class="call-lawyer-menu__list">
               <li class="call-lawyer-menu__item">
@@ -74,25 +86,23 @@
               </li>
             </ul>
           </nav>
-          <div class="call-lawyer-menu__network">
+          <div class="call-lawyer-menu__network desktop">
             <span class="call-lawyer-menu__network-off">Offline</span>
             <span class="call-lawyer-menu__network-on">Online</span>
           </div>
-          <a class="call-lawyer-menu__profile" href="#">Мій профайл</ф>
+          <a class="call-lawyer-menu__profile desktop" href="#">Мій профайл</a>
         </div>
         <section class="call-lawyer-hero">
           <div class="call-lawyer-hero__content">
             <div class="call-lawyer-hero__info">
               <div class="call-lawyer-hero__icon"></div>
               <div class="call-lawyer-hero__line"></div>
-              <p class="call-lawyer-hero__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo nec
-                ultrices
-                fermentum diam a porta. Consectetur varius a.</p>
+              <p class="call-lawyer-hero__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo nec ultrices fermentum diam a porta. Consectetur varius a.</p>
             </div>
-            <button class="call-lawyer-hero__btn" type="button">
-              <span class="call-lawyer-hero__btn-icon call-lawyer-hero__btn-icon--off"></span>
-              <span class="call-lawyer-hero__btn-icon call-lawyer-hero__btn-icon--on"></span>
-            </button>
+            <label class="call-lawyer-hero__label">
+              <input class="call-lawyer-hero__radio visually-hidden" type="checkbox" name="online">
+              <span class="call-lawyer-hero__radio-custom"></span>
+            </label>
           </div>
         </section>
       </div>
