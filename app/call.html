@@ -33,7 +33,7 @@
             </button>
           </div>
         </div>
-        <div class="call-talk">
+        <div class="call-talk chat">
           <div class="call-talk__completion">
             <div class="call-talk__completion-content">
               <button class="call-talk__completion-close" type="button"></button>
@@ -48,7 +48,10 @@
                 <strong class="call-talk__name">Екатерина Корженко</strong>
                 <time class="call-talk__time call-talk__time--mobile" datetime="29:45">29:45</time>
               </div>
-              <img class="call-talk__img" src="./images/talk-woman.jpg" alt="Лицо обеседник">
+              <picture class="call-talk__img">
+                <source media="(max-width: 575.98px)" srcset="./images/talk-woman-mobile.jpg">
+                <img src="./images/talk-woman.jpg" alt="Лицо обеседника">
+              </picture>
             </div>
             <div class="call-talk__modals">
               <div class="call-talk__me">
@@ -57,10 +60,10 @@
               </div>
               <div class="call-talk__messenger">
                 <div class="call-talk__messenger-top">
-                  <div class="call-talk__messenger-avatar">
+                  <a class="call-talk__messenger-avatar" href="#">
                     <img class="call-talk__messenger-avatar-img" src="./images/call-avatar.jpg" alt="Аватар">
-                  </div>
-                  <strong class="call-talk__messenger-name">Екатерина Корженко</strong>
+                  </a>
+                  <a class="call-talk__messenger-name" href="#">Екатерина Корженко</a>
                   <button class="call-talk__messenger-hire-btn  btn btn-red" type="button">Нанять юриста</button>
                   <button class="call-talk__messenger-close" type="button"></button>
                 </div>
@@ -72,34 +75,73 @@
                 <div class="call-talk__messenger-body">
                   <div class="call-talk__messenger-chat active">
                     <div class="call-talk__messenger-message">
-                      <img src="./images/call-message.jpg" alt="">
+                      <div class="call-talk__messenger-message-voice">
+                        <div class="call-talk__messenger-message-voice-inner">
+                          <button class="call-talk__messenger-message-voice-play" type="button">
+                            <span class="call-talk__messenger-message-voice-play-icon"></span>
+                          </button>
+                          <button class="call-talk__messenger-message-voice-track" type="button">
+                            <span class="call-talk__messenger-message-voice-track-icon"></span>
+                          </button>
+                        </div>
+                        <span class="call-talk__messenger-message-voice-duration">00:09</span>
+                        <button class="call-talk__messenger-message-more">
+                          <span class="call-talk__messenger-message-more-icon"></span>
+                        </button>
+                        <div class="call-talk__messenger-message-info">
+                          <time class="call-talk__messenger-message-time" datetime="11:45">11:45</time>
+                          <div class="call-talk__messenger-message-check">
+                            <span class="call-talk__messenger-message-sent"></span>
+                            <span class="call-talk__messenger-message-viewed"></span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                     <div class="call-talk__messenger-message">
-                      <img src="./images/call-message.jpg" alt="">
+                      <div class="call-talk__messenger-message-voice">
+                        <div class="call-talk__messenger-message-voice-inner">
+                          <button class="call-talk__messenger-message-voice-play" type="button">
+                            <span class="call-talk__messenger-message-voice-play-icon"></span>
+                          </button>
+                          <button class="call-talk__messenger-message-voice-track" type="button">
+                            <span class="call-talk__messenger-message-voice-track-icon"></span>
+                          </button>
+                        </div>
+                        <span class="call-talk__messenger-message-voice-duration">00:09</span>
+                        <button class="call-talk__messenger-message-more">
+                          <span class="call-talk__messenger-message-more-icon"></span>
+                        </button>
+                        <div class="call-talk__messenger-message-info">
+                          <time class="call-talk__messenger-message-time" datetime="11:45">11:45</time>
+                          <div class="call-talk__messenger-message-check viewed">
+                            <span class="call-talk__messenger-message-sent"></span>
+                            <span class="call-talk__messenger-message-viewed"></span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                     <div class="call-talk__messenger-message">
-                      <img src="./images/call-message.jpg" alt="">
-                    </div>
-                    <div class="call-talk__messenger-message">
-                      <img src="./images/call-message.jpg" alt="">
-                    </div>
-                    <div class="call-talk__messenger-message">
-                      <img src="./images/call-message.jpg" alt="">
-                    </div>
-                    <div class="call-talk__messenger-message">
-                      <img src="./images/call-message.jpg" alt="">
-                    </div>
-                    <div class="call-talk__messenger-message">
-                      <img src="./images/call-message.jpg" alt="">
-                    </div>
-                    <div class="call-talk__messenger-message">
-                      <img src="./images/call-message.jpg" alt="">
-                    </div>
-                    <div class="call-talk__messenger-message">
-                      <img src="./images/call-message.jpg" alt="">
-                    </div>
-                    <div class="call-talk__messenger-message">
-                      <img src="./images/call-message.jpg" alt="">
+                      <div class="call-talk__messenger-message-voice">
+                        <div class="call-talk__messenger-message-voice-inner">
+                          <button class="call-talk__messenger-message-voice-play" type="button">
+                            <span class="call-talk__messenger-message-voice-play-icon"></span>
+                          </button>
+                          <button class="call-talk__messenger-message-voice-track" type="button">
+                            <span class="call-talk__messenger-message-voice-track-icon"></span>
+                          </button>
+                        </div>
+                        <span class="call-talk__messenger-message-voice-duration">00:09</span>
+                        <button class="call-talk__messenger-message-more">
+                          <span class="call-talk__messenger-message-more-icon"></span>
+                        </button>
+                        <div class="call-talk__messenger-message-info">
+                          <time class="call-talk__messenger-message-time" datetime="11:45">11:45</time>
+                          <div class="call-talk__messenger-message-check sent">
+                            <span class="call-talk__messenger-message-sent"></span>
+                            <span class="call-talk__messenger-message-viewed"></span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div class="call-talk__messenger-files"></div>
@@ -135,7 +177,7 @@
             </li>
           </ul>
         </div>
-        <div class="call-review">
+        <div class="call-review active">
           <form class="call-review__content">
             <button class="call-review__close" type="button"></button>
             <h2 class="call-review__title">Оцените качество предоставленных юридических услуг</h2>

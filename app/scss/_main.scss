@@ -4099,7 +4099,7 @@
    &-about-call {
       display: none;
       position: fixed;
-      z-index: 2;
+      z-index: 20;
       top: 0;
       left: 0;
       right: 0;
@@ -4178,6 +4178,7 @@
 
          @media (max-width: 575.98px) {
             padding: 10px 12px;
+            padding-right: 22px;
             font-size: 11px;
          }
 
@@ -4199,6 +4200,8 @@
 
          @media (max-width: 575.98px) {
             font-size: 14px;
+            top: 12px;
+            right: 8px;
          }
       }
 
@@ -4217,8 +4220,8 @@
 
    &-outgoing {
       display: none;
-      position: fixed;
-      z-index: 3;
+      position: absolute;
+      z-index: 30;
       top: 0;
       left: 0;
       right: 0;
@@ -4271,7 +4274,7 @@
    &-talk {
       display: none;
       position: fixed;
-      z-index: 3;
+      z-index: 40;
       top: 0;
       left: 0;
       right: 0;
@@ -4282,9 +4285,24 @@
       background: #191919;
       color: $white;
       padding: 84px 0;
+      @media (max-width: 575.98px) {
+         padding: 0;
+      }
 
       &.active {
          display: flex;
+      }
+
+      &.chat {
+         .call-talk__messenger {
+            display: flex;
+         }
+      }
+
+      &.end {
+         .call-talk__completion {
+            display: flex;
+         }
       }
 
       &__completion {
@@ -4295,14 +4313,10 @@
          left: 0;
          right: 0;
          bottom: 0;
-         z-index: 20;
+         z-index: 46;
          align-items: center;
          justify-content: center;
          background-color: rgba($black, .75);
-
-         &.active {
-            display: flex;
-         }
 
          &-content {
             position: relative;
@@ -4400,6 +4414,7 @@
 
       &__companion {
          display: flex;
+         justify-content: center;
          width: 100%;
          max-height: 100%;
          height: 100%;
@@ -4465,26 +4480,24 @@
       &__messenger {
          display: none;
          position: relative;
-         z-index: 2;
-         border-radius: 4px;
-         background-color: $white;
-         color: #333;
+         z-index: 43;
+         flex-direction: column;
          max-height: 100%;
          margin-right: 20px;
          max-width: 440px;
          width: 440px;
+         background-color: $white;
+         color: #333;
+         border-radius: 4px;
          @media (max-width: 767.98px) {
             width: 100%;
             max-width: 100%;
             margin: 0;
             max-height: 400px;
          }
-
-         &.active {
-            display: flex;
-            flex-direction: column;
+         @media (max-width: 575.98px) {
+            bottom: 90px;
          }
-
          &-top {
             padding: 10px 16px;
             padding-right: 3px;
@@ -4498,6 +4511,7 @@
          }
 
          &-avatar {
+            display: block;
             width: 32px;
             height: 32px;
             filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -4515,6 +4529,7 @@
          }
 
          &-name {
+            display: block;
             font-weight: 700;
 
             @media (max-width: 575.98px) {
@@ -4590,7 +4605,7 @@
                &::before {
                   content: '';
                   position: absolute;
-                  z-index: 1;
+                  z-index: 44;
                   bottom: -15px;
                   left: 0%;
                   width: 100%;
@@ -4636,6 +4651,91 @@
             }
          }
 
+         &-message {
+            position: relative;
+            background-color: #FFF8EA;
+            border-radius: 4px;
+            width: fit-content;
+            &-voice {
+               display: flex;
+               flex-direction: column;
+               gap: 11px;
+               padding: 14px 28px 11px 16px;
+               &-inner {
+                  display: flex;
+                  align-items: center;
+                  gap: 20px;
+               }
+               &-play {
+                  &-icon {
+                     display: block;
+                     width: 32px;
+                     height: 32px;
+                     background: url('../images/play-icon.svg') no-repeat center / contain;
+                  }
+               }
+               &-track {
+                  &-icon {
+                     display: block;
+                     width: 185px;
+                     height: 19px;
+                     background: url('../images/track.svg') no-repeat center / contain;
+                  }
+               }
+               &-duration {
+                  font-size: 12px;
+                  color: $gray3;
+               }
+            }
+            &-more {
+               position: absolute;
+               top: 12px;
+               right: 12px;
+               &-icon {
+                  display: block;
+                  width: 16px;
+                  height: 4px;
+                  background: url('../images/message-more.svg') no-repeat center / contain;
+               }
+            }
+            &-info {
+               position: absolute;
+               right: 10px;
+               bottom: 12px;
+               display: flex;
+               align-items: center;
+               gap: 6px;
+            }
+            &-time {
+               font-size: 12px;
+               color: $gray3;
+            }
+            &-check {
+               &.sent {
+                  .call-talk__messenger-message-sent {
+                     display: block;
+                  }
+               }
+               &.viewed {
+                  .call-talk__messenger-message-viewed {
+                     display: block;
+                  }
+               }
+            }
+            &-sent {
+               display: none;
+               width: 20px;
+               height: 20px;
+               background: url('../images/message-sent.svg') no-repeat center / contain;
+            }
+            &-viewed {
+               display: none;
+               width: 27px;
+               height: 20px;
+               background: url('../images/message-viewed.svg') no-repeat center / contain;
+            }
+         }
+
          &-form {
             padding: 16px;
             padding-bottom: 10px;
@@ -4668,7 +4768,7 @@
 
          &-submit-btn {
             position: relative;
-            z-index: 1;
+            z-index: 45;
             display: block;
             margin-top: -22px;
             margin-left: auto;
@@ -4703,7 +4803,13 @@
          align-items: center;
          gap: 20px;
          font-size: 0;
-
+         @media (max-width: 575.98px) {
+            bottom: 0;
+            width: 100%;
+            justify-content: center;
+            padding: 23px 0;
+            background-color: rgba($black, .75);
+         }
          &-icon {
             display: inline-block;
             width: 44px;
@@ -4734,7 +4840,7 @@
    &-review {
       display: none;
       position: fixed;
-      z-index: 4;
+      z-index: 50;
       top: 0;
       left: 0;
       right: 0;
@@ -4760,7 +4866,7 @@
          }
          @media (max-width: 575.98px) {
             padding: 12px;
-            padding-bottom: 16px;
+            width: 345px
          }
       }
 
@@ -4809,6 +4915,7 @@
          @media (max-width: 575.98px) {
             font-size: 12px;
             max-width: 283px;
+            margin: 0 auto;
             margin-bottom: 20px;
          }
       }
@@ -4895,6 +5002,9 @@
                   border-color: $red;
                }
             }
+            @media (max-width: 575.98px) {
+               margin-bottom: 14px;
+            }
          }
          font-size: 14px;
          width: 100%;
@@ -4908,6 +5018,7 @@
          transition: border-color .2s ease-in-out;
          @media (max-width: 575.98px) {
             font-size: 9px;
+            padding: 8px;
             height: 68px;
          }
 
@@ -4988,7 +5099,7 @@
 
          @media (max-width: 575.98px) {
             margin-bottom: 28px;
-            width: 67.25%;
+            width: 73%;
          }
       }
 
@@ -5002,7 +5113,7 @@
             display: flex;
             flex-direction: column;
             gap: 14px;
-            width: 67.25%;
+            width: 73%;
 
             @media (min-width: 576px) {
                display: none;
@@ -5035,7 +5146,7 @@
          @media (max-width: 575.98px) {
             font-size: 24px;
             text-align: center;
-            margin-bottom: 80px;
+            margin-bottom: 40px;
          }
       }
 
@@ -5084,7 +5195,7 @@
          }
          &-link {
             position: absolute;
-            z-index: 5;
+            z-index: 2;
             top: 0;
             left: 0;
             right: 0;
@@ -5112,6 +5223,7 @@
 
          &-info {
             position: absolute;
+            z-index: 4;
             bottom: 0;
             left: 0;
             display: flex;
@@ -5156,7 +5268,7 @@
 
          &-call {
             position: absolute;
-            z-index: 10;
+            z-index: 6;
             bottom: 12px;
             right: 12px;
          }
@@ -5216,7 +5328,7 @@
       @media (max-width: 575.98px) {
          display: none;
          position: absolute;
-         z-index: 2;
+         z-index: 10;
          top: 0;
          left: 0;
          min-width: 100%;
@@ -5310,6 +5422,7 @@
             margin: 0 !important;
             box-shadow: 0px 4px 7px 4px rgba(0, 0, 0, 0.18);
             border-radius: 10px;
+            background-color: $white;
          }
 
          &:first-child,
@@ -5365,7 +5478,9 @@
             display: flex;
             align-items: flex-start;
             gap: 11px;
-
+            @media (max-width: 575.98px) {
+               gap: 6px;
+            }
             &:not(:first-child) {
                margin-top: auto;
             }
@@ -5377,6 +5492,10 @@
             min-height: 12px;
             background-color: #fdc571;
             border-radius: 50%;
+            @media (max-width: 575.98px) {
+               min-width: 8px;
+               min-height: 8px;
+            }
 
             &--1 {
                background-color: #FDC571;
@@ -5546,7 +5665,7 @@
    &-incoming {
       display: none;
       position: fixed;
-      z-index: 3;
+      z-index: 10;
       top: 0;
       left: 0;
       right: 0;
@@ -5629,84 +5748,13 @@
          }
          @media (max-width: 575.98px) {
             font-size: 10px;
+            padding: 8px;
             margin-top: 40px;
          }
       }
    }
 
-   &-hero {
-      &__content {
-         display: flex;
-         align-items: center;
-         gap: 40px;
-         @media (max-width: 575.98px) {
-            flex-direction: column;
-         }
-      }
-
-      &__info {
-         display: grid;
-         grid-template-columns: repeat(3, auto);
-         align-items: center;
-         gap: 13px;
-      }
-
-      &__icon {
-         width: 52px;
-         height: 52px;
-         background: url('../images/info2.svg') no-repeat center / contain;
-      }
-
-      &__line {
-         width: 4px;
-         height: 100%;
-         background-color: $orange;
-      }
-
-      &__desc {
-         font-size: 18px;
-         font-weight: 700;
-         max-width: 388px;
-         @media (max-width: 575.98px) {
-            font-size: 16px;
-         }
-      }
-
-      &__btn {
-         &-icon {
-            display: block;
-            width: 80px;
-            height: 80px;
-            background-position: center;
-            background-size: contain;
-            background-repeat: no-repeat;
-
-            &--off {
-               background-image: url('../images/call-btn-off.svg');
-            }
-
-            &--on {
-               display: none;
-               background-image: url('../images/call-btn-on.svg');
-            }
-         }
-      }
-      &__label {}
-      &__radio {
-         &:checked + .call-lawyer-hero__radio-custom {
-            background: url('../images/call-btn-on.svg') no-repeat center / contain;
-         }
-         &-custom {
-            width: 80px;
-            height: 80px;
-            display: block;
-            width: 80px;
-            height: 80px;
-            background: url('../images/call-btn-off.svg') no-repeat center / contain;
-         }
-      }
-   }
-
+   
    &-menu {
       display: flex;
       align-items: center;
@@ -5729,7 +5777,7 @@
       }
       &__top {
          position: relative;
-         padding: 12px 0;
+         padding-bottom: 12px;
          width: 100%;
          display: flex;
          align-items: center;
@@ -5826,6 +5874,79 @@
             margin-right: 2px;
             color: $red;
             transform: translateY(-2px);  
+         }
+      }
+   }
+
+   &-hero {
+      &__content {
+         display: flex;
+         align-items: center;
+         gap: 40px;
+         @media (max-width: 575.98px) {
+            flex-direction: column;
+         }
+      }
+
+      &__info {
+         display: grid;
+         grid-template-columns: repeat(3, auto);
+         align-items: center;
+         gap: 13px;
+      }
+
+      &__icon {
+         width: 52px;
+         height: 52px;
+         background: url('../images/info2.svg') no-repeat center / contain;
+      }
+
+      &__line {
+         width: 4px;
+         height: 100%;
+         background-color: $orange;
+      }
+
+      &__desc {
+         font-size: 18px;
+         font-weight: 700;
+         max-width: 388px;
+         @media (max-width: 575.98px) {
+            font-size: 16px;
+         }
+      }
+
+      &__btn {
+         &-icon {
+            display: block;
+            width: 80px;
+            height: 80px;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+
+            &--off {
+               background-image: url('../images/call-btn-off.svg');
+            }
+
+            &--on {
+               display: none;
+               background-image: url('../images/call-btn-on.svg');
+            }
+         }
+      }
+      &__label {}
+      &__radio {
+         &:checked + .call-lawyer-hero__radio-custom {
+            background: url('../images/call-btn-on.svg') no-repeat center / contain;
+         }
+         &-custom {
+            width: 80px;
+            height: 80px;
+            display: block;
+            width: 80px;
+            height: 80px;
+            background: url('../images/call-btn-off.svg') no-repeat center / contain;
          }
       }
    }
