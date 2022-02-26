@@ -5939,3 +5939,174 @@
       }
    }
 }
+
+.transaction {
+   padding-top: 60px;
+   padding-bottom: 42px;
+   color: #333;
+   font-size: 16px;
+   &-hero {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 120px;
+      &__text-block {
+         display: flex;
+         flex-direction: column;
+         margin-top: 40px;
+         max-width: 470px;
+      }
+      &__title {
+         margin: 0;
+         font-size: 38px;
+         font-weight: 700;
+         margin-bottom: 80px;
+      }
+      &__desc {
+         margin: 0;
+         font-size: 20px;
+         margin-bottom: 40px;
+      }
+      &__btn {
+         font-size: 18px;
+         font-weight: 600;
+         padding: 10px 40px;
+      }
+      &__img {
+         &-wrap {
+            width: 606px;
+         }
+         padding-bottom: 57.6%;
+         background: url('../images/transaction-hero.svg') no-repeat center / contain;
+      }
+   }
+   &-ways {
+      margin-bottom: 120px;
+      &__title {
+         margin: 0;
+         font-size: 38px;
+         font-weight: 700;
+         margin-bottom: 80px;
+      }
+      &__list {
+         margin: 0;
+         padding: 0;
+         list-style: none;
+         display: grid;
+         grid-template-columns: repeat(3, 1fr);
+         gap: 86px;
+      }
+      &__item {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         &:nth-child(odd) {
+            .transaction-ways__item-text-block {
+               padding-bottom: 142px;
+            }
+            .transaction-ways__item-number-wrap {
+               margin-top: -77px;
+            }
+         }
+         &:nth-child(even) {
+            .transaction-ways__item-text-block {
+               padding-top: 142px;
+               order: 1;
+            }
+            .transaction-ways__item-number-wrap {
+               margin-bottom: -77px;
+            }
+         }
+         &-text-block {
+            text-align: center;
+            padding: 40px 12px;
+            border: 1px solid rgba(204, 127, 49, 0.78);
+            border-radius: 10px;
+         }
+         &-title {
+            display: block;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 32px;
+         }
+         &-desc {
+            margin: 0;
+            font-size: 18px;
+         }
+         &-number {
+            &-wrap {
+               width: 202px;
+            }
+            padding-bottom: 72.28%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            &--1 {
+               background-image: url('../images/transaction-number-1.svg');
+            }
+            &--2 {
+               background-image: url('../images/transaction-number-2.svg');
+            }
+            &--3 {
+               background-image: url('../images/transaction-number-3.svg');
+            }
+         }
+      }
+   }
+   &-benefits {
+      &__title {
+         margin: 0;
+         font-size: 38px;
+         font-weight: 700;
+         margin-bottom: 60px;
+      }
+      &__list {
+         background-color: #fff8ea;
+         margin: 0 -100vw;
+         padding: 60px 100vw;
+         list-style: none;
+         display: grid;
+         grid-template-columns: repeat(2, 1fr);
+         gap: 120px;
+      }
+      &__item {
+         display: flex;
+         align-items: center;
+         gap: 20px;
+         &-icon-wrap {
+            width: 100px;
+         }
+         &-icon {
+            padding-bottom: 100%;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            &--1 {
+               background-image: url('../images/transaction-benefits-1.png');
+            }
+            &--2 {
+               background-image: url('../images/transaction-benefits-2.png');
+            }
+            &--3 {
+               background-image: url('../images/transaction-benefits-3.png');
+            }
+            &--4 {
+               background-image: url('../images/transaction-benefits-4.png');
+            }
+         }
+         &-text-block {
+         }
+         &-title {
+            display: inline-block;
+            color: $black;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+         }
+         &-desc {
+            margin: 0;
+            font-size: 14px;  
+         }
+      }
+   }
+}

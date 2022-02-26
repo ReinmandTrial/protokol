@@ -53,31 +53,15 @@ select {
   box-sizing: border-box
 }
 
-textarea {
-  resize: none;
-}
-
-button {
-  font: inherit;
-  outline: none;
-  background: transparent;
-  padding: unset;
-  cursor: pointer;
-  border: unset;
-  color: unset;
-}
-
 a {
   text-decoration: none;
-  color: inherit;
+  color: inherit
 }
 
-a:hover,
-a:focus,
-a:active {
+a :focus {
   outline: none;
   text-decoration: none;
-  color: inherit;
+  color: inherit
 }
 
 button,
@@ -94,7 +78,7 @@ textarea {
 button {
   background: transparent;
   padding: unset;
-  cursor: pointer;
+  cursor: pointer
 }
 
 @font-face {
@@ -1075,9 +1059,6 @@ textarea {
 }
 
 .pagintation__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1106,12 +1087,6 @@ textarea {
 }
 
 .pagintation__btn {
-  font: inherit;
-  outline: none;
-  background: transparent;
-  padding: unset;
-  cursor: pointer;
-  border: unset;
   background: #efefef;
   border: 1px solid #bdbdbd;
   border-radius: 6px;
@@ -1131,13 +1106,6 @@ textarea {
 }
 
 .pagintation__btn-arrow {
-  font: inherit;
-  outline: none;
-  background: transparent;
-  padding: unset;
-  cursor: pointer;
-  border: unset;
-  color: inherit;
   font-size: 24px;
   color: #c74a2e
 }
@@ -1810,14 +1778,9 @@ textarea {
 }
 
 .more-btn {
-  font: inherit;
-  outline: none;
-  background: transparent;
-  padding: unset;
-  cursor: pointer;
-  border: unset;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -1946,18 +1909,12 @@ textarea {
 }
 
 .phone-call {
-  font: inherit;
-  outline: none;
-  background: transparent;
-  padding: unset;
-  cursor: pointer;
-  border: unset;
-  color: unset;
   position: relative;
   padding: 5px;
   border: 1px solid #fff;
   border-radius: 50%
 }
+
 .phone-call.decline::before {
   border-color: #c74a2e
 }
@@ -7360,7 +7317,7 @@ textarea {
 
 .call-outgoing {
   display: none;
-  position: fixed;
+  position: absolute;
   z-index: 30;
   top: 0;
   left: 0;
@@ -9670,3 +9627,4 @@ textarea {
   height: 80px;
   background: url("../images/call-btn-off.svg") no-repeat center/contain
 }
+
