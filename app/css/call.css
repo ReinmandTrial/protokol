@@ -241,13 +241,12 @@
 
 .call {
   height: 100%;
-  width: 100%;
   font-family: "Open Sans";
   font-weight: normal;
   font-style: normal;
   font-size: 18px;
   color: #000;
-  overflow-x: hidden;
+  position: relative;
 }
 
 .visually-hidden {
@@ -1836,8 +1835,7 @@
   z-index: 20;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
+  overflow-y: auto;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -2021,6 +2019,7 @@
   left: 0;
   right: 0;
   bottom: 0;
+  overflow-y: auto;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -3605,12 +3604,13 @@
 @media (max-width: 575.98px) {
   .call-explanation {
     display: none;
-    position: absolute;
+    position: fixed;
     z-index: 10;
     top: 0;
     left: 0;
-    min-height: 100%;
-    min-width: 100%;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -3619,7 +3619,7 @@
     align-items: center;
     margin: 0;
     padding: 32px 8px;
-    background-color: rgba(0, 0, 0, 0.75)
+    background-color: rgba(0, 0, 0, 0.75);
   }
 
   .call-explanation.active {
@@ -3630,8 +3630,7 @@
 }
 
 .call-explanation__content {
-  padding: 60px 100vw;
-  margin: 0 -100vw;
+  padding: 60px 0;
   background-color: #fff8ea
 }
 
