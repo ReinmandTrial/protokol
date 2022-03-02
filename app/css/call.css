@@ -239,6 +239,32 @@
   border: 1px solid #cc7f31
 }
 
+.width-window {
+  margin: 0 calc((-100vw + 1170px) / 2);
+  padding: 0 calc((100vw - 1170px) / 2);
+}
+
+@media (max-width: 1199.98px) {
+  .width-window {
+    margin: 0 calc((-100vw + 970px) / 2);
+    padding: 0 calc((100vw - 970px) / 2);
+  }
+}
+
+@media (max-width: 991.98px) {
+  .width-window {
+    margin: 0 calc((-100vw + 750px) / 2);
+    padding: 0 calc((100vw - 750px) / 2);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .width-window {
+    margin: 0;
+    padding: 0.1px;
+  }
+}
+
 .call {
   height: 100%;
   font-family: "Open Sans";
@@ -1726,10 +1752,11 @@
 }
 
 .hr {
-  border: none;
-  width: 100vw;
-  height: 1px;
-  background-color: #e0e0e0
+  display: block;
+	border: none;
+  width: 100%;
+	height: 1px;
+	background-color: #e0e0e0;
 }
 
 @-webkit-keyframes call-anim {
@@ -1829,19 +1856,57 @@
   }
 }
 
-.call-about-call {
+.call-popup {
   display: none;
   position: fixed;
-  z-index: 20;
   top: 0;
   left: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100%;
+  min-height: 100%;
+}
+
+.call-popup>* {
   overflow-y: auto;
+}
+
+@media (max-width: 575.98px) {
+  .call-popup-mobile {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100%;
+    min-height: 100%;
+  }
+  .call-popup-mobile.active {
+    display: block;
+  }
+  .call-popup-mobile>* {
+    overflow-y: auto;
+  }
+}
+
+.call-popup.active {
+  display: block;
+}
+
+
+.call-about-call {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  width: 100%;
+  height: 100%;
   background: rgba(0, 0, 0, 0.75)
 }
 
@@ -1849,12 +1914,6 @@
   .call-about-call {
     padding: 32px 15px
   }
-}
-
-.call-about-call.active {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex
 }
 
 .call-about-call__content {
@@ -2012,28 +2071,19 @@
 }
 
 .call-outgoing {
-  display: none;
-  position: fixed;
-  z-index: 30;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow-y: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  width: 100%;
+  height: 100%;
   background: #191919;
   color: #fff
-}
-
-.call-outgoing.active {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex
 }
 
 .call-outgoing__content {
@@ -2084,19 +2134,17 @@
 }
 
 .call-talk {
-  display: none;
-  position: fixed;
-  z-index: 40;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  width: 100%;
+  height: 100%;
   font-size: 14px;
   background: #191919;
   color: #fff;
@@ -2107,12 +2155,6 @@
   .call-talk {
     padding: 0
   }
-}
-
-.call-talk.active {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex
 }
 
 .call-talk.chat .call-talk__messenger {
@@ -2370,7 +2412,8 @@
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  max-height: 100%;
+  overflow: hidden;
+  height: 100%;
   margin-right: 20px;
   max-width: 440px;
   width: 440px;
@@ -2399,6 +2442,7 @@
   padding-right: 3px;
   display: -webkit-box;
   display: -ms-flexbox;
+  flex: none;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2517,6 +2561,7 @@
 }
 
 .call-talk__messenger-head {
+  font: none;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2578,10 +2623,13 @@
 }
 
 .call-talk__messenger-body {
-  overflow-y: auto
+  flex: 1 1 auto;
+  overflow: hidden;
 }
 
 .call-talk__messenger-body>* {
+  height: 100%;
+  overflow: hidden;
   display: none;
   padding: 16px;
   padding-right: 3px;
@@ -2590,28 +2638,42 @@
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  -ms-flex-item-align: start;
-  align-self: flex-start;
   gap: 16px
 }
 
-@media (max-width: 575.98px) {
+
+@media (max-width : 575.98px) {
   .call-talk__messenger-body>* {
     padding: 8px;
     padding-right: 3px;
-    padding-bottom: 0
+    padding-bottom: 0;
+    overflow-y: auto;
   }
-}
-
-.call-talk__messenger-body>*>*:nth-child(odd) {
-  -ms-flex-item-align: end;
-  align-self: flex-end
 }
 
 .call-talk__messenger-body>*.active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex
+}
+
+.call-talk__messenger-chat-messages {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+@media (max-width : 575.98px) {
+  .call-talk__messenger-chat-messages {
+    overflow: unset;
+  }
+}
+
+.call-talk__messenger-message--out {
+  align-self: flex-end
 }
 
 .call-talk__messenger-message {
@@ -2745,6 +2807,7 @@
 }
 
 .call-talk__messenger-form {
+  flex: none;
   padding: 16px;
   padding-bottom: 10px
 }
@@ -2898,26 +2961,18 @@
 }
 
 .call-review {
-  display: none;
-  position: fixed;
-  z-index: 50;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  width: 100%;
+  height: 100%;
   background: rgba(0, 0, 0, 0.75)
-}
-
-.call-review.active {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex
 }
 
 .call-review__content {
@@ -3426,19 +3481,6 @@
   border-color: #bdbdbd
 }
 
-.call-video__item.off .call-video__item-link {
-  display: none
-}
-
-.call-video__item-link {
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0
-}
-
 .call-video__item-img-wrap {
   position: absolute;
   top: 0;
@@ -3515,10 +3557,18 @@
 }
 
 .call-video__item-name {
+  text-decoration: none;
   font-size: 14px;
   font-weight: 600;
   color: #c74a2e
 }
+.call-video__item-name:hover,
+.call-video__item-name:focus,
+.call-video__item-name:active {
+  text-decoration: none;
+  color: #c74a2e
+}
+
 
 .call-video__item-call {
   position: absolute;
@@ -3603,34 +3653,26 @@
 
 @media (max-width: 575.98px) {
   .call-explanation {
-    display: none;
-    position: fixed;
-    z-index: 10;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow-y: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    width: 100%;
+    height: 100%;
     margin: 0;
     padding: 32px 8px;
     background-color: rgba(0, 0, 0, 0.75);
   }
-
-  .call-explanation.active {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex
-  }
 }
 
 .call-explanation__content {
-  padding: 60px 0;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: #fff8ea
 }
 

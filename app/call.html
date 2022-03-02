@@ -921,247 +921,281 @@
   <div class="container">
     <div class="row">
       <div class="call">
-        <div class="call-about-call">
-          <form class="call-about-call__content">
-            <label class="call-about-call__label" for="call-about-input">Два слова - про що Ваш дзвінок</label>
-            <div class="call-about-call__input-wrap active">
-              <textarea id="call-about-input" class="call-about-call__input" rows="1"
-                placeholder="Введите текст"></textarea>
-              <button class="call-about-call__delete icon icon-close" type="button">
+        <div class="call-popup">
+          <div class="call-about-call">
+            <form class="call-about-call__content">
+              <label class="call-about-call__label" for="call-about-input">Два слова - про що Ваш дзвінок</label>
+              <div class="call-about-call__input-wrap active">
+                <textarea id="call-about-input" class="call-about-call__input" rows="1"
+                  placeholder="Введите текст"></textarea>
+                <button class="call-about-call__delete icon icon-close" type="button">
+                </button>
+              </div>
+              <button class="call-about-call__btn btn-temp btn-red" type="submit">Відправити</button>
+            </form>
+          </div>
+        </div>
+        <div class="call-popup">
+          <div class="call-outgoing">
+            <div class="call-outgoing__content">
+              <h2 class="call-outgoing__title">Очікуйте з’єднання</h2>
+              <button class="call-outgoing__btn phone-call" type="button">
+                <span class="phone-call__icon icon icon-phone-call"></span>
               </button>
             </div>
-            <button class="call-about-call__btn btn-temp btn-red" type="submit">Відправити</button>
-          </form>
-        </div>
-        <div class="call-outgoing">
-          <div class="call-outgoing__content">
-            <h2 class="call-outgoing__title">Очікуйте з’єднання</h2>
-            <button class="call-outgoing__btn phone-call" type="button">
-              <span class="phone-call__icon icon icon-phone-call"></span>
-            </button>
           </div>
         </div>
-        <div class="call-talk chat">
-          <div class="call-talk__completion">
-            <div class="call-talk__completion-content">
-              <button class="call-talk__completion-close" type="button"></button>
-              <p class="call-talk__completion-desc">Консультация завершена 1 ч 8 мин 12:39</p>
-              <button class="call-talk__completion-btn btn-temp btn-red" type="button">Посмотреть запись</button>
-            </div>
-          </div>
-          <time class="call-talk__time" datetime="29:45">29:45</time>
-          <div class="call-talk__content">
-            <div class="call-talk__companion">
-              <div class="call-talk__companion-inner">
-                <strong class="call-talk__name">Екатерина Корженко</strong>
-                <time class="call-talk__time call-talk__time--mobile" datetime="29:45">29:45</time>
+        <div class="call-popup">
+          <div class="call-talk chat">
+            <div class="call-talk__completion">
+              <div class="call-talk__completion-content">
+                <button class="call-talk__completion-close" type="button"></button>
+                <p class="call-talk__completion-desc">Консультация завершена 1 ч 8 мин 12:39</p>
+                <button class="call-talk__completion-btn btn-temp btn-red" type="button">Посмотреть запись</button>
               </div>
-              <picture class="call-talk__img">
-                <source media="(max-width: 575.98px)" srcset="./images/talk-woman-mobile.jpg">
-                <img src="./images/talk-woman.jpg" alt="Лицо обеседника">
-              </picture>
             </div>
-            <div class="call-talk__modals">
-              <div class="call-talk__me">
-                <strong class="call-talk__name">Мирон Янович</strong>
-                <img class="call-talk__img" src="./images/talk-man1.jpg" alt="Моё лицо">
+            <span class="call-talk__time">29:45</span>
+            <div class="call-talk__content">
+              <div class="call-talk__companion">
+                <div class="call-talk__companion-inner">
+                  <strong class="call-talk__name">Екатерина Корженко</strong>
+                  <time class="call-talk__time call-talk__time--mobile" datetime="29:45">29:45</time>
+                </div>
+                <picture class="call-talk__img">
+                  <source media="(max-width: 575.98px)" srcset="./images/talk-woman-mobile.jpg">
+                  <img src="./images/talk-woman.jpg" alt="Лицо обеседника">
+                </picture>
               </div>
-              <div class="call-talk__messenger">
-                <div class="call-talk__messenger-top">
-                  <a class="call-talk__messenger-avatar" href="#">
-                    <img class="call-talk__messenger-avatar-img" src="./images/call-avatar.jpg" alt="Аватар">
-                  </a>
-                  <a class="call-talk__messenger-name" href="#">Екатерина Корженко</a>
-                  <button class="call-talk__messenger-hire-btn  btn-temp btn-red" type="button">Нанять юриста</button>
-                  <button class="call-talk__messenger-close" type="button"></button>
+              <div class="call-talk__modals">
+                <div class="call-talk__me">
+                  <strong class="call-talk__name">Мирон Янович</strong>
+                  <img class="call-talk__img" src="./images/talk-man1.jpg" alt="Моё лицо">
                 </div>
-                <div class="call-talk__messenger-head">
-                  <button class="call-talk__messenger-section-btn active" type="button">Чат</button>
-                  <button class="call-talk__messenger-section-btn" type="button">Файлы</button>
-                  <button class="call-talk__messenger-section-btn" type="button">Договор</button>
-                </div>
-                <div class="call-talk__messenger-body">
-                  <div class="call-talk__messenger-chat active">
-                    <div class="call-talk__messenger-message">
-                      <div class="call-talk__messenger-message-voice">
-                        <div class="call-talk__messenger-message-voice-inner">
-                          <button class="call-talk__messenger-message-voice-play" type="button">
-                            <span class="call-talk__messenger-message-voice-play-icon"></span>
-                          </button>
-                          <button class="call-talk__messenger-message-voice-track" type="button">
-                            <span class="call-talk__messenger-message-voice-track-icon"></span>
-                          </button>
-                        </div>
-                        <span class="call-talk__messenger-message-voice-duration">00:09</span>
-                        <button class="call-talk__messenger-message-more">
-                          <span class="call-talk__messenger-message-more-icon"></span>
-                        </button>
-                        <div class="call-talk__messenger-message-info">
-                          <time class="call-talk__messenger-message-time" datetime="11:45">11:45</time>
-                          <div class="call-talk__messenger-message-check">
-                            <span class="call-talk__messenger-message-sent"></span>
-                            <span class="call-talk__messenger-message-viewed"></span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="call-talk__messenger-message">
-                      <div class="call-talk__messenger-message-voice">
-                        <div class="call-talk__messenger-message-voice-inner">
-                          <button class="call-talk__messenger-message-voice-play" type="button">
-                            <span class="call-talk__messenger-message-voice-play-icon"></span>
-                          </button>
-                          <button class="call-talk__messenger-message-voice-track" type="button">
-                            <span class="call-talk__messenger-message-voice-track-icon"></span>
-                          </button>
-                        </div>
-                        <span class="call-talk__messenger-message-voice-duration">00:09</span>
-                        <button class="call-talk__messenger-message-more">
-                          <span class="call-talk__messenger-message-more-icon"></span>
-                        </button>
-                        <div class="call-talk__messenger-message-info">
-                          <time class="call-talk__messenger-message-time" datetime="11:45">11:45</time>
-                          <div class="call-talk__messenger-message-check viewed">
-                            <span class="call-talk__messenger-message-sent"></span>
-                            <span class="call-talk__messenger-message-viewed"></span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="call-talk__messenger-message">
-                      <div class="call-talk__messenger-message-voice">
-                        <div class="call-talk__messenger-message-voice-inner">
-                          <button class="call-talk__messenger-message-voice-play" type="button">
-                            <span class="call-talk__messenger-message-voice-play-icon"></span>
-                          </button>
-                          <button class="call-talk__messenger-message-voice-track" type="button">
-                            <span class="call-talk__messenger-message-voice-track-icon"></span>
-                          </button>
-                        </div>
-                        <span class="call-talk__messenger-message-voice-duration">00:09</span>
-                        <button class="call-talk__messenger-message-more">
-                          <span class="call-talk__messenger-message-more-icon"></span>
-                        </button>
-                        <div class="call-talk__messenger-message-info">
-                          <time class="call-talk__messenger-message-time" datetime="11:45">11:45</time>
-                          <div class="call-talk__messenger-message-check sent">
-                            <span class="call-talk__messenger-message-sent"></span>
-                            <span class="call-talk__messenger-message-viewed"></span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                <div class="call-talk__messenger">
+                  <div class="call-talk__messenger-top">
+                    <a class="call-talk__messenger-avatar" href="#">
+                      <img class="call-talk__messenger-avatar-img" src="./images/call-avatar.jpg" alt="Аватар">
+                    </a>
+                    <a class="call-talk__messenger-name" href="#">Екатерина Корженко</a>
+                    <button class="call-talk__messenger-hire-btn  btn-temp btn-red" type="button">Нанять юриста</button>
+                    <button class="call-talk__messenger-close" type="button"></button>
                   </div>
-                  <div class="call-talk__messenger-files"></div>
-                  <div class="call-talk__messenger-treaty"></div>
+                  <div class="call-talk__messenger-head">
+                    <button class="call-talk__messenger-section-btn active" type="button">Чат</button>
+                    <button class="call-talk__messenger-section-btn" type="button">Файлы</button>
+                    <button class="call-talk__messenger-section-btn" type="button">Договор</button>
+                  </div>
+                  <div class="call-talk__messenger-body">
+                    <div class="call-talk__messenger-chat active">
+                      <div class="call-talk__messenger-chat-messages">
+                        <div class="call-talk__messenger-message call-talk__messenger-message--in">
+                          <div class="call-talk__messenger-message-voice">
+                            <div class="call-talk__messenger-message-voice-inner">
+                              <button class="call-talk__messenger-message-voice-play" type="button">
+                                <span class="call-talk__messenger-message-voice-play-icon"></span>
+                              </button>
+                              <button class="call-talk__messenger-message-voice-track" type="button">
+                                <span class="call-talk__messenger-message-voice-track-icon"></span>
+                              </button>
+                            </div>
+                            <span class="call-talk__messenger-message-voice-duration">00:09</span>
+                            <button class="call-talk__messenger-message-more">
+                              <span class="call-talk__messenger-message-more-icon"></span>
+                            </button>
+                            <div class="call-talk__messenger-message-info">
+                              <time class="call-talk__messenger-message-time" datetime="11:45">11:45</time>
+                              <div class="call-talk__messenger-message-check">
+                                <span class="call-talk__messenger-message-sent"></span>
+                                <span class="call-talk__messenger-message-viewed"></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="call-talk__messenger-message call-talk__messenger-message--out">
+                          <div class="call-talk__messenger-message-voice">
+                            <div class="call-talk__messenger-message-voice-inner">
+                              <button class="call-talk__messenger-message-voice-play" type="button">
+                                <span class="call-talk__messenger-message-voice-play-icon"></span>
+                              </button>
+                              <button class="call-talk__messenger-message-voice-track" type="button">
+                                <span class="call-talk__messenger-message-voice-track-icon"></span>
+                              </button>
+                            </div>
+                            <span class="call-talk__messenger-message-voice-duration">00:09</span>
+                            <button class="call-talk__messenger-message-more">
+                              <span class="call-talk__messenger-message-more-icon"></span>
+                            </button>
+                            <div class="call-talk__messenger-message-info">
+                              <time class="call-talk__messenger-message-time" datetime="11:45">11:45</time>
+                              <div class="call-talk__messenger-message-check viewed">
+                                <span class="call-talk__messenger-message-sent"></span>
+                                <span class="call-talk__messenger-message-viewed"></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="call-talk__messenger-message call-talk__messenger-message--out">
+                          <div class="call-talk__messenger-message-voice">
+                            <div class="call-talk__messenger-message-voice-inner">
+                              <button class="call-talk__messenger-message-voice-play" type="button">
+                                <span class="call-talk__messenger-message-voice-play-icon"></span>
+                              </button>
+                              <button class="call-talk__messenger-message-voice-track" type="button">
+                                <span class="call-talk__messenger-message-voice-track-icon"></span>
+                              </button>
+                            </div>
+                            <span class="call-talk__messenger-message-voice-duration">00:09</span>
+                            <button class="call-talk__messenger-message-more">
+                              <span class="call-talk__messenger-message-more-icon"></span>
+                            </button>
+                            <div class="call-talk__messenger-message-info">
+                              <time class="call-talk__messenger-message-time" datetime="11:45">11:45</time>
+                              <div class="call-talk__messenger-message-check sent">
+                                <span class="call-talk__messenger-message-sent"></span>
+                                <span class="call-talk__messenger-message-viewed"></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="call-talk__messenger-message call-talk__messenger-message--in">
+                          <div class="call-talk__messenger-message-voice">
+                            <div class="call-talk__messenger-message-voice-inner">
+                              <button class="call-talk__messenger-message-voice-play" type="button">
+                                <span class="call-talk__messenger-message-voice-play-icon"></span>
+                              </button>
+                              <button class="call-talk__messenger-message-voice-track" type="button">
+                                <span class="call-talk__messenger-message-voice-track-icon"></span>
+                              </button>
+                            </div>
+                            <span class="call-talk__messenger-message-voice-duration">00:09</span>
+                            <button class="call-talk__messenger-message-more">
+                              <span class="call-talk__messenger-message-more-icon"></span>
+                            </button>
+                            <div class="call-talk__messenger-message-info">
+                              <time class="call-talk__messenger-message-time" datetime="11:45">11:45</time>
+                              <div class="call-talk__messenger-message-check">
+                                <span class="call-talk__messenger-message-sent"></span>
+                                <span class="call-talk__messenger-message-viewed"></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <form class="call-talk__messenger-form">
+                        <textarea class="call-talk__messenger-input active"
+                          placeholder="Напишите ваше сообщение..."></textarea>
+                        <button class="call-talk__messenger-submit-btn icon icon-send" type="submit"></button>
+                      </form>
+                    </div>
+                    <div class="call-talk__messenger-files"></div>
+                    <div class="call-talk__messenger-treaty"></div>
+                  </div>
                 </div>
-                <form class="call-talk__messenger-form">
-                  <textarea class="call-talk__messenger-input active" placeholder="Напишите ваше сообщение..."></textarea>
-                  <button class="call-talk__messenger-submit-btn icon icon-send" type="submit"></button>
-                </form>
               </div>
             </div>
-          </div>
-          <ul class="call-talk__menu">
-            <li class="call-talk__menu-item">
-              <button class="call-talk__menu-btn" type="button">
-                <span class="call-talk__menu-icon call-talk__menu-icon--1"></span>
-              </button>
-            </li>
-            <li class="call-talk__menu-item">
-              <button class="call-talk__menu-btn" type="button">
-                <span class="call-talk__menu-icon call-talk__menu-icon--2"></span>
-              </button>
-            </li>
-            <li class="call-talk__menu-item">
-              <button class="call-talk__menu-btn" type="button">
-                <span class="call-talk__menu-icon call-talk__menu-icon--3"></span>
-              </button>
-            </li>
-            <li class="call-talk__menu-item">
-              <button class="call-talk__menu-btn" type="button">
-                <span class="call-talk__menu-icon call-talk__menu-icon--4"></span>
-              </button>
-            </li>
-          </ul>
-        </div>
-        <div class="call-review">
-          <form class="call-review__content">
-            <button class="call-review__close" type="button"></button>
-            <h2 class="call-review__title">Оцените качество предоставленных юридических услуг</h2>
-            <ul class="call-review__list">
-              <li class="call-review__item">
-                <label class="call-review__radio-label">
-                  <input class="visually-hidden call-review__radio" type="radio" name="review" value="1">
-                  <span class="call-review__radio-custom">1</span>
-                </label>
+            <ul class="call-talk__menu">
+              <li class="call-talk__menu-item">
+                <button class="call-talk__menu-btn" type="button">
+                  <span class="call-talk__menu-icon call-talk__menu-icon--1"></span>
+                </button>
               </li>
-              <li class="call-review__item">
-                <label class="call-review__radio-label">
-                  <input class="visually-hidden call-review__radio" type="radio" name="review" value="2">
-                  <span class="call-review__radio-custom">2</span>
-                </label>
+              <li class="call-talk__menu-item">
+                <button class="call-talk__menu-btn" type="button">
+                  <span class="call-talk__menu-icon call-talk__menu-icon--2"></span>
+                </button>
               </li>
-              <li class="call-review__item">
-                <label class="call-review__radio-label">
-                  <input class="visually-hidden call-review__radio" type="radio" name="review" value="3">
-                  <span class="call-review__radio-custom">3</span>
-                </label>
+              <li class="call-talk__menu-item">
+                <button class="call-talk__menu-btn" type="button">
+                  <span class="call-talk__menu-icon call-talk__menu-icon--3"></span>
+                </button>
               </li>
-              <li class="call-review__item">
-                <label class="call-review__radio-label">
-                  <input class="visually-hidden call-review__radio" type="radio" name="review" value="4">
-                  <span class="call-review__radio-custom">4</span>
-                </label>
-              </li>
-              <li class="call-review__item">
-                <label class="call-review__radio-label">
-                  <input class="visually-hidden call-review__radio" type="radio" name="review" value="5">
-                  <span class="call-review__radio-custom">5</span>
-                </label>
-              </li>
-              <li class="call-review__item">
-                <label class="call-review__radio-label">
-                  <input class="visually-hidden call-review__radio" type="radio" name="review" value="6">
-                  <span class="call-review__radio-custom">6</span>
-                </label>
-              </li>
-              <li class="call-review__item">
-                <label class="call-review__radio-label">
-                  <input class="visually-hidden call-review__radio" type="radio" name="review" value="7">
-                  <span class="call-review__radio-custom">7</span>
-                </label>
-              </li>
-              <li class="call-review__item">
-                <label class="call-review__radio-label">
-                  <input class="visually-hidden call-review__radio" type="radio" name="review" value="8">
-                  <span class="call-review__radio-custom">8</span>
-                </label>
-              </li>
-              <li class="call-review__item">
-                <label class="call-review__radio-label">
-                  <input class="visually-hidden call-review__radio" type="radio" name="review" value="9">
-                  <span class="call-review__radio-custom">9</span>
-                </label>
-              </li>
-              <li class="call-review__item">
-                <label class="call-review__radio-label">
-                  <input class="visually-hidden call-review__radio" type="radio" name="review" value="10">
-                  <span class="call-review__radio-custom">10</span>
-                </label>
+              <li class="call-talk__menu-item">
+                <button class="call-talk__menu-btn" type="button">
+                  <span class="call-talk__menu-icon call-talk__menu-icon--4"></span>
+                </button>
               </li>
             </ul>
-            <div class="call-review__btn-desc-wrap">
-              <span class="call-review__btn-desc">Очень плохо</span>
-              <span class="call-review__btn-desc">Супер качество</span>
-            </div>
-            <label class="call-review__label" for="call-review-input">Пожалуйста, ставьте отзыв </label>
-            <div class="call-review__input-wrap active">
-              <textarea id="call-review__input" class="call-review__input" placeholder="Введите текст"></textarea>
-              <button class="call-review__delete icon icon-close" type="button">
-            </div>
-            <button class="call-review__btn btn-temp btn-red" type="submit">Отправить</button>
-          </form>
+          </div>
+        </div>
+        <div class="call-popup">
+          <div class="call-review">
+            <form class="call-review__content">
+              <button class="call-review__close" type="button"></button>
+              <h2 class="call-review__title">Оцените качество предоставленных юридических услуг</h2>
+              <ul class="call-review__list">
+                <li class="call-review__item">
+                  <label class="call-review__radio-label">
+                    <input class="visually-hidden call-review__radio" type="radio" name="review" value="1">
+                    <span class="call-review__radio-custom">1</span>
+                  </label>
+                </li>
+                <li class="call-review__item">
+                  <label class="call-review__radio-label">
+                    <input class="visually-hidden call-review__radio" type="radio" name="review" value="2">
+                    <span class="call-review__radio-custom">2</span>
+                  </label>
+                </li>
+                <li class="call-review__item">
+                  <label class="call-review__radio-label">
+                    <input class="visually-hidden call-review__radio" type="radio" name="review" value="3">
+                    <span class="call-review__radio-custom">3</span>
+                  </label>
+                </li>
+                <li class="call-review__item">
+                  <label class="call-review__radio-label">
+                    <input class="visually-hidden call-review__radio" type="radio" name="review" value="4">
+                    <span class="call-review__radio-custom">4</span>
+                  </label>
+                </li>
+                <li class="call-review__item">
+                  <label class="call-review__radio-label">
+                    <input class="visually-hidden call-review__radio" type="radio" name="review" value="5">
+                    <span class="call-review__radio-custom">5</span>
+                  </label>
+                </li>
+                <li class="call-review__item">
+                  <label class="call-review__radio-label">
+                    <input class="visually-hidden call-review__radio" type="radio" name="review" value="6">
+                    <span class="call-review__radio-custom">6</span>
+                  </label>
+                </li>
+                <li class="call-review__item">
+                  <label class="call-review__radio-label">
+                    <input class="visually-hidden call-review__radio" type="radio" name="review" value="7">
+                    <span class="call-review__radio-custom">7</span>
+                  </label>
+                </li>
+                <li class="call-review__item">
+                  <label class="call-review__radio-label">
+                    <input class="visually-hidden call-review__radio" type="radio" name="review" value="8">
+                    <span class="call-review__radio-custom">8</span>
+                  </label>
+                </li>
+                <li class="call-review__item">
+                  <label class="call-review__radio-label">
+                    <input class="visually-hidden call-review__radio" type="radio" name="review" value="9">
+                    <span class="call-review__radio-custom">9</span>
+                  </label>
+                </li>
+                <li class="call-review__item">
+                  <label class="call-review__radio-label">
+                    <input class="visually-hidden call-review__radio" type="radio" name="review" value="10">
+                    <span class="call-review__radio-custom">10</span>
+                  </label>
+                </li>
+              </ul>
+              <div class="call-review__btn-desc-wrap">
+                <span class="call-review__btn-desc">Очень плохо</span>
+                <span class="call-review__btn-desc">Супер качество</span>
+              </div>
+              <label class="call-review__label" for="call-review-input">Пожалуйста, ставьте отзыв </label>
+              <div class="call-review__input-wrap active">
+                <textarea id="call-review__input" class="call-review__input" placeholder="Введите текст"></textarea>
+                <button class="call-review__delete icon icon-close" type="button"></button>
+              </div>
+              <button class="call-review__btn btn-temp btn-red" type="submit">Отправить</button>
+            </form>
+          </div>
         </div>
         <section class="call-hero">
           <div class="call-hero__content">
@@ -1185,7 +1219,6 @@
           </h2>
           <ul class="call-video__list">
             <li class="call-video__item">
-              <a class="call-video__item-link" href="#"></a>
               <div class="call-video__item-img-wrap">
                 <img src="./images/call-woman.jpg" alt="Фотография Юриста">
               </div>
@@ -1195,7 +1228,7 @@
                     <span class="call-video__item-online-icon"></span>
                     <p class="call-video__item-online-text">Готов отвечать прямо сейчас</p>
                   </div>
-                  <strong class="call-video__item-name">Кірюшин Артем Андрійович</strong>
+                  <a href="#" class="call-video__item-name">Кірюшин Артем Андрійович</a>
                 </div>
               </div>
               <button class="call-video__item-call phone-call" type="button">
@@ -1203,7 +1236,6 @@
               </button>
             </li>
             <li class="call-video__item">
-              <a class="call-video__item-link" href="#"></a>
               <div class="call-video__item-img-wrap">
                 <img src="./images/call-woman.jpg" alt="Фотография Юриста">
               </div>
@@ -1213,7 +1245,7 @@
                     <span class="call-video__item-online-icon"></span>
                     <p class="call-video__item-online-text">Готов отвечать прямо сейчас</p>
                   </div>
-                  <strong class="call-video__item-name">Кірюшин Артем Андрійович</strong>
+                  <a href="#" class="call-video__item-name">Кірюшин Артем Андрійович</a>
                 </div>
               </div>
               <button class="call-video__item-call phone-call" type="button">
@@ -1221,7 +1253,6 @@
               </button>
             </li>
             <li class="call-video__item off">
-              <a class="call-video__item-link" href="#"></a>
               <div class="call-video__item-img-wrap">
                 <img src="./images/call-no-online.jpg" alt="Фотография Юриста">
               </div>
@@ -1231,7 +1262,7 @@
                     <span class="call-video__item-online-icon"></span>
                     <p class="call-video__item-online-text">Готов отвечать прямо сейчас</p>
                   </div>
-                  <strong class="call-video__item-name">Кірюшин Артем Андрійович</strong>
+                  <a href="#" class="call-video__item-name">Кірюшин Артем Андрійович</a>
                 </div>
               </div>
               <button class="call-video__item-call phone-call" type="button">
@@ -1239,7 +1270,6 @@
               </button>
             </li>
             <li class="call-video__item">
-              <a class="call-video__item-link" href="#"></a>
               <div class="call-video__item-img-wrap">
                 <img src="./images/call-woman.jpg" alt="Фотография Юриста">
               </div>
@@ -1249,7 +1279,7 @@
                     <span class="call-video__item-online-icon"></span>
                     <p class="call-video__item-online-text">Готов отвечать прямо сейчас</p>
                   </div>
-                  <strong class="call-video__item-name">Кірюшин Артем Андрійович</strong>
+                  <a href="#" class="call-video__item-name">Кірюшин Артем Андрійович</a>
                 </div>
               </div>
               <button class="call-video__item-call phone-call" type="button">
@@ -1257,7 +1287,6 @@
               </button>
             </li>
             <li class="call-video__item">
-              <a class="call-video__item-link" href="#"></a>
               <div class="call-video__item-img-wrap">
                 <img src="./images/call-woman.jpg" alt="Фотография Юриста">
               </div>
@@ -1267,7 +1296,7 @@
                     <span class="call-video__item-online-icon"></span>
                     <p class="call-video__item-online-text">Готов отвечать прямо сейчас</p>
                   </div>
-                  <strong class="call-video__item-name">Кірюшин Артем Андрійович</strong>
+                  <a href="#" class="call-video__item-name">Кірюшин Артем Андрійович</a>
                 </div>
               </div>
               <button class="call-video__item-call phone-call" type="button">
@@ -1275,7 +1304,6 @@
               </button>
             </li>
             <li class="call-video__item off">
-              <a class="call-video__item-link" href="#"></a>
               <div class="call-video__item-img-wrap">
                 <img src="./images/call-no-online.jpg" alt="Фотография Юриста">
               </div>
@@ -1285,7 +1313,7 @@
                     <span class="call-video__item-online-icon"></span>
                     <p class="call-video__item-online-text">Готов отвечать прямо сейчас</p>
                   </div>
-                  <strong class="call-video__item-name">Кірюшин Артем Андрійович</strong>
+                  <a href="#" class="call-video__item-name">Кірюшин Артем Андрійович</a>
                 </div>
               </div>
               <button class="call-video__item-call phone-call" type="button">
@@ -1302,7 +1330,7 @@
               <span class="more-btn__refresh icon icon-refresh"></span>
               Показати ще 6 юристів онлайн
             </button>
-            <hr class="hr">
+            <hr class="hr width-window">
             <div class="call-video__pagintation pagintation">
               <div class="pagintation__prev">
                 <button class="pagintation__btn-arrow icon icon-arrow " type="button" disabled></button>
@@ -1342,90 +1370,99 @@
             </div>
           </div>
         </section>
-        <section class="call-explanation active">
-          <div class="call-explanation__content bg-100">
-            <button class="call-explanation__close"></button>
-            <h2 class="call-explanation__title">“Відеодзвінок з юристом” як працює ця система</h2>
-            <ul class="call-explanation__list">
-              <li class="call-explanation__item">
-                <strong class="call-explanation__item-title call-explanation__item-title--1">Вибір</strong>
-                <ul class="call-explanation__desc-list">
-                  <li class="call-explanation__desc-item">
-                    <span class="call-explanation__desc-icon call-explanation__desc-icon--1"></span>
-                    <p class="call-explanation__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim
-                      aenean eget nulla.</p>
-                  </li>
-                  <li class="call-explanation__desc-item">
-                    <span class="call-explanation__desc-icon call-explanation__desc-icon--2"></span>
-                    <p class="call-explanation__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Posuere
-                      ac vulputate vel eget. </p>
-                  </li>
-                </ul>
-              </li>
-              <li class="call-explanation__item">
-                <strong class="call-explanation__item-title call-explanation__item-title--2">Дзвінок</strong>
-                <ul class="call-explanation__desc-list">
-                  <li class="call-explanation__desc-item">
-                    <span class="call-explanation__desc-icon call-explanation__desc-icon--3"></span>
-                    <p class="call-explanation__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacinia.
-                    </p>
-                  </li>
-                  <li class="call-explanation__desc-item">
-                    <span class="call-explanation__desc-icon call-explanation__desc-icon--4"></span>
-                    <p class="call-explanation__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget
-                      mauris molestie arcu.</p>
-                  </li>
-                </ul>
-              </li>
-              <li class="call-explanation__item">
-                <strong class="call-explanation__item-title call-explanation__item-title--3">Оплата</strong>
-                <ul class="call-explanation__desc-list">
-                  <li class="call-explanation__desc-item">
-                    <span class="call-explanation__desc-icon call-explanation__desc-icon--5"></span>
-                    <p class="call-explanation__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacinia.
-                    </p>
-                  </li>
-                  <li class="call-explanation__desc-item">
-                    <span class="call-explanation__desc-icon call-explanation__desc-icon--6"></span>
-                    <p class="call-explanation__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat
-                      augue at.</p>
-                  </li>
-                </ul>
-              </li>
-              <li class="call-explanation__item">
-                <strong class="call-explanation__item-title call-explanation__item-title--4">Відеодзвінок</strong>
-                <ul class="call-explanation__desc-list">
-                  <li class="call-explanation__desc-item">
-                    <span class="call-explanation__desc-icon call-explanation__desc-icon--7"></span>
-                    <p class="call-explanation__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacinia.
-                    </p>
-                  </li>
-                  <li class="call-explanation__desc-item">
-                    <span class="call-explanation__desc-icon call-explanation__desc-icon--8"></span>
-                    <p class="call-explanation__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat
-                      augue at.</p>
-                  </li>
-                </ul>
-              </li>
-              <li class="call-explanation__item">
-                <strong class="call-explanation__item-title call-explanation__item-title--5">Відгук</strong>
-                <ul class="call-explanation__desc-list">
-                  <li class="call-explanation__desc-item">
-                    <span class="call-explanation__desc-icon call-explanation__desc-icon--9"></span>
-                    <p class="call-explanation__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacinia.
-                    </p>
-                  </li>
-                  <li class="call-explanation__desc-item">
-                    <span class="call-explanation__desc-icon call-explanation__desc-icon--10"></span>
-                    <p class="call-explanation__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat
-                      augue at.</p>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-            <button class="call-explanation__btn btn-temp btn-red" type="button">Закрити</button>
-          </div>
-        </section>
+        <div class="call-popup-mobile">
+          <section class="call-explanation">
+            <div class="call-explanation__content width-window">
+              <button class="call-explanation__close"></button>
+              <h2 class="call-explanation__title">“Відеодзвінок з юристом” як працює ця система</h2>
+              <ul class="call-explanation__list">
+                <li class="call-explanation__item">
+                  <strong class="call-explanation__item-title call-explanation__item-title--1">Вибір</strong>
+                  <ul class="call-explanation__desc-list">
+                    <li class="call-explanation__desc-item">
+                      <span class="call-explanation__desc-icon call-explanation__desc-icon--1"></span>
+                      <p class="call-explanation__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim
+                        aenean eget nulla.</p>
+                    </li>
+                    <li class="call-explanation__desc-item">
+                      <span class="call-explanation__desc-icon call-explanation__desc-icon--2"></span>
+                      <p class="call-explanation__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Posuere
+                        ac vulputate vel eget. </p>
+                    </li>
+                  </ul>
+                </li>
+                <li class="call-explanation__item">
+                  <strong class="call-explanation__item-title call-explanation__item-title--2">Дзвінок</strong>
+                  <ul class="call-explanation__desc-list">
+                    <li class="call-explanation__desc-item">
+                      <span class="call-explanation__desc-icon call-explanation__desc-icon--3"></span>
+                      <p class="call-explanation__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lacinia.
+                      </p>
+                    </li>
+                    <li class="call-explanation__desc-item">
+                      <span class="call-explanation__desc-icon call-explanation__desc-icon--4"></span>
+                      <p class="call-explanation__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget
+                        mauris molestie arcu.</p>
+                    </li>
+                  </ul>
+                </li>
+                <li class="call-explanation__item">
+                  <strong class="call-explanation__item-title call-explanation__item-title--3">Оплата</strong>
+                  <ul class="call-explanation__desc-list">
+                    <li class="call-explanation__desc-item">
+                      <span class="call-explanation__desc-icon call-explanation__desc-icon--5"></span>
+                      <p class="call-explanation__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lacinia.
+                      </p>
+                    </li>
+                    <li class="call-explanation__desc-item">
+                      <span class="call-explanation__desc-icon call-explanation__desc-icon--6"></span>
+                      <p class="call-explanation__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Consequat
+                        augue at.</p>
+                    </li>
+                  </ul>
+                </li>
+                <li class="call-explanation__item">
+                  <strong class="call-explanation__item-title call-explanation__item-title--4">Відеодзвінок</strong>
+                  <ul class="call-explanation__desc-list">
+                    <li class="call-explanation__desc-item">
+                      <span class="call-explanation__desc-icon call-explanation__desc-icon--7"></span>
+                      <p class="call-explanation__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lacinia.
+                      </p>
+                    </li>
+                    <li class="call-explanation__desc-item">
+                      <span class="call-explanation__desc-icon call-explanation__desc-icon--8"></span>
+                      <p class="call-explanation__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Consequat
+                        augue at.</p>
+                    </li>
+                  </ul>
+                </li>
+                <li class="call-explanation__item">
+                  <strong class="call-explanation__item-title call-explanation__item-title--5">Відгук</strong>
+                  <ul class="call-explanation__desc-list">
+                    <li class="call-explanation__desc-item">
+                      <span class="call-explanation__desc-icon call-explanation__desc-icon--9"></span>
+                      <p class="call-explanation__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lacinia.
+                      </p>
+                    </li>
+                    <li class="call-explanation__desc-item">
+                      <span class="call-explanation__desc-icon call-explanation__desc-icon--10"></span>
+                      <p class="call-explanation__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Consequat
+                        augue at.</p>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <button class="call-explanation__btn btn-temp btn-red" type="button">Закрити</button>
+            </div>
+          </section>
+        </div>
         <section class="call-about">
           <h2 class="call-about__title">Мы перенесли офис юриста в девайс клиента</h2>
           <ul class="call-about__list">

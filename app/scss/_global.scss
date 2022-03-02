@@ -1122,8 +1122,10 @@ textarea {
 }
 
 .hr {
+	display: block;
 	border: none;
-	width: 100vw;
+	margin: 0 -100vw;
+	padding: 0 100vw;
 	height: 1px;
 	background-color: #e0e0e0;
 }
