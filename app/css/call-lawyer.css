@@ -1903,7 +1903,8 @@
   -ms-flex-pack: center;
   justify-content: center;
   background: rgba(0, 0, 0, 0.9);
-  color: #fff
+  color: #fff;
+  height: 100%;
 }
 
 .call-lawyer-incoming__content {

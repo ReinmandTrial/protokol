@@ -1,3 +1,10 @@
+ 
+
+.call *,
+.call *::after,
+.call *::before {
+  box-sizing: inherit;
+}
 @font-face {
   font-family: "Open Sans";
   src: url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Bold.woff") format("woff");
@@ -3068,7 +3075,7 @@
   font-weight: 400;
   margin-bottom: 40px;
   text-align: center;
-  padding-right: 30px;
+  /* padding-right: 30px; */
 }
 
 @media (max-width: 767.98px) {
@@ -3312,7 +3319,7 @@
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-bottom: 120px;
+  margin-bottom: 120px; 
 }
 
 @media (max-width: 991.98px) {
@@ -3520,6 +3527,7 @@
   padding: 8px;
   background: rgba(0, 0, 0, 0.75);
   border-radius: 4px;
+  box-sizing: border-box;
 }
 
 .call-video__item-info-text {

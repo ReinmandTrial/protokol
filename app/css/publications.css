@@ -194,6 +194,7 @@
    font-size: 18px;
    font-weight: 600;
 }
+
 .publications {
 }
 @media (max-width: 767.98px) {
@@ -309,15 +310,6 @@ h3.publications__title {
    border: 1px solid #cc7f31;
    border-radius: 4px;
    background: #fff;
-}
-.publications__sort-item {
-   font-size: 14px;
-   padding: 7px 11px;
-   display: block;
-   width: 100%;
-   text-align: left;
-   background: transparent;
-   border: none;
 }
 .publications__sort-item:hover {
    background: #c74a2e;

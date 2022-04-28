@@ -30,22 +30,25 @@ document.addEventListener("DOMContentLoaded", () => {
           e.target.closest('.js-review-form').remove()
         })
       })
-      // document.querySelectorAll('.js-review-submit').forEach((btnSubmit) => {
-      //   btnSubmit.addEventListener('click', (e) => {
-      //     e.target.closest('.js-review-form').remove()
-      //   })
-      // })
     })
   })
+
+  $('.search-by-adaptive-lawyer__title-wrap').on('click', function () {
+    $(this).closest('.search-by-adaptive-lawyer').toggleClass('active')
+    $(this).closest('.lawyer__main').toggleClass('lawyer-hide')
+  })
+  $('.search-by-lawyer__btn').on('click', function () {
+    $(this).closest('.search-by-lawyer__item').toggleClass('active')
+    // $(this).closest('.lawyer__main').toggleClass('hide')
+  })
+  $('.search-lawyer__input').on('focusin', function () {
+    $(this).closest('.search-lawyer__input-wrap').addClass('active')
+  })
+  $(document).on('click', function (e) {
+    if (!e.target.closest('.search-lawyer__input-wrap')) {
+      $('.search-lawyer__input-wrap').removeClass('active')
+    }
+  })
+
 });
 
-
-// js-view-answer
-// js-hide-answer
-// js-body
-
-// js-write-answer
-// js-comment-head
-// js-review-form
-// js-review-cancel
-// js-review-submit

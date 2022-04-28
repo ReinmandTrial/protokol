@@ -79,9 +79,7 @@
       gtag('config', 'UA-50967770-2');
    </script>
 
-   <link rel="stylesheet" href="./css/publications.css">
-
-   
+   <link rel="stylesheet" href="./css/call-lawyer.css">
    <link href="https://protocol.ua/css/sidebar.css" rel="stylesheet">
    <link href="https://protocol.ua/assets/9cc1d78f/css/bootstrap.min.css" rel="stylesheet">
    <link href="https://protocol.ua/css/style.css" rel="stylesheet">
@@ -95,7 +93,82 @@
       async="" data-inv="//inv-nets.admixer.net/" data-r="single" data-sender="admixer" data-bundle="desktop"></script>
 
    <!--Код в <head> -->
+   <script>
+      !(function () {
+         window.googletag = window.googletag || {};
+         window.vmpbjs = window.vmpbjs || {};
+         window.vpb = window.vpb || {};
+         vpb.fastLoad = true;
+         googletag.cmd = googletag.cmd || [];
+         vmpbjs.cmd = vmpbjs.cmd || [];
+         var cmds = googletag.cmd.slice(0) || [];
+         googletag.cmd.length = 0;
+         var ready = false;
 
+         function exec(cb) {
+            return cb.call(googletag);
+         }
+         googletag.cmd.push(function () {
+            googletag.cmd.unshift = function (cb) {
+               if (ready) {
+                  return exec(cb);
+               }
+               cmds.unshift(cb);
+               if (cb._startgpt) {
+                  ready = true;
+                  cmds.forEach(cb => {
+                     exec(cb);
+                  });
+               }
+            };
+            googletag.cmd.push = function (cb) {
+               if (ready) {
+                  return exec(cb);
+               }
+               cmds.push(cb);
+            };
+         });
+         googletag.cmd.push = function (cb) {
+            cmds.push(cb)
+         };
+         googletag.cmd.unshift = function (cb) {
+            cmds.unshift(cb);
+            if (cb._startgpt) {
+               ready = true;
+               if (googletag.apiReady) {
+                  cmds.forEach(function (cb) {
+                     googletag.cmd.push(cb);
+                  })
+               } else {
+                  googletag.cmd = cmds;
+               }
+            }
+         };
+         var dayMs = 36e5,
+            cb = parseInt(Date.now() / dayMs),
+            vpbSrc = '//player.adtelligent.com/prebidlink/' + cb + '/wrapper_hb_307180_6762.js',
+            pbSrc = vpbSrc.replace('wrapper_hb', 'hb'),
+            gptSrc = '//securepubads.g.doubleclick.net/tag/js/gpt.js',
+            c = document.head || document.body || document.documentElement;
+
+         function loadScript(src, cb) {
+            var s = document.createElement('script');
+            s.src = src;
+            s.defer = false;
+            c.appendChild(s);
+            s.onload = cb;
+            s.onerror = function () {
+               var fn = function () { };
+               fn._startgpt = true;
+               googletag.cmd.unshift(fn);
+            };
+            return s;
+         }
+         loadScript(pbSrc);
+         loadScript(gptSrc);
+         loadScript(vpbSrc);
+      })()
+   </script>
    <script
       src="./В Україні ставлять за мету знизити інфляцію на кінець року до 5%_files/hb_307180_6762.js.Без названия">
       </script>
@@ -110,7 +183,116 @@
          cmd: []
       };
    </script>
-
+   <script>
+      googletag.cmd.push(function () {
+         var mapping1 = googletag.sizeMapping()
+            .addSize([992, 0], [
+               [970, 250],
+               [970, 90],
+               [728, 90]
+            ])
+            .addSize([768, 0], [
+               [728, 90],
+               [300, 250]
+            ])
+            .addSize([320, 0], [
+               [300, 50],
+               [320, 50],
+               [300, 100],
+               [300, 250]
+            ])
+            .addSize([0, 0], [970, 250])
+            .build();
+         var mapping2 = googletag.sizeMapping()
+            .addSize([992, 0], [728, 90])
+            .addSize([768, 0], [
+               [300, 250],
+               [728, 90]
+            ])
+            .addSize([320, 0], [
+               [300, 50],
+               [320, 50],
+               [300, 100],
+               [300, 250]
+            ])
+            .addSize([0, 0], [300, 250])
+            .build();
+         var mapping3 = googletag.sizeMapping()
+            .addSize([768, 0], [
+               [300, 250],
+               [300, 600],
+               [160, 600]
+            ])
+            .addSize([320, 0], [
+               [300, 50],
+               [300, 100],
+               [300, 250],
+               [300, 600],
+               [160, 600]
+            ])
+            .addSize([0, 0], [300, 250])
+            .build();
+         var mapping4 = googletag.sizeMapping()
+            .addSize([992, 0], [
+               [970, 250],
+               [970, 90],
+               [728, 90]
+            ])
+            .addSize([768, 0], [
+               [468, 60],
+               [728, 90]
+            ])
+            .addSize([320, 0], [
+               [320, 50],
+               [300, 100],
+               [300, 250],
+               [300, 600]
+            ])
+            .addSize([0, 0], [970, 250])
+            .build();
+         var mapping5 = googletag.sizeMapping()
+            .addSize([992, 0], [
+               [1440, 90],
+               [970, 90],
+               [728, 90]
+            ])
+            .addSize([320, 0], [
+               [320, 50],
+               [320, 100],
+               [300, 100],
+               [300, 50]
+            ])
+            .addSize([0, 0], [970, 90])
+            .build();
+         gptadslots.push(googletag.defineSlot('/21939673208/protocol_bottom', [300, 250], 'div-gpt-ad-protocol_bottom')
+            .defineSizeMapping(mapping4)
+            .addService(googletag.pubads()));
+         gptadslots.push(googletag.defineSlot('/21939673208/protocol_sidebar', [300, 250],
+            'div-gpt-ad-protocol_sidebar')
+            .defineSizeMapping(mapping3)
+            .addService(googletag.pubads()));
+         gptadslots.push(googletag.defineSlot('/21939673208/protocol_top', [300, 250], 'div-gpt-ad-protocol_top')
+            .defineSizeMapping(mapping2)
+            .addService(googletag.pubads()));
+         gptadslots.push(googletag.defineSlot('/21939673208/protocol_under_category', [300, 250],
+            'div-gpt-ad-protocol_under_category')
+            .defineSizeMapping(mapping1)
+            .addService(googletag.pubads()));
+         gptadslots.push(googletag.defineSlot('/21939673208/protocol_catfish', [970, 250],
+            'div-gpt-ad-protocol_catfish')
+            .defineSizeMapping(mapping5)
+            .addService(googletag.pubads()));
+         gptadslots.push(googletag.defineSlot('/21939673208/protocol_mob_300x250', [300, 250],
+            'div-gpt-ad-protocol_mob_300x250')
+            .addService(googletag.pubads()));
+         gptadslots.push(googletag.defineSlot('/21939673208/protocol_mob_300x250', [300, 250],
+            'div-gpt-ad-protocol_mob_300x250_2')
+            .addService(googletag.pubads()));
+         googletag.pubads().enableSingleRequest();
+         googletag.pubads().collapseEmptyDivs();
+         googletag.enableServices();
+      });
+   </script>
    <script type="text/plain" id="vpb-catfish-template">
     <div class="vpb-catfish-container" style="position: fixed;bottom:0;left:0;right:0;z-index:1;">
       <div class="vpb-ad" style="display: block;position: relative;margin:0px auto;">
@@ -122,7 +304,39 @@
   </div>
 </script>
 
-
+   <script>
+      function catfish(div) {
+         var gt = window.googletag || {};
+         gt.cmd = gt.cmd || [];
+         gt.cmd.push(function () {
+            var template = document.getElementById('vpb-catfish-template').innerHTML;
+            var adContainer = document.getElementById(div);
+            adContainer.innerHTML = template;
+            adContainer.id = 'vpb-ad-wrapped-generated-' + (Math.random() + Date.now());
+            var innerWrapper = adContainer.getElementsByClassName('vpb-ad')[0];
+            var closeBtn = adContainer.getElementsByClassName('vpb-close-button')[0];
+            var newAdDiv = document.createElement('div');
+            newAdDiv.id = div;
+            innerWrapper.appendChild(newAdDiv);
+            googletag.pubads().addEventListener('slotRenderEnded', function (event) {
+               var slot = event.slot;
+               var slotId = slot.getSlotElementId();
+               if (slotId != div) return;
+               if (event.isEmpty) {
+                  closeBtn.style.display = 'none';
+                  return;
+               }
+               innerWrapper.style.width = event.size[0] + 'px';
+               innerWrapper.style.height = event.size[1] + 'px';
+               closeBtn.style.display = 'inline-block';
+               closeBtn.addEventListener('click', function () {
+                  adContainer.parentElement.removeChild(adContainer);
+               })
+            });
+            gt.display(div);
+         })
+      }
+   </script>
 
 
 
@@ -652,250 +866,117 @@
    </nav>
 
 
-   <div style="clear:both;"></div>
-   <div class="">
-      <div class="container">
-         <div class="row">
-            <div class="col-md-12">
-               <div class="crumbs">
-                  <span class="
-                                        ">
-                     <a class="crumbs__item
-                    
-                 
-                    
-                    " href="https://protocol.ua/ru/">
-                        Главная </a>
-                     <span class=""><img
-                           src="./В Україні ставлять за мету знизити інфляцію на кінець року до 5%_files/Vector.svg"></span>
-
-                  </span>
-
-
-                  <span class="
-                                        crumbs__item_center hide
-                                        ">
-                     <a class="crumbs__item
-                    
-                 
-                    
-                    " href="https://protocol.ua/ru/yurvideo_intervyu_konsultatsii/">
-                        Блог </a>
-                     <span class=""><img
-                           src="./В Україні ставлять за мету знизити інфляцію на кінець року до 5%_files/Vector.svg"></span>
-
-                  </span>
-                  <span class="crumbs__item_small_center">...</span>
-                  <span class="crumbs__item_small_center"><img
-                        src="./В Україні ставлять за мету знизити інфляцію на кінець року до 5%_files/Vector.svg"></span>
-
-
-                  <span class="
-                                        crumbs__item_center hide
-                                        ">
-                     <a class="crumbs__item
-                    
-                 
-                    
-                    " href="https://protocol.ua/ru/novosti/">
-                        Новости </a>
-                     <span class=""><img
-                           src="./В Україні ставлять за мету знизити інфляцію на кінець року до 5%_files/Vector.svg"></span>
-
-                  </span>
-
-
-
-
-
-                  <span class="crumbs__item_last crumbs__item_all hide"> В Україні ставлять за мету знизити інфляцію на
-                     кінець
-                     року до 5% </span>
-                  <span class="crumbs__item_last crumbs__item_small">В Україні ставлять за мету знизити інфляцію на
-                     кін...</span>
-
-
-
+   <div class="container">
+      <div class="row">
+         <div class="call-lawyer">
+            <div class="call-popup active">
+               <div class="call-lawyer-incoming">
+                  <div class="call-lawyer-incoming__content">
+                     <h2 class="call-lawyer-incoming__title">
+                        Вам звонит
+                        <span class="call-lawyer-incoming__name">Мироон Янович Фёдоров</span>
+                     </h2>
+                     <div class="call-lawyer-incoming__btn-wrap">
+                        <button class="call-lawyer-incoming__btn phone-call" type="button">
+                           <span class="phone-call__icon icon icon-phone-call"></span>
+                        </button>
+                        <button class="call-lawyer-incoming__btn phone-call decline" type="button">
+                           <span class="phone-call__icon icon icon-phone-call"></span>
+                        </button>
+                     </div>
+                     <p class="call-lawyer-incoming__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Pulvinar tristique est, in lorem erat urna. Hendrerit ultrices duis neque, eu. Egestas feugiat
+                        eget
+                        sollicitudin egestas dignissim ullamcorper aliquam nibh. Tincidunt et varius odio orci mus. Non
+                        sed
+                        ipsum nibh phasellus non aliquet. Elementum volutpat laoreet vitae at eros egestas fermentum. In
+                        cras
+                        dignissim nibh aliquet pulvinar sagittis consectetur.
+                     </p>
+                  </div>
                </div>
             </div>
+            <div class="call-lawyer-menu width-window">
+               <div class="call-lawyer-menu__top">
+                  <a class="call-lawyer-menu__profile" href="#">
+                     <span class="call-lawyer-menu__profile-icon icon icon-elephant"></span>
+                     Мій профайл
+                  </a>
+                  <div class="call-lawyer-menu__network">
+                     <span class="call-lawyer-menu__network-off">Offline</span>
+                     <span class="call-lawyer-menu__network-on">Online</span>
+                  </div>
+               </div>
+               <nav class="call-lawyer-menu__nav">
+                  <ul class="call-lawyer-menu__list">
+                     <li class="call-lawyer-menu__item">
+                        <a class="call-lawyer-menu__btn" href="#">
+                           Вопросы
+                           <span class="call-lawyer-menu__excess">
+                              ( <span class="call-lawyer-menu__btn--value">0</span> )
+                           </span>
+                        </a>
+                     </li>
+                     <li class="call-lawyer-menu__item">
+                        <a class="call-lawyer-menu__btn" href="#">
+                           Сообщения
+                           <span class="call-lawyer-menu__excess">
+                              ( <span class="call-lawyer-menu__btn--value">0</span> )
+                           </span>
+                        </a>
+                     </li>
+                     <li class="call-lawyer-menu__item">
+                        <a class="call-lawyer-menu__btn" href="#">
+                           Заказы
+                           <span class="call-lawyer-menu__excess">
+                              ( <span class="call-lawyer-menu__btn--value">0</span> )
+                           </span>
+                        </a>
+                     </li>
+                     <li class="call-lawyer-menu__item">
+                        <a class="call-lawyer-menu__btn active" href="#">
+                           Звонки
+                           <span class="call-lawyer-menu__excess">
+                              ( <span class="call-lawyer-menu__btn--value">0</span> )
+                           </span>
+                        </a>
+                     </li>
+                     <li class="call-lawyer-menu__item">
+                        <a class="call-lawyer-menu__btn" href="#">
+                           Публикации
+                           <span class="call-lawyer-menu__excess">
+                              ( <span class="call-lawyer-menu__btn--value">0</span> )
+                           </span>
+                        </a>
+                     </li>
+                  </ul>
+               </nav>
+               <div class="call-lawyer-menu__network desktop">
+                  <span class="call-lawyer-menu__network-off">Offline</span>
+                  <span class="call-lawyer-menu__network-on">Online</span>
+               </div>
+               <a class="call-lawyer-menu__profile desktop" href="#">Мій профайл</a>
+            </div>
+            <section class="call-lawyer-hero">
+               <div class="call-lawyer-hero__content">
+                  <div class="call-lawyer-hero__info">
+                     <div class="call-lawyer-hero__icon"></div>
+                     <div class="call-lawyer-hero__line"></div>
+                     <p class="call-lawyer-hero__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo nec
+                        ultrices fermentum diam a porta. Consectetur varius a.</p>
+                  </div>
+                  <form action="call-lawyer-hero__form">
+                     <label class="call-lawyer-hero__label">
+                        <input class="call-lawyer-hero__radio visually-hidden" type="checkbox" name="online">
+                        <span class="call-lawyer-hero__radio-custom"></span>
+                     </label>
+                  </form>
+               </div>
+            </section>
          </div>
       </div>
    </div>
-   <div class="container">
-      <div class="row">
-         <section class="publications open">
-            <div class="publications__content">
-               <div class="publications__sort-row">
-                  <h3 class="publications__title">
-                     Публикации
-                     <span>20/428</span>
-                  </h3>
-                  <div class="publications__sort">
-                     <button type="button" class="publications__sort-head">
-                        Все
-                        <span class="publications__sort-icon icon icon-triangle-round"></span>
-                     </button>
-                     <div class="publications__sort-body">
-                        <button type="button" class="publications__sort-item">Все</button>
-                        <button type="button" class="publications__sort-item">Аналитические статьи</button>
-                        <button type="button" class="publications__sort-item">Судебные решения</button>
-                        <button type="button" class="publications__sort-item">Консультации</button>
-                        <button type="button" class="publications__sort-item">Новости</button>
-                        <button type="button" class="publications__sort-item">Юридический мир</button>
-                     </div>
-                  </div>
-                  <button type="button" class="publications__btn-open icon icon-triangle-round"></button>
-               </div>
-               <div class="publications__body">
-                  <div class="publications__wrapper">
-                     <a href="#" class="publications__item card-article">
-                        <span class="card-article__img">
-                           <img src="images/other-news.jpg" alt="">
-                        </span>
-                        <span class="card-article__text">Огляд практики ВС від Ростислава Кравця, що опублікована
-                           з 01 по 07 травня 2021 року</span>
-                     </a>
-                     <a href="#" class="publications__item card-article">
-                        <span class="card-article__img">
-                           <img src="images/other-news.jpg" alt="">
-                        </span>
-                        <span class="card-article__text">Що не так з новим Українським правописом? Юридичний
-                           аналіз.</span>
-                     </a>
-                     <a href="#" class="publications__item card-article">
-                        <span class="card-article__img">
-                           <img src="images/other-news.jpg" alt="">
-                        </span>
-                        <span class="card-article__text">Огляд практики ВС від Ростислава Кравця, що опублікована
-                           з 08 по 14 травня 2021 року</span>
-                     </a>
-                     <a href="#" class="publications__item card-article">
-                        <span class="card-article__img">
-                           <img src="images/other-news.jpg" alt="">
-                        </span>
-                        <span class="card-article__text">Що не так з новим Українським правописом? Юридичний
-                           аналіз.</span>
-                     </a>
-                     <a href="#" class="publications__item card-article">
-                        <span class="card-article__img">
-                           <img src="images/other-news.jpg" alt="">
-                        </span>
-                        <span class="card-article__text">Огляд практики ВС від Ростислава Кравця, що опублікована
-                           з 08 по 14 травня 2021 року</span>
-                     </a>
-                     <a href="#" class="publications__item card-article">
-                        <span class="card-article__img">
-                           <img src="images/other-news.jpg" alt="">
-                        </span>
-                        <span class="card-article__text">Огляд практики ВС від Ростислава Кравця, що опублікована
-                           з 01 по 07 травня 2021 року</span>
-                     </a>
-                     <a href="#" class="publications__item card-article">
-                        <span class="card-article__img">
-                           <img src="images/other-news.jpg" alt="">
-                        </span>
-                        <span class="card-article__text">Огляд практики ВС від Ростислава Кравця, що опублікована
-                           з 01 по 07 травня 2021 року</span>
-                     </a>
-                     <a href="#" class="publications__item card-article">
-                        <span class="card-article__img">
-                           <img src="images/other-news.jpg" alt="">
-                        </span>
-                        <span class="card-article__text">Що не так з новим Українським правописом? Юридичний
-                           аналіз.</span>
-                     </a>
-                     <a href="#" class="publications__item card-article">
-                        <span class="card-article__img">
-                           <img src="images/other-news.jpg" alt="">
-                        </span>
-                        <span class="card-article__text">Огляд практики ВС від Ростислава Кравця, що опублікована
-                           з 08 по 14 травня 2021 року</span>
-                     </a>
-                     <a href="#" class="publications__item card-article">
-                        <span class="card-article__img">
-                           <img src="images/other-news.jpg" alt="">
-                        </span>
-                        <span class="card-article__text">Що не так з новим Українським правописом? Юридичний
-                           аналіз.</span>
-                     </a>
-                     <a href="#" class="publications__item card-article">
-                        <span class="card-article__img">
-                           <img src="images/other-news.jpg" alt="">
-                        </span>
-                        <span class="card-article__text">Огляд практики ВС від Ростислава Кравця, що опублікована
-                           з 08 по 14 травня 2021 року</span>
-                     </a>
-                     <a href="#" class="publications__item card-article">
-                        <span class="card-article__img">
-                           <img src="images/other-news.jpg" alt="">
-                        </span>
-                        <span class="card-article__text">Огляд практики ВС від Ростислава Кравця, що опублікована
-                           з 01 по 07 травня 2021 року</span>
-                     </a>
-                     <a href="#" class="publications__item card-article">
-                        <span class="card-article__img">
-                           <img src="images/other-news.jpg" alt="">
-                        </span>
-                        <span class="card-article__text">Огляд практики ВС від Ростислава Кравця, що опублікована
-                           з 01 по 07 травня 2021 року</span>
-                     </a>
-                     <a href="#" class="publications__item card-article">
-                        <span class="card-article__img">
-                           <img src="images/other-news.jpg" alt="">
-                        </span>
-                        <span class="card-article__text">Що не так з новим Українським правописом? Юридичний
-                           аналіз.</span>
-                     </a>
-                     <a href="#" class="publications__item card-article">
-                        <span class="card-article__img">
-                           <img src="images/other-news.jpg" alt="">
-                        </span>
-                        <span class="card-article__text">Огляд практики ВС від Ростислава Кравця, що опублікована
-                           з 08 по 14 травня 2021 року</span>
-                     </a>
-                     <a href="#" class="publications__item card-article">
-                        <span class="card-article__img">
-                           <img src="images/other-news.jpg" alt="">
-                        </span>
-                        <span class="card-article__text">Що не так з новим Українським правописом? Юридичний
-                           аналіз.</span>
-                     </a>
-                     <a href="#" class="publications__item card-article">
-                        <span class="card-article__img">
-                           <img src="images/other-news.jpg" alt="">
-                        </span>
-                        <span class="card-article__text">Огляд практики ВС від Ростислава Кравця, що опублікована
-                           з 08 по 14 травня 2021 року</span>
-                     </a>
-                     <a href="#" class="publications__item card-article">
-                        <span class="card-article__img">
-                           <img src="images/other-news.jpg" alt="">
-                        </span>
-                        <span class="card-article__text">Огляд практики ВС від Ростислава Кравця, що опублікована
-                           з 01 по 07 травня 2021 року</span>
-                     </a>
-                     <a href="#" class="publications__item card-article">
-                        <span class="card-article__img">
-                           <img src="images/other-news.jpg" alt="">
-                        </span>
-                        <span class="card-article__text">Огляд практики ВС від Ростислава Кравця, що опублікована
-                           з 08 по 14 травня 2021 року</span>
-                     </a>
-                     <a href="#" class="publications__item card-article">
-                        <span class="card-article__img">
-                           <img src="images/other-news.jpg" alt="">
-                        </span>
-                        <span class="card-article__text">Огляд практики ВС від Ростислава Кравця, що опублікована
-                           з 01 по 07 травня 2021 року</span>
-                     </a>
-                  </div>
-                  <button type="button" class="publications__show-more btn-red">Показать еще</button>
-               </div>
-            </div>
 
-         </section>
-      </div>
-   </div>
    </div>
 
 
