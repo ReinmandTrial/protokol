@@ -187,7 +187,6 @@
 .icon-triangle:before {
    content: '';
 }
-
 .safe-transaction {
    font-family: 'Open Sans';
    margin-top: 50px;
@@ -494,7 +493,33 @@
    }
 }
 .safe-transaction .privilege {
+   padding-left: calc((100vw - 1170px) / 2);
+   margin-left: calc((-100vw + 1170px) / 2);
+   padding-right: calc((100vw - 1170px) / 2);
+   margin-right: calc((-100vw + 1170px) / 2);
    background: #fff8ea;
+}
+@media (max-width: 1199.98px) {
+   .safe-transaction .privilege {
+      padding-left: calc((100vw - 970px) / 2);
+      margin-left: calc((-100vw + 970px) / 2);
+      padding-right: calc((100vw - 970px) / 2);
+      margin-right: calc((-100vw + 970px) / 2);
+   }
+}
+@media (max-width: 991.98px) {
+   .safe-transaction .privilege {
+      padding-left: calc((100vw - 750px) / 2);
+      margin-left: calc((-100vw + 750px) / 2);
+      padding-right: calc((100vw - 750px) / 2);
+      margin-right: calc((-100vw + 750px) / 2);
+   }
+}
+@media (max-width: 767.98px) {
+   .safe-transaction .privilege {
+      padding: 0px 0px;
+      margin: 0px 0px;
+   }
 }
 @media (max-width: 991.98px) {
    .safe-transaction .privilege {
