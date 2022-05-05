@@ -267,7 +267,7 @@ $mobileSmall: 479.98px;
          font-weight: 600;
          font-size: 26px;
          line-height: 35px;
-         padding: 0px 15px;
+         // padding: 0px 15px;
          margin: 0px 0px 30px 0px;
       }
    }
@@ -302,6 +302,10 @@ $mobileSmall: 479.98px;
 
       &_2 {
          flex: 0 1 265px;
+         transform: translate(0px, 70px);
+         @media (max-width: 1200px) {
+            transform: translate(0px, 0px);
+         }
          @media (max-width: $mobile) {
             flex: 0 1 345px;
          }
@@ -344,7 +348,7 @@ $mobileSmall: 479.98px;
          padding: 0px 10px 0px 10px;
          flex: 1 0 auto;
          text-align: center;
-         @media (max-width: $tablet) {
+         @media (max-width: 1200px) {
             order: 1;
             font-size: 20px;
             line-height: 27px;
@@ -364,7 +368,7 @@ $mobileSmall: 479.98px;
       &_2 {
          order: 1;
          transform: translate(0px, -70px);
-         @media (max-width: $tablet) {
+         @media (max-width: 1200px) {
             order: 2;
             transform: translate(0px, 70px);
          }

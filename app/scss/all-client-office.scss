@@ -1,0 +1,473 @@
+$pc: 1024.98px;
+$tablet: 991.98px;
+$mobile: 767.98px;
+$mobileSmall: 479.98px;
+
+.container {
+   height: auto;
+}
+.all-dialogue-main {
+   .call-lawyer {
+      padding-bottom: 42px;
+      @media (max-width: $mobile) {
+         padding-bottom: 20px;
+      }
+   }
+   .call-lawyer-menu {
+      margin-bottom: 20px;
+      @media (max-width: $mobile) {
+         padding-right: 15px;
+         padding-left: 15px;
+         margin-bottom: 30px;
+      }
+   }
+}
+//ONE-DIALOGUE START========================================================================================================================================================
+
+.one-dialogue {
+   font-family: 'Open Sans';
+   margin: 0px 5px;
+
+   &__table {
+      border: 1px solid #bdbdbd;
+      border-radius: 4px;
+   }
+
+   &__table-head {
+      background: #bdbdbd;
+      font-size: 18px;
+      line-height: 25px;
+      display: flex;
+      padding: 18px 0px;
+      p {
+         margin: 0px 0px 0px 0px;
+      }
+   }
+
+   &__table-head-title {
+      font-weight: 400;
+      flex: 1 1 50%;
+      padding: 0px 0px 0px 150px;
+      @media (max-width: $tablet) {
+         padding: 0px 0px 0px 10px;
+         font-size: 16px;
+         line-height: 22px;
+      }
+   }
+
+   &__table-head-date {
+      font-weight: 600;
+      flex: 1 1 50%;
+      padding: 0px 160px 0px 0px;
+      text-align: right;
+      @media (max-width: $tablet) {
+         padding: 0px 10px 0px 0px;
+         font-size: 16px;
+         line-height: 22px;
+      }
+   }
+
+   &__body {
+      display: flex;
+      min-height: 165px;
+      @media (max-width: $tablet) {
+         flex-wrap: wrap;
+      }
+   }
+
+   &__first-column {
+      flex: 1 1 33.333%;
+      border-right: 1px solid #bdbdbd;
+      @media (max-width: $tablet) {
+         border-right: none;
+         flex: 1 1 100%;
+      }
+   }
+
+   &__user {
+      padding: 20px 0px 0px 20px;
+      @media (max-width: $tablet) {
+         padding: 15px 0px 0px 10px;
+      }
+   }
+
+   &__second-column {
+      flex: 1 1 33.333%;
+      border-right: 1px solid #bdbdbd;
+      display: flex;
+      justify-content: center;
+      padding: 40px 0px 0px 0px;
+      @media (max-width: $tablet) {
+         border-right: none;
+         flex: 1 1 50%;
+         order: 3;
+         justify-content: start;
+      }
+   }
+
+   &__link-file {
+      a,
+      a:hover {
+         text-decoration: none;
+         font-weight: 400;
+         font-size: 16px;
+         line-height: 22px;
+         color: #c74a2e;
+      }
+      @media (max-width: $tablet) {
+         padding: 0px 0px 0px 20px;
+      }
+   }
+
+   &__third-column {
+      flex: 1 1 33.333%;
+      display: flex;
+      justify-content: center;
+      padding: 25px 0px 0px 0px;
+      @media (max-width: $tablet) {
+         order: 2;
+         justify-content: space-between;
+      }
+   }
+
+   &__datetime-list {
+      text-align: center;
+      @media (max-width: $tablet) {
+         font-size: 12px;
+         line-height: 16px;
+         text-align: left;
+         margin: 0px 0px 0px 10px;
+      }
+   }
+
+   &__date {
+   }
+
+   &__time {
+   }
+
+   &__btn-delete {
+      max-width: 26px;
+      transform: translate(70px, 13px);
+      cursor: pointer;
+      @media (max-width: $tablet) {
+         transform: translate(200px, 13px);
+      }
+      @media (max-width: 370px) {
+         transform: translate(165px, 13px);
+      }
+   }
+}
+.user-dialogue {
+   display: flex;
+
+   &__img {
+      flex: 0 0 60px;
+      margin: 0px 12px 0px 0px;
+   }
+
+   &__info {
+      flex: 1 1 auto;
+      @media (max-width: $tablet) {
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+      }
+   }
+
+   &__name {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 134%;
+      color: #c74a2e;
+      margin: 0px 0px 5px 0px;
+      max-width: 170px;
+      @media (max-width: $tablet) {
+         max-width: none;
+         padding: 0px 10px 0px 0px;
+      }
+   }
+   &__status {
+      font-weight: 600;
+      font-size: 10px;
+      line-height: 14px;
+      color: #27ae60;
+      @media (max-width: $tablet) {
+         margin: 0px 0px 0px 0px;
+      }
+   }
+}
+
+//ONE-DIALOGUE END========================================================================================================================================================
+
+//MORE-DIALOGUES START========================================================================================================================================================
+
+.more-dialogues {
+   .user-dialogue {
+      &__img {
+      }
+
+      &__info {
+         text-align: left;
+      }
+
+      &__name {
+      }
+
+      &__status {
+         font-size: 11px;
+      }
+   }
+}
+
+//TABS========================================================================================================================================================
+
+.tabs {
+   display: flex;
+   justify-content: space-between;
+   @media (max-width: 1200px) {
+      margin: 0px 15px;
+   }
+   @media (max-width: $tablet) {
+      flex-direction: column;
+      margin: 0px 0px 0px 0px;
+   }
+
+   &__main-column-left {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #bdbdbd;
+      border-radius: 4px;
+      @media (max-width: 1200px) {
+         margin: 0px 15px 0px 0px;
+      }
+      @media (max-width: $tablet) {
+         border: none;
+         margin: 0px 4px;
+      }
+   }
+
+   &__main-chats-title {
+      background: #bdbdbd;
+      border-radius: 4px 4px 0px 0px;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 25px;
+      padding: 18px 126px;
+      @media (max-width: $tablet) {
+         padding: 18px 10px;
+         margin-bottom: 12px;
+      }
+   }
+
+   &__main-navigation {
+      display: flex;
+      flex-direction: column;
+   }
+
+   &__main-title {
+      background-color: #fff;
+      border: none;
+      padding: 10px 18px;
+      @media (max-width: $tablet) {
+         min-width: 100%;
+         box-shadow: 0px 2px 7px 2px rgba(0, 0, 0, 0.08);
+         border-radius: 4px;
+         margin-bottom: 20px;
+      }
+      &._tab-active {
+         background: #c74a2e;
+         .user-dialogue {
+            &__img {
+            }
+
+            &__info {
+            }
+
+            &__name {
+               color: #fff;
+            }
+
+            &__status {
+               color: #fff;
+            }
+         }
+      }
+   }
+
+   &__main-column-right {
+      flex: 0 1 830px;
+      @media (max-width: $tablet) {
+         padding: 0px 8px;
+         flex: 1 1 auto;
+      }
+   }
+
+   &__main-body {
+      border: 1px solid #bdbdbd;
+      box-sizing: border-box;
+      border-radius: 4px;
+      @media (max-width: $tablet) {
+         margin-bottom: 20px;
+      }
+   }
+}
+
+//TABSIN========================================================================================================================================================
+
+.tabsin {
+   &__inside-row-top {
+      display: flex;
+      border-bottom: 1px solid #bdbdbd;
+      box-sizing: border-box;
+      border-radius: 4px;
+      @media (max-width: $mobile) {
+         display: block;
+      }
+   }
+
+   &__inside-user {
+      margin: 8px 70px 0px 17px;
+      flex: 0 0 236px;
+      @media (max-width: $mobile) {
+         display: none;
+      }
+
+      .user-dialogue {
+         &__img {
+            max-width: 52px;
+         }
+
+         &__info {
+         }
+
+         &__name {
+            color: #000000;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+         }
+
+         &__status {
+            font-weight: 600;
+            font-size: 11px;
+            line-height: 15px;
+            color: #c74a2e;
+         }
+      }
+   }
+
+   &__inside-navigation {
+      display: flex;
+      align-items: center;
+      column-gap: 40px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 22px;
+      @media (max-width: $mobile) {
+         padding: 19px 11px;
+         justify-content: space-between;
+      }
+   }
+
+   &__inside-title {
+      background-color: #fff;
+      border: none;
+      &._tab-active {
+         color: #c74a2e;
+      }
+   }
+
+   &__inside-content {
+   }
+
+   &__inside-body {
+   }
+
+   &__inside-row-bottom {
+      display: flex;
+      min-height: 170px;
+      margin: 27px 0px 0px 0px;
+      @media (max-width: 1200px) {
+         flex-wrap: wrap;
+      }
+      @media (max-width: $mobile) {
+         margin: 20px 0px 0px 0px;
+         min-height: 150px;
+      }
+   }
+
+   &__inside-row-bottom-order {
+      margin: 0px 53px 0px 65px;
+      position: relative;
+      &:hover {
+         text-decoration: underline;
+         color: #c74a2e;
+      }
+      &::before {
+         content: url(../images/more-dialogues/order.svg);
+         position: absolute;
+         width: 42px;
+         height: 42px;
+         top: -7px;
+         left: -46px;
+         @media (max-width: $mobile) {
+            top: 0;
+         }
+      }
+      @media (max-width: 1200px) {
+         flex: 1 1 100%;
+      }
+      @media (max-width: $mobile) {
+         margin-bottom: 10px;
+      }
+   }
+
+   &__inside-row-bottom-button-container {
+      margin: 0px 30px 0px 0px;
+      @media (max-width: 1200px) {
+         margin: 0px 30px 0px 30px;
+      }
+      @media (max-width: $mobile) {
+         margin: 0px 30px 0px 10px;
+      }
+      @media (max-width: 370px) {
+         flex: 1 1 150px;
+      }
+   }
+   &__inside-row-bottom-button {
+      border: none;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 19px;
+      background: #cc7f31;
+      border-radius: 20px;
+      color: #fff;
+      padding: 8px 27px;
+      &:active {
+         border: none;
+      }
+   }
+
+   &__inside-row-bottom-mail {
+      margin: 0px 20px 0px 0px;
+      @media (max-width: $mobile) {
+         margin: 0px 30px 0px 0px;
+      }
+   }
+
+   &__inside-row-bottom-print {
+   }
+}
+
+//MORE-DIALOGUES END========================================================================================================================================================
+
+//PROFILE-CLIENT START========================================================================================================================================================
+
+.profile-client {
+   max-width: 1170px;
+   margin: 0 auto;
+   margin-top: 100px;
+}
+
+//PROFILE-CLIENT END========================================================================================================================================================
