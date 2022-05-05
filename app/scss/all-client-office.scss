@@ -976,3 +976,95 @@ $mobileSmall: 479.98px;
    &__print {
    }
 }
+
+//POPAP REVIEW FIX MOBILE ========================================================================================================================================================
+
+.call-review {
+   font-family: 'Open Sans';
+   &__content {
+      @media (max-width: 575.98px) {
+         width: 375px;
+         height: 525px;
+      }
+   }
+
+   &__close {
+   }
+
+   &__title {
+      @media (max-width: 575.98px) {
+         font-weight: 400;
+         font-size: 20px;
+         line-height: 27px;
+         max-width: none;
+         margin-bottom: 40px;
+      }
+   }
+
+   &__list {
+      @media (max-width: 575.98px) {
+         padding: 0px 0px 0px 0px;
+      }
+   }
+
+   &__item {
+   }
+
+   &__radio-label {
+   }
+
+   &__radio {
+   }
+
+   &__radio-custom {
+      font-weight: 400;
+      line-height: 27px;
+      @media (max-width: 575.98px) {
+         font-size: 20px;
+         width: 30px;
+         height: 30px;
+      }
+   }
+
+   &__btn-desc-wrap {
+      @media (max-width: 575.98px) {
+         margin-bottom: 32px;
+      }
+   }
+
+   &__btn-desc {
+      @media (max-width: 575.98px) {
+         font-size: 10px;
+      }
+   }
+
+   &__label {
+      @media (max-width: 575.98px) {
+         font-size: 16px;
+      }
+   }
+
+   &__input-wrap {
+      @media (max-width: 575.98px) {
+         margin-bottom: 32px;
+      }
+   }
+
+   &__input {
+      @media (max-width: 575.98px) {
+         font-size: 14px;
+         height: 170px;
+      }
+   }
+
+   &__delete {
+   }
+
+   &__btn {
+   }
+   .btn-red {
+      @media (max-width: 575.98px) {
+         padding: 14px 59px;
+      }
+   }
+}
