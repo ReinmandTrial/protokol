@@ -17,22 +17,425 @@
             <div class="content">
                <section class="profile-client">
                   <div data-tabs class="profile-client-tabs">
-                     <nav data-tabs-titles class="tabs__navigation">
-                        <button type="button" class="profile-client-tabs__title _tab-active">div.profile-client-tabs__on</button>
-                        <button type="button" class="profile-client-tabs__title">Таб №2</button>
-                        <button type="button" class="profile-client-tabs__title">Таб №3</button>
-                        <button type="button" class="profile-client-tabs__title">Таб №3</button>
-                        <button type="button" class="profile-client-tabs__title">Таб №3</button>
+                     <nav data-tabs-titles class="profile-client-tabs__navigation">
+                        <button type="button" class="profile-client-tabs__title _tab-active">
+                           <div class="profile-client-tabs__on-signature">Заказы на подписи (<span>15</span>)</div>
+                        </button>
+                        <button type="button" class="profile-client-tabs__title">
+                           <div class="profile-client-tabs__on-payment">Заказы в оплате (<span>3</span>)</div>
+                        </button>
+                        <button type="button" class="profile-client-tabs__title">
+                           <div class="profile-client-tabs__on-work">Заказы в работе (<span>3</span>)</div>
+                        </button>
+                        <button type="button" class="profile-client-tabs__title">
+                           <div class="profile-client-tabs__complit-order">Выполненые заказы (<span>3</span>)</div>
+                        </button>
+                        <button type="button" class="profile-client-tabs__title">
+                           <div class="profile-client-tabs__safe-transaction">Безопасная сделка (<span>3</span>)</div>
+                        </button>
                      </nav>
                      <div data-tabs-body class="profile-client-tabs__content">
-                        <div class="profile-client-tabs__body">
-                           Содержимое первого таба
+                        <div class="profile-client-tabs__on-signature-list">
+                           <div class="profile-client-tabs__on-signature-item small-info-profail">
+                              <div class="small-info-profail__row">
+                                 <div class="small-info-profail__column-user">
+                                    <div class="small-info-profail__user user-dialogue">
+                                       <div class="user-dialogue__img">
+                                          <img src="images/one-dialogue/user.svg" alt="user" />
+                                       </div>
+                                       <div class="user-dialogue__info">
+                                          <p class="user-dialogue__name">Иванова Иванна Ивановна</p>
+                                          <p class="user-dialogue__status">Offline</p>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="small-info-profail__column-info">
+                                    <p class="small-info-profail__status">Статус: <span>Подписан юристом</span></p>
+                                    <p class="small-info-profail__date">Дата подачи: <span>12. 11. 2021</span></p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="profile-client-tabs__on-signature-item small-info-profail">
+                              <div class="small-info-profail__row">
+                                 <div class="small-info-profail__column-user">
+                                    <div class="small-info-profail__user user-dialogue">
+                                       <div class="user-dialogue__img">
+                                          <img src="images/one-dialogue/user.svg" alt="user" />
+                                       </div>
+                                       <div class="user-dialogue__info">
+                                          <p class="user-dialogue__name">Иванова Иванна Ивановна</p>
+                                          <p class="user-dialogue__status online-user">Online</p>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="small-info-profail__column-info">
+                                    <p class="small-info-profail__status">Статус: <span>Подписан юристом</span></p>
+                                    <p class="small-info-profail__date">Дата подачи: <span>12. 11. 2021</span></p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="profile-client-tabs__on-signature-item small-info-profail">
+                              <div class="small-info-profail__row">
+                                 <div class="small-info-profail__column-user">
+                                    <div class="small-info-profail__user user-dialogue">
+                                       <div class="user-dialogue__img">
+                                          <img src="images/one-dialogue/user.svg" alt="user" />
+                                       </div>
+                                       <div class="user-dialogue__info">
+                                          <p class="user-dialogue__name">Иванова Иванна Ивановна</p>
+                                          <p class="user-dialogue__status">Offline</p>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="small-info-profail__column-info">
+                                    <p class="small-info-profail__status">Статус: <span>Подписан юристом</span></p>
+                                    <p class="small-info-profail__date">Дата подачи: <span>12. 11. 2021</span></p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="profile-client-tabs__on-signature-item small-info-profail">
+                              <div class="small-info-profail__row">
+                                 <div class="small-info-profail__column-user">
+                                    <div class="small-info-profail__user user-dialogue">
+                                       <div class="user-dialogue__img">
+                                          <img src="images/one-dialogue/user.svg" alt="user" />
+                                       </div>
+                                       <div class="user-dialogue__info">
+                                          <p class="user-dialogue__name">Иванова Иванна Ивановна</p>
+                                          <p class="user-dialogue__status">Offline</p>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="small-info-profail__column-info">
+                                    <p class="small-info-profail__status">Статус: <span>Подписан юристом</span></p>
+                                    <p class="small-info-profail__date">Дата подачи: <span>12. 11. 2021</span></p>
+                                 </div>
+                              </div>
+                           </div>
                         </div>
-                        <div class="profile-client-tabs__body">
-                           Содержимое второго таба
+                        <div class="profile-client-tabs__on-payment-list">
+                           <div class="profile-client-tabs__on-payment-item big-info-profail">
+                              <div class="big-info-profail__column-main-info">
+                                 <div class="big-info-profail__user user-dialogue">
+                                    <div class="user-dialogue__img">
+                                       <img src="images/one-dialogue/user.svg" alt="user" />
+                                    </div>
+                                    <div class="user-dialogue__info">
+                                       <p class="user-dialogue__name">Иванова Иванна Ивановна</p>
+                                       <p class="user-dialogue__status online-user">Online</p>
+                                    </div>
+                                 </div>
+                                 <div class="big-info-profail__info">
+                                    <p class="big-info-profail__status">Статус: <span>Оплачен</span></p>
+                                    <p class="big-info-profail__price">Цена: 12 000 грн</p>
+                                    <p class="big-info-profail__date-closing">Дата заключения: <span>12. 11. 2021</span></p>
+                                    <p class="big-info-profail__date-realization">Дата выполнения :<span>13. 11. 2021</span></p>
+                                 </div>
+                              </div>
+                              <div class="big-info-profail__column-object-order">
+                                 <div class="big-info-profail__object-order-descr">
+                                    <p class="big-info-profail__object-order-title">Предмет договора:</p>
+                                    <p class="big-info-profail__object-order-text">
+                                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nibh eu eu tincidunt hac in
+                                       imperdiet eu sodales. Nec scelerisque lectus mauris elementum parturient at. Est nibh tincidunt sed
+                                       enim aliquet et. Eu velit in molestie at amet ut.
+                                    </p>
+                                 </div>
+                                 <div class="big-info-profail__buttons">
+                                    <div class="big-info-profail__buttons-container">
+                                       <button class="big-info-profail__button-orange">Оставить отзыв</button>
+                                    </div>
+                                    <div class="big-info-profail__buttons-container">
+                                       <button class="big-info-profail__button-red">Запись звонка</button>
+                                    </div>
+                                    <div class="big-info-profail__buttons-container">
+                                       <button class="big-info-profail__button-red">Посмотреть чат</button>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="profile-client-tabs__on-payment-item big-info-profail">
+                              <div class="big-info-profail__column-main-info">
+                                 <div class="big-info-profail__user user-dialogue">
+                                    <div class="user-dialogue__img">
+                                       <img src="images/one-dialogue/user.svg" alt="user" />
+                                    </div>
+                                    <div class="user-dialogue__info">
+                                       <p class="user-dialogue__name">Иванова Иванна Ивановна</p>
+                                       <p class="user-dialogue__status online-user">Online</p>
+                                    </div>
+                                 </div>
+                                 <div class="big-info-profail__info">
+                                    <p class="big-info-profail__status">Статус: <span>Оплачен</span></p>
+                                    <p class="big-info-profail__price">Цена: 12 000 грн</p>
+                                    <p class="big-info-profail__date-closing">Дата заключения: <span>12. 11. 2021</span></p>
+                                    <p class="big-info-profail__date-realization">Дата выполнения :<span>13. 11. 2021</span></p>
+                                 </div>
+                              </div>
+                              <div class="big-info-profail__column-object-order">
+                                 <div class="big-info-profail__object-order-descr">
+                                    <p class="big-info-profail__object-order-title">Предмет договора:</p>
+                                    <p class="big-info-profail__object-order-text">
+                                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nibh eu eu tincidunt hac in
+                                       imperdiet eu sodales. Nec scelerisque lectus mauris elementum parturient at. Est nibh tincidunt sed
+                                       enim aliquet et. Eu velit in molestie at amet ut.
+                                    </p>
+                                 </div>
+                                 <div class="big-info-profail__buttons">
+                                    <div class="big-info-profail__buttons-container">
+                                       <button class="big-info-profail__button-orange">Оставить отзыв</button>
+                                    </div>
+                                    <div class="big-info-profail__buttons-container">
+                                       <button class="big-info-profail__button-red">Запись звонка</button>
+                                    </div>
+                                    <div class="big-info-profail__buttons-container">
+                                       <button class="big-info-profail__button-red">Посмотреть чат</button>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
                         </div>
-                        <div class="profile-client-tabs__body">
-                           Содержимое третьего таба
+                        <div class="profile-client-tabs__on-work-list">
+                           <div class="profile-client-tabs__on-work-item big-info-profail">
+                              <div class="big-info-profail__column-main-info">
+                                 <div class="big-info-profail__user user-dialogue">
+                                    <div class="user-dialogue__img">
+                                       <img src="images/one-dialogue/user.svg" alt="user" />
+                                    </div>
+                                    <div class="user-dialogue__info">
+                                       <p class="user-dialogue__name">Иванова Иванна Ивановна</p>
+                                       <p class="user-dialogue__status">Online</p>
+                                    </div>
+                                 </div>
+                                 <div class="big-info-profail__info">
+                                    <p class="big-info-profail__status">Статус: <span>В работе</span></p>
+                                    <p class="big-info-profail__price">Цена: 12 000 грн</p>
+                                    <p class="big-info-profail__date-closing">Дата заключения: <span>12. 11. 2021</span></p>
+                                    <p class="big-info-profail__date-realization">Дата выполнения :<span>13. 11. 2021</span></p>
+                                 </div>
+                              </div>
+                              <div class="big-info-profail__column-object-order">
+                                 <div class="big-info-profail__object-order-descr">
+                                    <p class="big-info-profail__object-order-title">Предмет договора:</p>
+                                    <p class="big-info-profail__object-order-text">
+                                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nibh eu eu tincidunt hac in
+                                       imperdiet eu sodales. Nec scelerisque lectus mauris elementum parturient at. Est nibh tincidunt sed
+                                       enim aliquet et. Eu velit in molestie at amet ut.
+                                    </p>
+                                 </div>
+                                 <div class="big-info-profail__buttons">
+                                    <div class="big-info-profail__buttons-container">
+                                       <button class="big-info-profail__button-orange">Оставить отзыв</button>
+                                    </div>
+                                    <div class="big-info-profail__buttons-container">
+                                       <button class="big-info-profail__button-red">Запись звонка</button>
+                                    </div>
+                                    <div class="big-info-profail__buttons-container">
+                                       <button class="big-info-profail__button-red">Посмотреть чат</button>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="profile-client-tabs__on-work-item big-info-profail">
+                              <div class="big-info-profail__column-main-info">
+                                 <div class="big-info-profail__user user-dialogue">
+                                    <div class="user-dialogue__img">
+                                       <img src="images/one-dialogue/user.svg" alt="user" />
+                                    </div>
+                                    <div class="user-dialogue__info">
+                                       <p class="user-dialogue__name">Иванова Иванна Ивановна</p>
+                                       <p class="user-dialogue__status">Online</p>
+                                    </div>
+                                 </div>
+                                 <div class="big-info-profail__info">
+                                    <p class="big-info-profail__status">Статус: <span>В работе</span></p>
+                                    <p class="big-info-profail__price">Цена: 12 000 грн</p>
+                                    <p class="big-info-profail__date-closing">Дата заключения: <span>12. 11. 2021</span></p>
+                                    <p class="big-info-profail__date-realization">Дата выполнения :<span>13. 11. 2021</span></p>
+                                 </div>
+                              </div>
+                              <div class="big-info-profail__column-object-order">
+                                 <div class="big-info-profail__object-order-descr">
+                                    <p class="big-info-profail__object-order-title">Предмет договора:</p>
+                                    <p class="big-info-profail__object-order-text">
+                                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nibh eu eu tincidunt hac in
+                                       imperdiet eu sodales. Nec scelerisque lectus mauris elementum parturient at. Est nibh tincidunt sed
+                                       enim aliquet et. Eu velit in molestie at amet ut.
+                                    </p>
+                                 </div>
+                                 <div class="big-info-profail__buttons">
+                                    <div class="big-info-profail__buttons-container">
+                                       <button class="big-info-profail__button-orange">Оставить отзыв</button>
+                                    </div>
+                                    <div class="big-info-profail__buttons-container">
+                                       <button class="big-info-profail__button-red">Запись звонка</button>
+                                    </div>
+                                    <div class="big-info-profail__buttons-container">
+                                       <button class="big-info-profail__button-red">Посмотреть чат</button>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="profile-client-tabs__complit-order-list">
+                           <div class="profile-client-tabs__complit-order-item small-info-profail">
+                              <div class="small-info-profail__row">
+                                 <div class="small-info-profail__column-user">
+                                    <div class="small-info-profail__user user-dialogue">
+                                       <div class="user-dialogue__img">
+                                          <img src="images/one-dialogue/user.svg" alt="user" />
+                                       </div>
+                                       <div class="user-dialogue__info">
+                                          <p class="user-dialogue__name">Иванова Иванна Ивановна</p>
+                                          <p class="user-dialogue__status">Offline</p>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="small-info-profail__column-info">
+                                    <p class="small-info-profail__status">Статус: <span>Удален после исполненния</span></p>
+                                    <p class="small-info-profail__date">Дата подачи: <span>12. 11. 2021</span></p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="profile-client-tabs__complit-order-item small-info-profail">
+                              <div class="small-info-profail__row">
+                                 <div class="small-info-profail__column-user">
+                                    <div class="small-info-profail__user user-dialogue">
+                                       <div class="user-dialogue__img">
+                                          <img src="images/one-dialogue/user.svg" alt="user" />
+                                       </div>
+                                       <div class="user-dialogue__info">
+                                          <p class="user-dialogue__name">Иванова Иванна Ивановна</p>
+                                          <p class="user-dialogue__status">Offline</p>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="small-info-profail__column-info">
+                                    <p class="small-info-profail__status">Статус: <span>Удален после исполненния</span></p>
+                                    <p class="small-info-profail__date">Дата подачи: <span>12. 11. 2021</span></p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="profile-client-tabs__complit-order-item small-info-profail">
+                              <div class="small-info-profail__row">
+                                 <div class="small-info-profail__column-user">
+                                    <div class="small-info-profail__user user-dialogue">
+                                       <div class="user-dialogue__img">
+                                          <img src="images/one-dialogue/user.svg" alt="user" />
+                                       </div>
+                                       <div class="user-dialogue__info">
+                                          <p class="user-dialogue__name">Иванова Иванна Ивановна</p>
+                                          <p class="user-dialogue__status">Offline</p>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="small-info-profail__column-info">
+                                    <p class="small-info-profail__status">Статус: <span>Удален после исполненния</span></p>
+                                    <p class="small-info-profail__date">Дата подачи: <span>12. 11. 2021</span></p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="profile-client-tabs__complit-order-item small-info-profail">
+                              <div class="small-info-profail__row">
+                                 <div class="small-info-profail__column-user">
+                                    <div class="small-info-profail__user user-dialogue">
+                                       <div class="user-dialogue__img">
+                                          <img src="images/one-dialogue/user.svg" alt="user" />
+                                       </div>
+                                       <div class="user-dialogue__info">
+                                          <p class="user-dialogue__name">Иванова Иванна Ивановна</p>
+                                          <p class="user-dialogue__status">Offline</p>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="small-info-profail__column-info">
+                                    <p class="small-info-profail__status">Статус: <span>Удален после исполненния</span></p>
+                                    <p class="small-info-profail__date">Дата подачи: <span>12. 11. 2021</span></p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="profile-client-tabs__safe-transaction-list">
+                           <div class="profile-client-tabs__safe-transaction-item big-info-profail">
+                              <div class="big-info-profail__column-main-info">
+                                 <div class="big-info-profail__user user-dialogue">
+                                    <div class="user-dialogue__img">
+                                       <img src="images/one-dialogue/user.svg" alt="user" />
+                                    </div>
+                                    <div class="user-dialogue__info">
+                                       <p class="user-dialogue__name">Иванова Иванна Ивановна</p>
+                                       <p class="user-dialogue__status">Online</p>
+                                    </div>
+                                 </div>
+                                 <div class="big-info-profail__info">
+                                    <p class="big-info-profail__status">Тип: <span>Безопасная сделка</span></p>
+                                    <p class="big-info-profail__price">Цена: 12 000 грн</p>
+                                    <p class="big-info-profail__date-closing">Дата заключения: <span>12. 11. 2021</span></p>
+                                    <p class="big-info-profail__date-realization">Дата выполнения :<span>13. 11. 2021</span></p>
+                                 </div>
+                              </div>
+                              <div class="big-info-profail__column-object-order">
+                                 <div class="big-info-profail__object-order-descr">
+                                    <p class="big-info-profail__object-order-title">Предмет договора:</p>
+                                    <p class="big-info-profail__object-order-text">
+                                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nibh eu eu tincidunt hac in
+                                       imperdiet eu sodales. Nec scelerisque lectus mauris elementum parturient at. Est nibh tincidunt sed
+                                       enim aliquet et. Eu velit in molestie at amet ut.
+                                    </p>
+                                 </div>
+                                 <div class="big-info-profail__buttons">
+                                    <div class="big-info-profail__buttons-container">
+                                       <button class="big-info-profail__button-orange">Оставить отзыв</button>
+                                    </div>
+                                    <div class="big-info-profail__buttons-container">
+                                       <button class="big-info-profail__button-red">Запись звонка</button>
+                                    </div>
+                                    <div class="big-info-profail__buttons-container">
+                                       <button class="big-info-profail__button-red">Посмотреть чат</button>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="profile-client-tabs__safe-transaction-item big-info-profail">
+                              <div class="big-info-profail__column-main-info">
+                                 <div class="big-info-profail__user user-dialogue">
+                                    <div class="user-dialogue__img">
+                                       <img src="images/one-dialogue/user.svg" alt="user" />
+                                    </div>
+                                    <div class="user-dialogue__info">
+                                       <p class="user-dialogue__name">Иванова Иванна Ивановна</p>
+                                       <p class="user-dialogue__status">Online</p>
+                                    </div>
+                                 </div>
+                                 <div class="big-info-profail__info">
+                                    <p class="big-info-profail__status">Тип: <span>Безопасная сделка</span></p>
+                                    <p class="big-info-profail__price">Цена: 12 000 грн</p>
+                                    <p class="big-info-profail__date-closing">Дата заключения: <span>12. 11. 2021</span></p>
+                                    <p class="big-info-profail__date-realization">Дата выполнения :<span>13. 11. 2021</span></p>
+                                 </div>
+                              </div>
+                              <div class="big-info-profail__column-object-order">
+                                 <div class="big-info-profail__object-order-descr">
+                                    <p class="big-info-profail__object-order-title">Предмет договора:</p>
+                                    <p class="big-info-profail__object-order-text">
+                                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nibh eu eu tincidunt hac in
+                                       imperdiet eu sodales. Nec scelerisque lectus mauris elementum parturient at. Est nibh tincidunt sed
+                                       enim aliquet et. Eu velit in molestie at amet ut.
+                                    </p>
+                                 </div>
+                                 <div class="big-info-profail__buttons">
+                                    <div class="big-info-profail__buttons-container">
+                                       <button class="big-info-profail__button-orange">Оставить отзыв</button>
+                                    </div>
+                                    <div class="big-info-profail__buttons-container">
+                                       <button class="big-info-profail__button-red">Запись звонка</button>
+                                    </div>
+                                    <div class="big-info-profail__buttons-container">
+                                       <button class="big-info-profail__button-red">Посмотреть чат</button>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
                         </div>
                      </div>
                   </div>
@@ -43,7 +446,6 @@
          <!-- MAIN end -->
       </div>
       <!-- WRAPPER end -->
-
       <!-- SCRIPTS start  -->
    </body>
 </html>
