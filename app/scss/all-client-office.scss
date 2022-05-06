@@ -835,7 +835,7 @@ $mobileSmall: 479.98px;
 
 //PROFILE-CLIENT END========================================================================================================================================================
 
-//POPAP DOCUMENT========================================================================================================================================================
+//POPUP DOCUMENT========================================================================================================================================================
 
 .popup-document {
    display: none;
@@ -857,6 +857,8 @@ $mobileSmall: 479.98px;
    }
 
    &__content {
+      margin-top: 50px;
+      margin-bottom: 50px;
       background-color: #fff;
       max-width: 882px;
    }
@@ -882,7 +884,7 @@ $mobileSmall: 479.98px;
       min-height: 60px;
       position: relative;
       &:before {
-         content: url(../images/popup/elefant.svg);
+         content: url(../images/popup/elefant.png);
          position: absolute;
          top: 9px;
          left: 34px;
@@ -977,94 +979,481 @@ $mobileSmall: 479.98px;
    }
 }
 
-//POPAP REVIEW FIX MOBILE ========================================================================================================================================================
+//POPUP REFISTRATION========================================================================================================================================================
 
-.call-review {
+.popup-registration {
+   display: none;
    font-family: 'Open Sans';
+   overflow: auto;
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.75);
+   top: 0;
+   left: 0;
+   order: 10;
+   a,
+   a:hover,
+   a:active {
+      text-decoration: none !important;
+   }
+
+   &__body {
+      min-height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0px 15px;
+   }
+
    &__content {
-      @media (max-width: 575.98px) {
-         width: 375px;
-         height: 525px;
+      padding: 52px 47px;
+      background-color: #fff;
+      max-width: 526px;
+      max-height: 683px;
+      width: 100%;
+      @media (max-width: 550px) {
+         padding: 42px 12px;
+      }
+      @media (max-width: 370px) {
+         max-height: 710px;
       }
    }
 
-   &__close {
+   &__form {
    }
 
    &__title {
-      @media (max-width: 575.98px) {
-         font-weight: 400;
-         font-size: 20px;
-         line-height: 27px;
-         max-width: none;
-         margin-bottom: 40px;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 30px;
+      margin-bottom: 48px;
+      @media (max-width: 550px) {
+         text-align: center;
+         font-size: 18px;
       }
    }
 
-   &__list {
-      @media (max-width: 575.98px) {
-         padding: 0px 0px 0px 0px;
-      }
-   }
-
-   &__item {
-   }
-
-   &__radio-label {
-   }
-
-   &__radio {
-   }
-
-   &__radio-custom {
-      font-weight: 400;
-      line-height: 27px;
-      @media (max-width: 575.98px) {
-         font-size: 20px;
-         width: 30px;
-         height: 30px;
-      }
-   }
-
-   &__btn-desc-wrap {
-      @media (max-width: 575.98px) {
-         margin-bottom: 32px;
-      }
-   }
-
-   &__btn-desc {
-      @media (max-width: 575.98px) {
-         font-size: 10px;
+   &__item-email {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 32px;
+      position: relative;
+      &::after {
+         display: none;
+         content: url(../images/registration/done-email.png);
+         position: absolute;
+         top: 40px;
+         right: 20px;
       }
    }
 
    &__label {
-      @media (max-width: 575.98px) {
-         font-size: 16px;
-      }
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 19px;
+      margin-bottom: 8px;
    }
 
-   &__input-wrap {
-      @media (max-width: 575.98px) {
-         margin-bottom: 32px;
-      }
-   }
-
-   &__input {
-      @media (max-width: 575.98px) {
+   &__emaill {
+      border: 1px solid #d6d6d6;
+      border-radius: 4px;
+      height: 48px;
+      padding: 15px 50px 15px 15px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 19px;
+      color: #333333;
+      &::placeholder {
+         font-weight: 600;
          font-size: 14px;
-         height: 170px;
+         line-height: 19px;
+         color: #bdbdbd;
+      }
+      &:active {
+         border: none !important;
       }
    }
 
-   &__delete {
+   &__item-password {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 8px;
+      position: relative;
+      .passwor-see-svg {
+         display: none;
+         position: absolute;
+         top: 41px;
+         right: 20px;
+      }
+      .passwor-dont-see-svg {
+         position: absolute;
+         top: 44px;
+         right: 20px;
+      }
    }
 
-   &__btn {
+   &__password {
+      border: 1px solid #d6d6d6;
+      border-radius: 4px;
+      height: 48px;
+      padding: 15px 50px 15px 15px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 19px;
+      color: #333333;
+
+      &::placeholder {
+         font-weight: 600;
+         font-size: 14px;
+         line-height: 19px;
+         color: #bdbdbd;
+      }
+      &:active {
+         border: 1px solid #d6d6d6 !important;
+      }
    }
-   .btn-red {
-      @media (max-width: 575.98px) {
-         padding: 14px 59px;
+
+   &__row-remember-forgot {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      span {
+         margin: 0px 0px 0px 0px;
+         font-weight: 600;
+         font-size: 14px;
+         line-height: 19px;
+         color: #000000;
+      }
+   }
+
+   &__checkbox-item {
+   }
+
+   &__checkbox {
+      display: none;
+   }
+   .popup-registration__checkbox:checked + .popup-registration__cheklabel::after {
+      transform: scale(1);
+      transition: all 0.3s ease 0s;
+   }
+
+   &__cheklabel {
+      min-width: 150px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 19px;
+      display: inline-flex;
+      align-items: center;
+      position: relative;
+      cursor: pointer;
+      @media (max-width: 550px) {
+         font-size: 12px;
+      }
+
+      &::before {
+         content: '';
+         flex: 0 0 20px;
+         align-self: flex-start;
+         height: 20px;
+         border: 1px solid #c74a2e;
+         border-radius: 2px;
+         margin: 0px 4px 0px 0px;
+      }
+      &::after {
+         content: '';
+         width: 10px;
+         height: 10px;
+         position: absolute;
+         top: 5px;
+         left: 5px;
+         background: #c74a2e;
+         border-radius: 2px;
+         transform: scale(0);
+         transition: all 0.3s ease 0s;
+      }
+   }
+
+   &__forgot {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 19px;
+      a,
+      a:hover,
+      a:active {
+         color: #c74a2e !important;
+      }
+   }
+
+   &__item-button {
+      display: flex;
+      margin-bottom: 40px;
+   }
+
+   &__button {
+      cursor: pointer;
+      padding: 13px 0px;
+      flex: 1 1 432px;
+      background: #c74a2e;
+      border-radius: 4px;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 25px;
+      color: #ffffff;
+      border: none;
+      &:active {
+         border: none;
+      }
+   }
+
+   &__or {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      text-align: center;
+      margin-bottom: 40px;
+   }
+
+   &__list-login {
+      display: flex;
+      column-gap: 12px;
+      margin-bottom: 32px;
+      @media (max-width: 550px) {
+         column-gap: 9px;
+         justify-content: center;
+      }
+   }
+
+   &__login-fb {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 22px;
+      color: #ffffff;
+      background: #3679ea;
+      border-radius: 4px;
+      flex: 0 1 210px;
+      padding: 14px 0px 14px 41px;
+      position: relative;
+      a,
+      a:hover {
+         color: #fff !important;
+      }
+      @media (max-width: $mobileSmall) {
+         font-size: 14px;
+         padding: 17px 6px 15px 25px;
+         text-align: center;
+      }
+      @media (max-width: 370px) {
+         font-size: 10px;
+      }
+      &::before {
+         content: url(../images/registration/fb.png);
+         position: absolute;
+         top: 14px;
+         left: 14px;
+         @media (max-width: $mobileSmall) {
+            left: 7px;
+            top: 16px;
+         }
+      }
+   }
+
+   &__login-google {
+      flex: 0 1 210px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 22px;
+      border: 1px solid #e0e0e0;
+      padding: 14px 0px 14px 52px;
+      position: relative;
+      a,
+      a:hover,
+      a:active {
+         color: #000000 !important;
+      }
+      @media (max-width: $mobileSmall) {
+         padding: 15px 0px 15px 35px;
+         font-size: 14px;
+      }
+      @media (max-width: 370px) {
+         font-size: 10px;
+      }
+      &::before {
+         content: url(../images/registration/google.png);
+         position: absolute;
+         top: 16px;
+         left: 30px;
+         @media (max-width: $mobileSmall) {
+            left: 7px;
+         }
+      }
+   }
+
+   &__no-account {
+      text-align: center;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 19px;
+      color: #000000;
+      a,
+      a:hover,
+      a:active {
+         color: #b04e35;
+         font-weight: 700;
+      }
+      @media (max-width: $mobileSmall) {
+         margin-bottom: 20px;
       }
    }
 }
+
+//Класс добавлять на popup-registration__form
+.error-reg-form {
+   .popup-registration__emaill {
+      background: rgba(199, 74, 46, 0.18);
+   }
+   .popup-registration__password {
+      background: rgba(199, 74, 46, 0.18);
+   }
+   .error-text {
+      display: block !important;
+      padding: 4px 0px 0px 2px;
+      font-weight: 600;
+      font-size: 10px;
+      line-height: 14px;
+      color: #c74a2e;
+   }
+   .passwor-see-svg {
+      path {
+         fill: #c74a2e;
+      }
+   }
+   .passwor-dont-see-svg {
+      path {
+         fill: #c74a2e;
+      }
+   }
+}
+//Класс добавлять на popup-registration__form
+.min-symbol-reg-form {
+   .min-symbol-text {
+      display: block !important;
+      font-weight: 600;
+      font-size: 10px;
+      line-height: 14px;
+      color: #828282;
+      padding: 2px 0px 0px 2px;
+   }
+}
+//Класс добавлять на popup-registration__form
+.done-reg-form {
+   .popup-registration__item-email::after {
+      display: block;
+   }
+   .popup-registration__emaill {
+      background: #e8f0fe;
+   }
+   .popup-registration__password {
+      background: #e8f0fe;
+   }
+}
+//Класс добавлять на  popup-registration__item-password
+.see-password {
+   .passwor-see-svg {
+      display: block;
+   }
+   .passwor-dont-see-svg {
+      display: none;
+   }
+}
+//POPAP REVIEW FIX MOBILE ========================================================================================================================================================
+
+// .call-review {
+//    font-family: 'Open Sans';
+//    &__content {
+//       @media (max-width: 575.98px) {
+//          width: 375px;
+//          height: 525px;
+//       }
+//    }
+
+//    &__close {
+//    }
+
+//    &__title {
+//       @media (max-width: 575.98px) {
+//          font-weight: 400;
+//          font-size: 20px;
+//          line-height: 27px;
+//          max-width: none;
+//          margin-bottom: 40px;
+//       }
+//    }
+
+//    &__list {
+//       @media (max-width: 575.98px) {
+//          padding: 0px 0px 0px 0px;
+//       }
+//    }
+
+//    &__item {
+//    }
+
+//    &__radio-label {
+//    }
+
+//    &__radio {
+//    }
+
+//    &__radio-custom {
+//       font-weight: 400;
+//       line-height: 27px;
+//       @media (max-width: 575.98px) {
+//          font-size: 20px;
+//          width: 30px;
+//          height: 30px;
+//       }
+//    }
+
+//    &__btn-desc-wrap {
+//       @media (max-width: 575.98px) {
+//          margin-bottom: 32px;
+//       }
+//    }
+
+//    &__btn-desc {
+//       @media (max-width: 575.98px) {
+//          font-size: 10px;
+//       }
+//    }
+
+//    &__label {
+//       @media (max-width: 575.98px) {
+//          font-size: 16px;
+//       }
+//    }
+
+//    &__input-wrap {
+//       @media (max-width: 575.98px) {
+//          margin-bottom: 32px;
+//       }
+//    }
+
+//    &__input {
+//       @media (max-width: 575.98px) {
+//          font-size: 14px;
+//          height: 170px;
+//       }
+//    }
+
+//    &__delete {
+//    }
+
+//    &__btn {
+//    }
+//    .btn-red {
+//       @media (max-width: 575.98px) {
+//          padding: 14px 59px;
+//       }
+//    }
+// }

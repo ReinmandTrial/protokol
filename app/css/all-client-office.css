@@ -927,6 +927,8 @@
    margin: 0px 15px;
 }
 .popup-document__content {
+   margin-top: 50px;
+   margin-bottom: 50px;
    background-color: #fff;
    max-width: 882px;
 }
@@ -953,7 +955,7 @@
    position: relative;
 }
 .popup-document__select-text:before {
-   content: url(../images/popup/elefant.svg);
+   content: url(../images/popup/elefant.png);
    position: absolute;
    top: 9px;
    left: 34px;
@@ -1072,68 +1074,469 @@
       margin: -40px 20px 0px 0px;
    }
 }
-.call-review {
+.popup-registration {
+   display: none;
    font-family: 'Open Sans';
+   overflow: auto;
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.75);
+   top: 0;
+   left: 0;
+   -webkit-box-ordinal-group: 11;
+   -ms-flex-order: 10;
+   order: 10;
 }
-@media (max-width: 575.98px) {
-   .call-review__content {
-      width: 375px;
-      height: 525px;
+.popup-registration a,
+.popup-registration a:hover,
+.popup-registration a:active {
+   text-decoration: none !important;
+}
+.popup-registration__body {
+   min-height: 100%;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-pack: center;
+   -ms-flex-pack: center;
+   justify-content: center;
+   -webkit-box-align: center;
+   -ms-flex-align: center;
+   align-items: center;
+   margin: 0px 15px;
+}
+.popup-registration__content {
+   padding: 52px 47px;
+   background-color: #fff;
+   max-width: 526px;
+   max-height: 683px;
+   width: 100%;
+}
+@media (max-width: 550px) {
+   .popup-registration__content {
+      padding: 42px 12px;
    }
 }
-@media (max-width: 575.98px) {
-   .call-review__title {
-      font-weight: 400;
-      font-size: 20px;
-      line-height: 27px;
-      max-width: none;
-      margin-bottom: 40px;
+@media (max-width: 370px) {
+   .popup-registration__content {
+      max-height: 710px;
    }
 }
-@media (max-width: 575.98px) {
-   .call-review__list {
-      padding: 0px 0px 0px 0px;
+.popup-registration__title {
+   font-weight: 700;
+   font-size: 22px;
+   line-height: 30px;
+   margin-bottom: 48px;
+}
+@media (max-width: 550px) {
+   .popup-registration__title {
+      text-align: center;
+      font-size: 18px;
    }
 }
-.call-review__radio-custom {
+.popup-registration__item-email {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+   -ms-flex-direction: column;
+   flex-direction: column;
+   margin-bottom: 32px;
+   position: relative;
+}
+.popup-registration__item-email::after {
+   display: none;
+   content: url(../images/registration/done-email.png);
+   position: absolute;
+   top: 40px;
+   right: 20px;
+}
+.popup-registration__label {
+   font-weight: 600;
+   font-size: 14px;
+   line-height: 19px;
+   margin-bottom: 8px;
+}
+.popup-registration__emaill {
+   border: 1px solid #d6d6d6;
+   border-radius: 4px;
+   height: 48px;
+   padding: 15px 50px 15px 15px;
+   font-weight: 600;
+   font-size: 14px;
+   line-height: 19px;
+   color: #333333;
+}
+.popup-registration__emaill::-webkit-input-placeholder {
+   font-weight: 600;
+   font-size: 14px;
+   line-height: 19px;
+   color: #bdbdbd;
+}
+.popup-registration__emaill::-moz-placeholder {
+   font-weight: 600;
+   font-size: 14px;
+   line-height: 19px;
+   color: #bdbdbd;
+}
+.popup-registration__emaill:-ms-input-placeholder {
+   font-weight: 600;
+   font-size: 14px;
+   line-height: 19px;
+   color: #bdbdbd;
+}
+.popup-registration__emaill::-ms-input-placeholder {
+   font-weight: 600;
+   font-size: 14px;
+   line-height: 19px;
+   color: #bdbdbd;
+}
+.popup-registration__emaill::placeholder {
+   font-weight: 600;
+   font-size: 14px;
+   line-height: 19px;
+   color: #bdbdbd;
+}
+.popup-registration__emaill:active {
+   border: none !important;
+}
+.popup-registration__item-password {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+   -ms-flex-direction: column;
+   flex-direction: column;
+   margin-bottom: 8px;
+   position: relative;
+}
+.popup-registration__item-password .passwor-see-svg {
+   display: none;
+   position: absolute;
+   top: 41px;
+   right: 20px;
+}
+.popup-registration__item-password .passwor-dont-see-svg {
+   position: absolute;
+   top: 44px;
+   right: 20px;
+}
+.popup-registration__password {
+   border: 1px solid #d6d6d6;
+   border-radius: 4px;
+   height: 48px;
+   padding: 15px 50px 15px 15px;
+   font-weight: 600;
+   font-size: 14px;
+   line-height: 19px;
+   color: #333333;
+}
+.popup-registration__password::-webkit-input-placeholder {
+   font-weight: 600;
+   font-size: 14px;
+   line-height: 19px;
+   color: #bdbdbd;
+}
+.popup-registration__password::-moz-placeholder {
+   font-weight: 600;
+   font-size: 14px;
+   line-height: 19px;
+   color: #bdbdbd;
+}
+.popup-registration__password:-ms-input-placeholder {
+   font-weight: 600;
+   font-size: 14px;
+   line-height: 19px;
+   color: #bdbdbd;
+}
+.popup-registration__password::-ms-input-placeholder {
+   font-weight: 600;
+   font-size: 14px;
+   line-height: 19px;
+   color: #bdbdbd;
+}
+.popup-registration__password::placeholder {
+   font-weight: 600;
+   font-size: 14px;
+   line-height: 19px;
+   color: #bdbdbd;
+}
+.popup-registration__password:active {
+   border: 1px solid #d6d6d6 !important;
+}
+.popup-registration__row-remember-forgot {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-pack: justify;
+   -ms-flex-pack: justify;
+   justify-content: space-between;
+   margin-bottom: 40px;
+}
+.popup-registration__row-remember-forgot span {
+   margin: 0px 0px 0px 0px;
+   font-weight: 600;
+   font-size: 14px;
+   line-height: 19px;
+   color: #000000;
+}
+.popup-registration__checkbox {
+   display: none;
+}
+.popup-registration .popup-registration__checkbox:checked + .popup-registration__cheklabel::after {
+   -webkit-transform: scale(1);
+   -ms-transform: scale(1);
+   transform: scale(1);
+   -webkit-transition: all 0.3s ease 0s;
+   -o-transition: all 0.3s ease 0s;
+   transition: all 0.3s ease 0s;
+}
+.popup-registration__cheklabel {
+   min-width: 150px;
+   font-weight: 600;
+   font-size: 14px;
+   line-height: 19px;
+   display: -webkit-inline-box;
+   display: -ms-inline-flexbox;
+   display: inline-flex;
+   -webkit-box-align: center;
+   -ms-flex-align: center;
+   align-items: center;
+   position: relative;
+   cursor: pointer;
+}
+@media (max-width: 550px) {
+   .popup-registration__cheklabel {
+      font-size: 12px;
+   }
+}
+.popup-registration__cheklabel::before {
+   content: '';
+   -webkit-box-flex: 0;
+   -ms-flex: 0 0 20px;
+   flex: 0 0 20px;
+   -ms-flex-item-align: start;
+   align-self: flex-start;
+   height: 20px;
+   border: 1px solid #c74a2e;
+   border-radius: 2px;
+   margin: 0px 4px 0px 0px;
+}
+.popup-registration__cheklabel::after {
+   content: '';
+   width: 10px;
+   height: 10px;
+   position: absolute;
+   top: 5px;
+   left: 5px;
+   background: #c74a2e;
+   border-radius: 2px;
+   -webkit-transform: scale(0);
+   -ms-transform: scale(0);
+   transform: scale(0);
+   -webkit-transition: all 0.3s ease 0s;
+   -o-transition: all 0.3s ease 0s;
+   transition: all 0.3s ease 0s;
+}
+.popup-registration__forgot {
+   font-weight: 600;
+   font-size: 14px;
+   line-height: 19px;
+}
+.popup-registration__forgot a,
+.popup-registration__forgot a:hover,
+.popup-registration__forgot a:active {
+   color: #c74a2e !important;
+}
+.popup-registration__item-button {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   margin-bottom: 40px;
+}
+.popup-registration__button {
+   cursor: pointer;
+   padding: 13px 0px;
+   -webkit-box-flex: 1;
+   -ms-flex: 1 1 432px;
+   flex: 1 1 432px;
+   background: #c74a2e;
+   border-radius: 4px;
    font-weight: 400;
-   line-height: 27px;
+   font-size: 18px;
+   line-height: 25px;
+   color: #ffffff;
+   border: none;
 }
-@media (max-width: 575.98px) {
-   .call-review__radio-custom {
-      font-size: 20px;
-      width: 30px;
-      height: 30px;
+.popup-registration__button:active {
+   border: none;
+}
+.popup-registration__or {
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 22px;
+   text-align: center;
+   margin-bottom: 40px;
+}
+.popup-registration__list-login {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-column-gap: 12px;
+   -moz-column-gap: 12px;
+   column-gap: 12px;
+   margin-bottom: 32px;
+}
+@media (max-width: 550px) {
+   .popup-registration__list-login {
+      -webkit-column-gap: 9px;
+      -moz-column-gap: 9px;
+      column-gap: 9px;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
    }
 }
-@media (max-width: 575.98px) {
-   .call-review__btn-desc-wrap {
-      margin-bottom: 32px;
+.popup-registration__login-fb {
+   font-weight: 600;
+   font-size: 16px;
+   line-height: 22px;
+   color: #ffffff;
+   background: #3679ea;
+   border-radius: 4px;
+   -webkit-box-flex: 0;
+   -ms-flex: 0 1 210px;
+   flex: 0 1 210px;
+   padding: 14px 0px 14px 41px;
+   position: relative;
+}
+.popup-registration__login-fb a,
+.popup-registration__login-fb a:hover {
+   color: #fff !important;
+}
+@media (max-width: 479.98px) {
+   .popup-registration__login-fb {
+      font-size: 14px;
+      padding: 17px 6px 15px 25px;
+      text-align: center;
    }
 }
-@media (max-width: 575.98px) {
-   .call-review__btn-desc {
+@media (max-width: 370px) {
+   .popup-registration__login-fb {
       font-size: 10px;
    }
 }
-@media (max-width: 575.98px) {
-   .call-review__label {
-      font-size: 16px;
+.popup-registration__login-fb::before {
+   content: url(../images/registration/fb.png);
+   position: absolute;
+   top: 14px;
+   left: 14px;
+}
+@media (max-width: 479.98px) {
+   .popup-registration__login-fb::before {
+      left: 7px;
+      top: 16px;
    }
 }
-@media (max-width: 575.98px) {
-   .call-review__input-wrap {
-      margin-bottom: 32px;
-   }
+.popup-registration__login-google {
+   -webkit-box-flex: 0;
+   -ms-flex: 0 1 210px;
+   flex: 0 1 210px;
+   font-weight: 600;
+   font-size: 16px;
+   line-height: 22px;
+   border: 1px solid #e0e0e0;
+   padding: 14px 0px 14px 52px;
+   position: relative;
 }
-@media (max-width: 575.98px) {
-   .call-review__input {
+.popup-registration__login-google a,
+.popup-registration__login-google a:hover,
+.popup-registration__login-google a:active {
+   color: #000000 !important;
+}
+@media (max-width: 479.98px) {
+   .popup-registration__login-google {
+      padding: 15px 0px 15px 35px;
       font-size: 14px;
-      height: 170px;
    }
 }
-@media (max-width: 575.98px) {
-   .call-review .btn-red {
-      padding: 14px 59px;
+@media (max-width: 370px) {
+   .popup-registration__login-google {
+      font-size: 10px;
    }
+}
+.popup-registration__login-google::before {
+   content: url(../images/registration/google.png);
+   position: absolute;
+   top: 16px;
+   left: 30px;
+}
+@media (max-width: 479.98px) {
+   .popup-registration__login-google::before {
+      left: 7px;
+   }
+}
+.popup-registration__no-account {
+   text-align: center;
+   font-weight: 600;
+   font-size: 14px;
+   line-height: 19px;
+   color: #000000;
+}
+.popup-registration__no-account a,
+.popup-registration__no-account a:hover,
+.popup-registration__no-account a:active {
+   color: #b04e35;
+   font-weight: 700;
+}
+@media (max-width: 479.98px) {
+   .popup-registration__no-account {
+      margin-bottom: 20px;
+   }
+}
+.error-reg-form .popup-registration__emaill {
+   background: rgba(199, 74, 46, 0.18);
+}
+.error-reg-form .popup-registration__password {
+   background: rgba(199, 74, 46, 0.18);
+}
+.error-reg-form .error-text {
+   display: block !important;
+   padding: 4px 0px 0px 2px;
+   font-weight: 600;
+   font-size: 10px;
+   line-height: 14px;
+   color: #c74a2e;
+}
+.error-reg-form .passwor-see-svg path {
+   fill: #c74a2e;
+}
+.error-reg-form .passwor-dont-see-svg path {
+   fill: #c74a2e;
+}
+.min-symbol-reg-form .min-symbol-text {
+   display: block !important;
+   font-weight: 600;
+   font-size: 10px;
+   line-height: 14px;
+   color: #828282;
+   padding: 2px 0px 0px 2px;
+}
+.done-reg-form .popup-registration__item-email::after {
+   display: block;
+}
+.done-reg-form .popup-registration__emaill {
+   background: #e8f0fe;
+}
+.done-reg-form .popup-registration__password {
+   background: #e8f0fe;
+}
+.see-password .passwor-see-svg {
+   display: block;
+}
+.see-password .passwor-dont-see-svg {
+   display: none;
 }
