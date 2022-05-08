@@ -1,6 +1,7 @@
 @font-face {
    font-family: 'Open Sans';
-   src: url('../fonts/OpenSans-Bold.woff2') format('woff2'), url('../fonts/OpenSans-Bold.woff') format('woff');
+   src: url('../fonts/OpenSans-Bold.woff2') format('woff2'),
+      url('../fonts/OpenSans-Bold.woff') format('woff');
    font-weight: bold;
    font-style: normal;
    font-display: swap;
@@ -8,7 +9,8 @@
 
 @font-face {
    font-family: 'Open Sans';
-   src: url('../fonts/OpenSans-Regular.woff2') format('woff2'), url('../fonts/OpenSans-Regular.woff') format('woff');
+   src: url('../fonts/OpenSans-Regular.woff2') format('woff2'),
+      url('../fonts/OpenSans-Regular.woff') format('woff');
    font-weight: normal;
    font-style: normal;
    font-display: swap;
@@ -16,7 +18,8 @@
 
 @font-face {
    font-family: 'Open Sans';
-   src: url('../fonts/OpenSans-SemiBold.woff2') format('woff2'), url('../fonts/OpenSans-SemiBold.woff') format('woff');
+   src: url('../fonts/OpenSans-SemiBold.woff2') format('woff2'),
+      url('../fonts/OpenSans-SemiBold.woff') format('woff');
    font-weight: 600;
    font-style: normal;
    font-display: swap;
@@ -896,10 +899,14 @@
 .profile-client-tabs__on-work-item .big-info-profail__status span {
    color: #cc7f31;
 }
-.profile-client-tabs__complit-order-item .small-info-profail__status span {
+.profile-client-tabs__complit-order-item
+   .small-info-profail__status
+   span {
    color: #c74a2e;
 }
-.profile-client-tabs__safe-transaction-item .big-info-profail__status span {
+.profile-client-tabs__safe-transaction-item
+   .big-info-profail__status
+   span {
    color: #cc7f31;
 }
 .popup-document {
@@ -1286,7 +1293,9 @@
 .popup-registration__checkbox {
    display: none;
 }
-.popup-registration .popup-registration__checkbox:checked + .popup-registration__cheklabel::after {
+.popup-registration
+   .popup-registration__checkbox:checked
+   + .popup-registration__cheklabel::after {
    -webkit-transform: scale(1);
    -ms-transform: scale(1);
    transform: scale(1);
@@ -1539,4 +1548,73 @@
 }
 .see-password .passwor-dont-see-svg {
    display: none;
+}
+.call-review {
+   font-family: 'Open Sans';
+}
+@media (max-width: 575.98px) {
+   .call-review__content {
+      width: 375px;
+      height: 525px;
+      padding: 15px;
+   }
+}
+@media (max-width: 575.98px) {
+   .call-review__title {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 27px;
+      max-width: none;
+      margin-bottom: 40px;
+   }
+}
+@media (max-width: 575.98px) {
+   .call-review__list {
+      padding: 0px 0px 0px 0px;
+   }
+}
+.call-review__radio-custom {
+   font-weight: 400;
+   line-height: 27px;
+}
+@media (max-width: 575.98px) {
+   .call-review__radio-custom {
+      font-size: 20px;
+      width: 30px;
+      height: 30px;
+   }
+}
+@media (max-width: 575.98px) {
+   .call-review__btn-desc-wrap {
+      margin-bottom: 32px;
+   }
+}
+@media (max-width: 575.98px) {
+   .call-review__btn-desc {
+      font-size: 10px;
+   }
+}
+@media (max-width: 575.98px) {
+   .call-review__label {
+      font-size: 16px;
+   }
+}
+@media (max-width: 575.98px) {
+   .call-review__input-wrap {
+      margin-bottom: 32px;
+   }
+}
+@media (max-width: 575.98px) {
+   .call-review__input {
+      font-size: 14px;
+      height: 170px;
+   }
+}
+.call-review__btn {
+   font-size: 14px !important;
+}
+@media (max-width: 575.98px) {
+   .call-review__btn {
+      padding: 14px 59px;
+   }
 }
