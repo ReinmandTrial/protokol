@@ -267,6 +267,7 @@ $mobileSmall: 479.98px;
    &__main-navigation {
       display: flex;
       flex-direction: column;
+      min-width: 301px;
    }
 
    &__main-title {
@@ -948,17 +949,23 @@ $mobileSmall: 479.98px;
 
    &__diy {
       @media (max-width: $mobile) {
-         min-width: 36px;
+         img {
+            max-width: 36px;
+         }
       }
    }
    &__privat {
       @media (max-width: $mobile) {
-         min-width: 35px;
+         img {
+            max-width: 35px;
+         }
       }
    }
    &__oshad {
       @media (max-width: $mobile) {
-         min-width: 72px;
+         img {
+            max-width: 72px;
+         }
       }
    }
 
@@ -1010,7 +1017,7 @@ $mobileSmall: 479.98px;
       padding: 52px 47px;
       background-color: #fff;
       max-width: 526px;
-      max-height: 683px;
+      max-height: 710px;
       width: 100%;
       @media (max-width: 550px) {
          padding: 42px 12px;
@@ -1087,6 +1094,7 @@ $mobileSmall: 479.98px;
          right: 20px;
       }
       .passwor-dont-see-svg {
+         display: none;
          position: absolute;
          top: 44px;
          right: 20px;
@@ -1319,6 +1327,7 @@ $mobileSmall: 479.98px;
    .error-text {
       display: block !important;
       padding: 4px 0px 0px 2px;
+      margin-bottom: 11px;
       font-weight: 600;
       font-size: 10px;
       line-height: 14px;
@@ -1344,6 +1353,7 @@ $mobileSmall: 479.98px;
       line-height: 14px;
       color: #828282;
       padding: 2px 0px 0px 2px;
+      margin-bottom: 11px;
    }
 }
 //Класс добавлять на popup-registration__form
@@ -1365,6 +1375,15 @@ $mobileSmall: 479.98px;
    }
    .passwor-dont-see-svg {
       display: none;
+   }
+}
+
+.not-see-password {
+   .passwor-see-svg {
+      display: none;
+   }
+   .passwor-dont-see-svg {
+      display: block;
    }
 }
 //POPAP REVIEW FIX MOBILE ========================================================================================================================================================
@@ -1458,3 +1477,6 @@ $mobileSmall: 479.98px;
       }
    }
 }
+
+
+
