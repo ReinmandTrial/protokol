@@ -1,0 +1,325 @@
+$pc: 1024.98px;
+$tablet: 991.98px;
+$mobile: 767.98px;
+$mobileSmall: 479.98px;
+
+.new-list-lawyer {
+   font-family: 'Open Sans';
+   a:hover {
+      text-decoration: none;
+   }
+
+   .active-quest {
+      .lawyers-found__request {
+         background: #bdbdbd !important;
+         color: #000 !important;
+      }
+      .lawyers-found__cancel {
+         display: flex !important;
+      }
+      .lawyers-question {
+         display: block;
+      }
+   }
+
+   //HEAD-question========================================================================================================================================================
+
+   .lawyers-found__btn-question {
+      max-height: 34px;
+      padding: 10px 0px !important;
+      width: 160px;
+      font-size: 14px;
+   }
+
+   .lawyers-found {
+      @media (max-width: $mobile) {
+         margin: 0px 0px 0px 0px;
+      }
+      &__head {
+         display: flex;
+         @media (max-width: $tablet) {
+            flex-direction: column;
+         }
+         @media (max-width: $mobile) {
+            margin-bottom: 32px;
+         }
+      }
+      &__list-btn {
+         display: flex;
+         column-gap: 20px;
+         @media (min-width: $tablet) {
+            align-self: start;
+         }
+         @media (max-width: 360px) {
+            flex-direction: column;
+            row-gap: 20px;
+         }
+      }
+
+      &__title {
+         margin-bottom: 30px;
+      }
+
+      &__btn-question {
+      }
+      &__request {
+      }
+      &__cancel {
+         display: none !important;
+      }
+
+      &__btn-question--desktop {
+         display: flex;
+      }
+
+      &__wrap {
+      }
+
+      &__item {
+      }
+
+      &__item-text {
+      }
+
+      &__btn-clear {
+      }
+
+      &__btn-question--mobile {
+         display: none;
+      }
+   }
+
+   .lawyers-question {
+      display: none;
+      border-bottom: 1px solid #bdbdbd;
+      padding-bottom: 40px;
+      @media (max-width: $mobile) {
+         padding-bottom: 30px;
+      }
+
+      &__direct-question {
+         font-weight: 400;
+         font-size: 18px;
+         line-height: 25px;
+         margin: 0px 0px 32px 36px;
+         position: relative;
+         text-transform: uppercase;
+         @media (max-width: $mobile) {
+            margin: 0px 0px 25px 36px;
+         }
+         &::before {
+            content: url('../images/new-list-lawyers/small-arrow.svg');
+            position: absolute;
+            top: 2px;
+            left: -36px;
+         }
+      }
+
+      &__advice {
+         min-width: 1300px;
+         display: flex;
+         column-gap: 55px;
+         // max-height: 105px;
+         @media (max-width: $tablet) {
+            flex-direction: column;
+            max-height: none;
+            min-width: none;
+            align-items: flex-start;
+            row-gap: 32px;
+            background-color: #fff;
+            min-width: auto;
+            padding: 0px 0px 0px 0px;
+            margin: 0px 0px 0px 0px;
+         }
+         @media (max-width: 400px) {
+            max-width: 300px;
+         }
+      }
+
+      &__advice-wrap {
+         background: #fff8ea;
+
+         @media (max-width: 400px) {
+            margin-left: -20px;
+            width: 360px;
+            padding: 12px 0px 12px 100px;
+            &::after {
+               height: 112px;
+               top: 15px;
+               @media (max-width: $mobile) {
+                  left: 80px;
+               }
+            }
+            &::before {
+               @media (max-width: $mobile) {
+                  left: 15px;
+               }
+            }
+         }
+         @media (max-width: 360px) {
+            width: 300px;
+         }
+      }
+
+      &__advice-title {
+      }
+
+      &__advice-descr {
+         @media (max-width: $mobile) {
+            padding-right: 10px;
+         }
+      }
+
+      &__long-arrow {
+         align-self: center;
+         @media (max-width: 1200px) {
+            display: none;
+         }
+      }
+
+      &__temp-check {
+         display: flex;
+         background: #ffffff;
+         border: 2px solid #e0e0e0;
+         flex: 0 0 396px;
+         height: 90px;
+         position: relative;
+         transform: translate(0px, -20px);
+         @media (max-width: $tablet) {
+            transform: translate(0px, 0px);
+            max-height: 90px;
+            max-width: 345px;
+         }
+         @media (max-width: $mobile) {
+            min-width: 310px;
+            align-self: center;
+            margin-left: 20px;
+         }
+         @media (max-width: 360px) {
+            min-width: auto;
+            margin-left: 0;
+         }
+         &::before {
+            content: url('../images/new-list-lawyers/check.png');
+            position: absolute;
+            top: 19px;
+            left: 9px;
+         }
+      }
+      &__user-img {
+         flex: 0 0 66px;
+         height: 63px;
+         margin: 23px 0px 0px 33px;
+         @media (max-width: $mobile) {
+            margin: 19px 0px 11px 38px;
+            flex: 0 0 60px;
+            height: 60px;
+         }
+      }
+
+      &__temp-name {
+         margin: 30px 0px 0px 12px;
+         min-width: 345px;
+         @media (max-width: $mobile) {
+            min-width: auto;
+         }
+      }
+
+      &__title {
+         font-weight: 400;
+         font-size: 14px;
+         line-height: 19px;
+         &::before {
+            width: 36px;
+            height: 42px;
+         }
+      }
+
+      &__message {
+      }
+
+      &__textarea {
+      }
+
+      &__message-nav {
+         column-gap: 0px;
+         justify-content: space-between;
+      }
+      &__list-btn {
+         display: flex;
+         flex-direction: column;
+         row-gap: 20px;
+      }
+      &__attach {
+      }
+
+      &__btn-send-to-selected {
+         // margin-right: 20px;
+         @media (max-width: $mobile) {
+            margin-right: 0;
+         }
+      }
+
+      &__btn-sunmit-first {
+      }
+
+      &__btn {
+      }
+
+      &__btn--voice {
+         margin-right: 20px;
+         @media (max-width: $mobile) {
+            margin-right: 0;
+         }
+      }
+
+      &__btn--file {
+      }
+   }
+
+   //ASIDE========================================================================================================================================================
+
+   .aside-container {
+      width: 280px;
+      margin-right: 20px;
+   }
+   .search-by-lawyer {
+      margin-bottom: 60px;
+   }
+   .our-services__title {
+      padding: 27px 13px;
+      @media (max-width: 1200.98px) {
+         padding: 27px 8px;
+      }
+   }
+   .our-services__list {
+      margin: 16px 5px 16px 5px;
+      padding: 0px !important;
+      a {
+         color: #c74a2e;
+      }
+   }
+   .decree__our-services {
+      margin-bottom: 60px;
+      @media (max-width: $tablet) {
+         display: none;
+      }
+   }
+   //SLIDER========================================================================================================================================================
+
+   .decree__slides {
+      @media (max-width: $tablet) {
+         display: none;
+      }
+   }
+   .small-slide__title {
+      margin: 0px 0px 0px 0px;
+   }
+   .decree__slides {
+      align-items: start;
+   }
+
+   .small-slide__btn {
+      background: #e58e13;
+   }
+}

@@ -304,3 +304,22 @@ document.addEventListener('DOMContentLoaded', () => {
    isWebp();
    tabs();
 })();
+
+//QUESTION========================================================================================================================================================
+
+{
+   const requestBtnEl = document.querySelector('.lawyers-found__request');
+   const cancelBtnEl = document.querySelector('.lawyers-found__cancel');
+
+   const lawyersFoundEl = document.querySelector('.lawyers-found');
+
+   requestBtnEl.addEventListener('click', onRequestBtnClick);
+   cancelBtnEl.addEventListener('click', onСancelBtnClick);
+
+   function onRequestBtnClick() {
+      lawyersFoundEl.classList.add('active-quest');
+   }
+   function onСancelBtnClick() {
+      lawyersFoundEl.classList.remove('active-quest');
+   }
+}
