@@ -118,7 +118,7 @@ $mobileSmall: 479.98px;
       &__advice {
          min-width: 1300px;
          display: flex;
-         column-gap: 55px;
+         column-gap: 25px;
          // max-height: 105px;
          @media (max-width: $tablet) {
             flex-direction: column;
