@@ -1,3 +1,160 @@
+.our-services {
+   border: 1px solid #c74a2e;
+   border-radius: 4px;
+}
+.our-services__title {
+   margin: -1px;
+   border-radius: 4px;
+   text-transform: uppercase;
+   font-size: 18px;
+   font-weight: 600;
+   padding: 18px;
+   padding-left: 16px;
+   color: #fff;
+   background-color: #c74a2e;
+}
+.our-services__list {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+   -ms-flex-direction: column;
+   flex-direction: column;
+   gap: 17px;
+   padding: 16px;
+   color: #000;
+}
+@media (max-width: 575.98px) {
+   .our-services__list {
+      padding: 6px;
+      gap: 10px;
+      padding-bottom: 15px;
+   }
+}
+.our-services__item {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-align: start;
+   -ms-flex-align: start;
+   align-items: flex-start;
+}
+.our-services__item-arrow {
+   position: relative;
+   top: 7px;
+   font-size: 8px;
+   color: #333;
+   margin-right: 8px;
+}
+.our-services__item-title {
+   display: inline-block;
+   font-size: 16px;
+   font-weight: 400;
+   text-transform: uppercase;
+   margin-bottom: 4px;
+   color: #c74a2e;
+}
+.our-services__item-desc {
+   font-size: 14px;
+}
+@media (max-width: 575.98px) {
+   .our-services__item-desc {
+      font-size: 12px;
+   }
+}
+
+.small-slide {
+   max-width: 260px;
+   min-height: 280px;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+   -ms-flex-direction: column;
+   flex-direction: column;
+   width: 260px;
+}
+.small-slide__title {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-align: center;
+   -ms-flex-align: center;
+   align-items: center;
+   -webkit-box-pack: center;
+   -ms-flex-pack: center;
+   justify-content: center;
+   text-align: center;
+   font-size: 16px;
+   font-weight: 600;
+   padding: 0 2px;
+   min-height: 54px;
+   color: #fff;
+   background-color: #cc7f31;
+   border-top-left-radius: 4px;
+   border-top-right-radius: 4px;
+}
+.small-slide__content {
+   -webkit-box-flex: 1;
+   -ms-flex-positive: 1;
+   flex-grow: 1;
+   border-bottom-left-radius: 4px;
+   border-bottom-right-radius: 4px;
+   position: relative;
+   background: url('../images/aside-man.jpg') no-repeat center/cover;
+}
+.small-slide__date {
+   position: absolute;
+   top: 6px;
+   left: 3px;
+}
+.small-slide__desc {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   font-size: 16px;
+   font-weight: 600;
+   padding: 10px 7px;
+   background: rgba(255, 255, 255, 0.65);
+   border-radius: 4px;
+}
+.small-slide__btn {
+   position: absolute;
+   top: 41%;
+   -webkit-transform: translateY(-50%);
+   -ms-transform: translateY(-50%);
+   transform: translateY(-50%);
+   font-size: 0;
+   padding: 5px;
+   background-color: #e58e13;
+   color: #fff;
+   border-radius: 50%;
+}
+.small-slide__btn--prev {
+   left: 0;
+}
+.small-slide__btn--prev .small-slide__icon {
+   -webkit-transform: translateX(-2px) rotate(90deg);
+   -ms-transform: translateX(-2px) rotate(90deg);
+   transform: translateX(-2px) rotate(90deg);
+}
+.small-slide__btn--next {
+   right: 0;
+}
+.small-slide__btn--next .small-slide__icon {
+   -webkit-transform: translateX(2px) rotate(-90deg);
+   -ms-transform: translateX(2px) rotate(-90deg);
+   transform: translateX(2px) rotate(-90deg);
+}
+.small-slide__icon {
+   display: inline-block;
+   font-size: 24px;
+}
+
+/* -------------------------------------------------- */
+
 .new-list-lawyer {
    font-family: 'Open Sans';
 }
@@ -275,19 +432,29 @@
    -ms-flex-pack: justify;
    justify-content: space-between;
 }
-.new-list-lawyer .lawyers-question__list-btn {
-   display: -webkit-box;
-   display: -ms-flexbox;
-   display: flex;
-   -webkit-box-orient: vertical;
-   -webkit-box-direction: normal;
-   -ms-flex-direction: column;
-   flex-direction: column;
-   row-gap: 20px;
+@media (max-width: 991.98px) {
+   .new-list-lawyer .lawyers-question__list-btn {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      row-gap: 20px;
+   }
 }
-@media (max-width: 767.98px) {
+.new-list-lawyer .lawyers-question__btn-send-to-selected {
+   margin-right: 20px;
+}
+@media (max-width: 991.98px) {
    .new-list-lawyer .lawyers-question__btn-send-to-selected {
-      margin-right: 0;
+      margin-right: 0px;
+   }
+}
+@media (max-width: 991.98px) {
+   .new-list-lawyer .lawyers-question__btn-sunmit-first {
+      min-width: 260px;
    }
 }
 .new-list-lawyer .lawyers-question__btn--voice {
@@ -306,11 +473,13 @@
    margin-bottom: 60px;
 }
 .new-list-lawyer .our-services__title {
-   padding: 27px 13px;
+   padding: 27px 0px;
+   font-size: 20px;
+   text-align: center;
 }
 @media (max-width: 1200.98px) {
    .new-list-lawyer .our-services__title {
-      padding: 27px 8px;
+      padding: 27px 0px;
    }
 }
 .new-list-lawyer .our-services__list {
@@ -319,6 +488,7 @@
 }
 .new-list-lawyer .our-services__list a {
    color: #c74a2e;
+   width: 100%;
 }
 .new-list-lawyer .decree__our-services {
    margin-bottom: 60px;
@@ -327,6 +497,21 @@
    .new-list-lawyer .decree__our-services {
       display: none;
    }
+}
+.new-list-lawyer .decree__our-services .our-services__item-desc {
+   font-size: 12px;
+}
+.new-list-lawyer .decree-hero__our-services_mobile {
+   display: none;
+}
+@media (max-width: 991.98px) {
+   .new-list-lawyer .decree-hero__our-services_mobile {
+      display: block;
+      margin-bottom: 50px;
+   }
+}
+.new-list-lawyer .decree__slides-small-slide {
+   margin-bottom: 32px;
 }
 @media (max-width: 991.98px) {
    .new-list-lawyer .decree__slides {
@@ -343,4 +528,25 @@
 }
 .new-list-lawyer .small-slide__btn {
    background: #e58e13;
+}
+.new-list-lawyer .decree-hero__slides_mobile {
+   display: none;
+}
+@media (max-width: 991.98px) {
+   .new-list-lawyer .decree-hero__slides_mobile {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-column-gap: 30px;
+      -moz-column-gap: 30px;
+      column-gap: 30px;
+   }
 }

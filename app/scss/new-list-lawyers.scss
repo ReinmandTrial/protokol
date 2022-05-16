@@ -246,21 +246,26 @@ $mobileSmall: 479.98px;
          justify-content: space-between;
       }
       &__list-btn {
-         display: flex;
-         flex-direction: column;
-         row-gap: 20px;
+         @media (max-width: $tablet) {
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+         }
       }
       &__attach {
       }
 
       &__btn-send-to-selected {
-         // margin-right: 20px;
-         @media (max-width: $mobile) {
-            margin-right: 0;
+         margin-right: 20px;
+         @media (max-width: $tablet) {
+            margin-right: 0px;
          }
       }
 
       &__btn-sunmit-first {
+         @media (max-width: $tablet) {
+            min-width: 260px;
+         }
       }
 
       &__btn {
@@ -287,9 +292,11 @@ $mobileSmall: 479.98px;
       margin-bottom: 60px;
    }
    .our-services__title {
-      padding: 27px 13px;
+      padding: 27px 0px;
+      font-size: 20px;
+      text-align: center;
       @media (max-width: 1200.98px) {
-         padding: 27px 8px;
+         padding: 27px 0px;
       }
    }
    .our-services__list {
@@ -297,6 +304,7 @@ $mobileSmall: 479.98px;
       padding: 0px !important;
       a {
          color: #c74a2e;
+         width: 100%;
       }
    }
    .decree__our-services {
@@ -304,8 +312,23 @@ $mobileSmall: 479.98px;
       @media (max-width: $tablet) {
          display: none;
       }
+      .our-services__item-desc {
+         font-size: 12px;
+      }
+   }
+
+   .decree-hero__our-services_mobile {
+      display: none;
+      @media (max-width: $tablet) {
+         display: block;
+         margin-bottom: 50px;
+      }
    }
    //SLIDER========================================================================================================================================================
+
+   .decree__slides-small-slide {
+      margin-bottom: 32px;
+   }
 
    .decree__slides {
       @media (max-width: $tablet) {
@@ -321,5 +344,16 @@ $mobileSmall: 479.98px;
 
    .small-slide__btn {
       background: #e58e13;
+   }
+
+   .decree-hero__slides_mobile {
+      display: none;
+      @media (max-width: $tablet) {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         align-items: center;
+         column-gap: 30px;
+      }
    }
 }
