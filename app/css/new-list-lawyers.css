@@ -162,7 +162,8 @@
    text-decoration: none;
 }
 .new-list-lawyer .active-quest .lawyers-found__request {
-   background: #bdbdbd !important;
+   background: #efefef !important;
+   border-color: #efefef !important;
    color: #000 !important;
 }
 .new-list-lawyer .active-quest .lawyers-found__cancel {
