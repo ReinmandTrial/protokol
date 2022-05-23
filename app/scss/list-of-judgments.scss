@@ -580,7 +580,7 @@ $mobileSmall: 479.98px;
          margin-bottom: 30px;
       }
       &__wrap-input {
-         flex: 0 0 670px;
+         flex: 1 1 auto;
 
          position: relative;
          &::before {
@@ -793,6 +793,60 @@ $mobileSmall: 479.98px;
             margin-bottom: 20px;
          }
          box-shadow: 0px 4px 14px 4px rgba(0, 0, 0, 0.12);
+      }
+      .resolution-item {
+         &__row {
+            @media (max-width: 1200px) {
+               flex-wrap: wrap;
+               height: auto;
+               row-gap: 20px;
+            }
+         }
+
+         &__name-column {
+            @media (max-width: 1200px) {
+               flex: 0 0 50%;
+            }
+         }
+
+         &__date-resolution {
+         }
+
+         &__status {
+            &_pc {
+            }
+
+            &_mobile {
+            }
+         }
+
+         &__info-column {
+            @media (max-width: 1200px) {
+               flex: 0 0 50%;
+               border: none;
+            }
+         }
+
+         &__instance {
+         }
+
+         &__judge-name {
+         }
+
+         &__views {
+         }
+
+         &__descr-column {
+            @media (max-width: 1200px) {
+               flex: 0 0 100%;
+            }
+         }
+
+         &__descr-text {
+            @media (max-width: 1200px) {
+               padding: 0px 0px 0px 0px;
+            }
+         }
       }
    }
 }

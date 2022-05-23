@@ -232,7 +232,7 @@
    margin-bottom: 30px;
 }
 .new-list-lawyer .lawyers-found__cancel {
-   display: none !important;
+   /* display: none !important; */
 }
 .new-list-lawyer .lawyers-found__btn-question--desktop {
    display: -webkit-box;
@@ -243,7 +243,7 @@
    display: none;
 }
 .new-list-lawyer .lawyers-question {
-   display: none;
+   /* display: none; */
    border-bottom: 1px solid #bdbdbd;
    padding-bottom: 40px;
 }

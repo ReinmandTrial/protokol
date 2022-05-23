@@ -66,7 +66,7 @@ $mobileSmall: 479.98px;
       &__request {
       }
       &__cancel {
-         display: none !important;
+         // display: none !important;
       }
 
       &__btn-question--desktop {
@@ -91,7 +91,7 @@ $mobileSmall: 479.98px;
    }
 
    .lawyers-question {
-      display: none;
+      // display: none;
       border-bottom: 1px solid #bdbdbd;
       padding-bottom: 40px;
       @media (max-width: $mobile) {
