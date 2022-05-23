@@ -1,3 +1,5 @@
+const { default: Swiper } = require('swiper');
+
 document.addEventListener('DOMContentLoaded', () => {
    setTimeout(() => {
       document.querySelectorAll('.js-view-answer').forEach((btn) => {
@@ -323,3 +325,5 @@ document.addEventListener('DOMContentLoaded', () => {
       lawyersFoundEl.classList.remove('active-quest');
    }
 }
+
+
