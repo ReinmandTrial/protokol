@@ -178,20 +178,20 @@ $mobileSmall: 479.98px;
       }
 
       &__temp-check {
+         align-self: center;
          display: flex;
          background: #ffffff;
          border: 2px solid #e0e0e0;
          flex: 0 0 396px;
          height: 90px;
          position: relative;
-         transform: translate(0px, -20px);
+
          @media (max-width: $tablet) {
-            transform: translate(0px, 0px);
             max-height: 90px;
             max-width: 345px;
          }
          @media (max-width: $mobile) {
-            min-width: 310px;
+            min-width: 345px;
             align-self: center;
             margin-left: 20px;
          }
@@ -202,14 +202,17 @@ $mobileSmall: 479.98px;
          &::before {
             content: url('../images/new-list-lawyers/check.png');
             position: absolute;
-            top: 19px;
-            left: 9px;
+            top: 8px;
+            left: 8px;
+            @media (max-width: $mobile) {
+               top: 19px;
+            }
          }
       }
       &__user-img {
-         flex: 0 0 66px;
-         height: 63px;
-         margin: 23px 0px 0px 33px;
+         flex: 0 0 60px;
+         height: 60px;
+         margin: 15px 0px 0px 38px;
          @media (max-width: $mobile) {
             margin: 19px 0px 11px 38px;
             flex: 0 0 60px;
@@ -218,7 +221,7 @@ $mobileSmall: 479.98px;
       }
 
       &__temp-name {
-         margin: 30px 0px 0px 12px;
+         margin: 19px 0px 0px 12px;
          min-width: 280px;
          @media (max-width: $mobile) {
             min-width: auto;
@@ -259,12 +262,13 @@ $mobileSmall: 479.98px;
          margin-right: 20px;
          @media (max-width: $tablet) {
             margin-right: 0px;
+            min-width: 285px;
          }
       }
 
       &__btn-sunmit-first {
          @media (max-width: $tablet) {
-            min-width: 260px;
+            min-width: 285px;
          }
       }
 

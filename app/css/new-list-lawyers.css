@@ -348,6 +348,9 @@
    }
 }
 .new-list-lawyer .lawyers-question__temp-check {
+   -ms-flex-item-align: center;
+   -ms-grid-row-align: center;
+   align-self: center;
    display: -webkit-box;
    display: -ms-flexbox;
    display: flex;
@@ -358,26 +361,20 @@
    flex: 0 0 396px;
    height: 90px;
    position: relative;
-   -webkit-transform: translate(0px, -20px);
-   -ms-transform: translate(0px, -20px);
-   transform: translate(0px, -20px);
 }
 @media (max-width: 991.98px) {
    .new-list-lawyer .lawyers-question__temp-check {
-      -webkit-transform: translate(0px, 0px);
-      -ms-transform: translate(0px, 0px);
-      transform: translate(0px, 0px);
       max-height: 90px;
       max-width: 345px;
    }
 }
 @media (max-width: 767.98px) {
    .new-list-lawyer .lawyers-question__temp-check {
-      min-width: 310px;
+      min-width: 345px;
       -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-      margin-left: 20px;
+      margin-left: 45px;
    }
 }
 @media (max-width: 360px) {
@@ -389,15 +386,20 @@
 .new-list-lawyer .lawyers-question__temp-check::before {
    content: url('../images/new-list-lawyers/check.png');
    position: absolute;
-   top: 19px;
-   left: 9px;
+   top: 8px;
+   left: 8px;
+}
+@media (max-width: 767.98px) {
+   .new-list-lawyer .lawyers-question__temp-check::before {
+      top: 19px;
+   }
 }
 .new-list-lawyer .lawyers-question__user-img {
    -webkit-box-flex: 0;
-   -ms-flex: 0 0 66px;
-   flex: 0 0 66px;
-   height: 63px;
-   margin: 23px 0px 0px 33px;
+   -ms-flex: 0 0 60px;
+   flex: 0 0 60px;
+   height: 60px;
+   margin: 15px 0px 0px 38px;
 }
 @media (max-width: 767.98px) {
    .new-list-lawyer .lawyers-question__user-img {
@@ -409,7 +411,7 @@
    }
 }
 .new-list-lawyer .lawyers-question__temp-name {
-   margin: 30px 0px 0px 12px;
+   margin: 19px 0px 0px 12px;
    min-width: 280px;
 }
 @media (max-width: 767.98px) {
@@ -452,11 +454,12 @@
 @media (max-width: 991.98px) {
    .new-list-lawyer .lawyers-question__btn-send-to-selected {
       margin-right: 0px;
+      min-width: 285px;
    }
 }
 @media (max-width: 991.98px) {
    .new-list-lawyer .lawyers-question__btn-sunmit-first {
-      min-width: 260px;
+      min-width: 285px;
    }
 }
 .new-list-lawyer .lawyers-question__btn--voice {
