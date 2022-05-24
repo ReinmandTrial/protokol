@@ -79,8 +79,8 @@
       </script>
 
       <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-      <!-- <link rel="stylesheet" href="css/list-of-judgments.css"> -->
-      <link rel="stylesheet" href="css/style.min.css" />
+      <link rel="stylesheet" href="css/list-of-judgments.css" />
+      <!-- <link rel="stylesheet" href="css/style.min.css" /> -->
 
       <link href="https://protocol.ua/css/sidebar.css" rel="stylesheet" />
       <link href="https://protocol.ua/assets/9cc1d78f/css/bootstrap.min.css" rel="stylesheet" />
@@ -577,7 +577,7 @@
          </ul>
       </nav>
 
-      <nav class="navMobile">
+      <nav class="navMobile" style="position: relative">
          <input id="menu__toggle" type="checkbox" />
          <span class="menu__text">Меню</span>
          <label class="menu__btn" for="menu__toggle">
@@ -1225,7 +1225,7 @@
                         <div class="judg-main-content__wrap-input">
                            <input class="judg-main-content__input" type="text" placeholder="Пошук по слову, номеру справи або інстанцій" />
                         </div>
-                        <button class="judg-main-content__search-btn">Пошук</button>
+                        <a href="#" class="judg-main-content__search-btn">Пошук</a>
                      </div>
                      <div class="judg-main-content__tabs-jurisdiction jurisdiction-tabs">
                         <nav class="jurisdiction-tabs__navigation">
@@ -1243,6 +1243,77 @@
                            <div id="tab-4" class="jurisdiction-tabs__body">Верховного Суд Касаційного кримінального суду</div>
                            <div id="tab-5" class="jurisdiction-tabs__body">Верховного Суд Касаційного цивільного суду</div>
                            <div id="tab-6" class="jurisdiction-tabs__body">Верховного Суд Касаційного господарського суду</div>
+                        </div>
+                     </div>
+                     <div class="list-of-judgments__filter list-of-judgments__filter_mobile solution-filter close-mobile">
+                        <div class="solution-filter__title">
+                           Дополнительные фильтры
+                           <span class="solution-filter__icon solution-filter__icon_open"
+                              ><img src="images/list-of-judgments/mobile-open-filter.svg" alt="open"
+                           /></span>
+                           <span class="solution-filter__icon solution-filter__icon_close"
+                              ><img src="images/list-of-judgments/mobile-close-filter.svg" alt="close"
+                           /></span>
+                        </div>
+
+                        <div class="solution-filter__type-list">
+                           <p class="solution-filter__type-list-title">
+                              Тип рішення
+                              <span class="solution-filter__list-arr"><img src="images/list-of-judgments/arrow-open.svg" alt="" /></span>
+                           </p>
+                           <div class="solution-filter__label-list">
+                              <label class="solution-filter__label">
+                                 <input name="Постанова" class="solution-filter__input" type="checkbox" />
+                                 <span class="solution-filter__label-style"></span>
+                                 <span class="solution-filter__label-text">Постанова</span>
+                              </label>
+                              <label class="solution-filter__label">
+                                 <input name="Рішення" class="solution-filter__input" type="checkbox" />
+                                 <span class="solution-filter__label-style"></span>
+                                 <span class="solution-filter__label-text">Рішення</span>
+                              </label>
+                              <label class="solution-filter__label">
+                                 <input name="Ухвала" class="solution-filter__input" type="checkbox" />
+                                 <span class="solution-filter__label-style"></span>
+                                 <span class="solution-filter__label-text">Ухвала</span>
+                              </label>
+                           </div>
+                        </div>
+                        <div class="solution-filter__type-list">
+                           <p class="solution-filter__type-list-title">
+                              Рішення ВС
+                              <span class="solution-filter__list-arr"><img src="images/list-of-judgments/arrow-open.svg" alt="" /></span>
+                           </p>
+                           <div class="solution-filter__label-list">
+                              <label class="solution-filter__label">
+                                 <input name="З правовою позицією" class="solution-filter__input" type="checkbox" />
+                                 <span class="solution-filter__label-style"></span>
+                                 <span class="solution-filter__label-text">З правовою позицією</span>
+                              </label>
+                              <label class="solution-filter__label">
+                                 <input name="Відступив від правового висновку" class="solution-filter__input" type="checkbox" />
+                                 <span class="solution-filter__label-style"></span>
+                                 <span class="solution-filter__label-text">Відступив від правового висновку</span>
+                              </label>
+                           </div>
+                        </div>
+                        <div class="solution-filter__type-list">
+                           <p class="solution-filter__type-list-title">
+                              Дата рішення
+                              <span class="solution-filter__list-arr"><img src="images/list-of-judgments/arrow-open.svg" alt="" /></span>
+                           </p>
+                           <div class="solution-filter__label-list">
+                              <label class="solution-filter__label">
+                                 <input name="За останній тиждень" class="solution-filter__input" type="checkbox" />
+                                 <span class="solution-filter__label-style"></span>
+                                 <span class="solution-filter__label-text">За останній тиждень</span>
+                              </label>
+                              <label class="solution-filter__label">
+                                 <input name="За останній рік" class="solution-filter__input" type="checkbox" />
+                                 <span class="solution-filter__label-style"></span>
+                                 <span class="solution-filter__label-text">За останній рік</span>
+                              </label>
+                           </div>
                         </div>
                      </div>
                      <div class="judg-main-content__search-result">За Вашим запитом знайдено 35 нормативно-правових актів</div>
@@ -1618,6 +1689,214 @@
                                     malesuada elementum, aliquam enim massa convallis. Feugiat etiam tincidunt quis aliquet. Urna facilisi.
                                  </p>
                               </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="list-of-judgments__pagination">
+                        <div class="list-of-judgments__pagination-see-more">
+                           <div class="list-of-judgments__pagination-see-more-img">
+                              <img src="images/list-of-judgments/pagination-see-more.svg" alt="see-more" />
+                           </div>
+                           <div class="list-of-judgments__pagination-see-more-text">Показати ще 20</div>
+                        </div>
+                        <div class="list-of-judgments__pagination-nav">
+                           <div class="list-of-judgments__pagination-prew disabled">
+                              <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M7.5 15.5L8.5725 14.4553L2.8875 8.75L18 8.75L18 7.25L2.8875 7.25L8.5725 1.57025L7.5 0.500001L-6.55671e-07 8L7.5 15.5Z"
+                                    fill="#CC7F31"
+                                 />
+                              </svg>
+                           </div>
+                           <ul class="list-of-judgments__pagination-list-pages">
+                              <li class="list-of-judgments__pagination-page page-selected">1</li>
+                              <li class="list-of-judgments__pagination-page">2</li>
+                              <li class="list-of-judgments__pagination-page">3</li>
+                              <li class="list-of-judgments__pagination-page">...</li>
+                              <li class="list-of-judgments__pagination-page">10</li>
+                           </ul>
+                           <div class="list-of-judgments__pagination-next">
+                              <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M10.5 0.5L9.4275 1.54475L15.1125 7.25H0V8.75H15.1125L9.4275 14.4298L10.5 15.5L18 8L10.5 0.5Z"
+                                    fill="#CC7F31"
+                                 />
+                              </svg>
+                           </div>
+                        </div>
+                     </div>
+                     <aside class="list-of-judgments__aside list-of-judgments__aside_mobile aside-bar">
+                        <div class="aside-bar__other-services other-services">
+                           <div class="other-services__title">Другие наши сервисы:</div>
+                           <div class="other-services__list">
+                              <div class="other-services__item">
+                                 <p class="other-services__item-name"><a href="#">Бесплатная консультация</a></p>
+                                 <p class="other-services__text">
+                                    Быстрый ответ на Ваш юридический вопрос поможет сориентироваться в дальнейших действиях
+                                 </p>
+                              </div>
+                              <div class="other-services__item">
+                                 <p class="other-services__item-name"><a href="#">Объявите собственный тендер</a></p>
+                                 <p class="other-services__text">
+                                    И получите выгодное предложение от более чем 5000 юристов со всей Украины
+                                 </p>
+                              </div>
+                              <div class="other-services__item">
+                                 <p class="other-services__item-name"><a href="#">ВИДЕОЗВОНОК С ЮРИСТОМ</a></p>
+                                 <p class="other-services__text">
+                                    У юриста это современное и эффективное решение для получения необходимой информации
+                                 </p>
+                              </div>
+                              <div class="other-services__item">
+                                 <p class="other-services__item-name"><a href="#">каталог юристов украины</a></p>
+                                 <p class="other-services__text">
+                                    Это эффективный способ найти надежного и профессионального исполнителя для Вашей юридической цели
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="aside-bar__slider-news slider-news">
+                           <div class="slider-news__list">
+                              <div class="slider-news__item">
+                                 <div class="slider-news__title">Популярные новости</div>
+                                 <div class="slider-news__container swiper">
+                                    <div class="slider-news__wrapper swiper-wrapper">
+                                       <div class="slider-news__slide swiper-slide">
+                                          <div class="slider-news__bg-img"><img src="images/list-of-judgments/bg-slides.png" alt="" /></div>
+                                          <p class="slider-news__slide-date">2021-02-12</p>
+                                          <p class="slider-news__descr">ЦИТАТА: О. Басилашвили - об аннексии Крыма.</p>
+                                       </div>
+                                       <div class="slider-news__slide swiper-slide">
+                                          <div class="slider-news__bg-img"><img src="images/list-of-judgments/bg-slides.png" alt="" /></div>
+                                          <p class="slider-news__slide-date">2021-02-12</p>
+                                          <p class="slider-news__descr">ЦИТАТА: О. Басилашвили - об аннексии Крыма.</p>
+                                       </div>
+                                       <div class="slider-news__slide swiper-slide">
+                                          <div class="slider-news__bg-img"><img src="images/list-of-judgments/bg-slides.png" alt="" /></div>
+                                          <p class="slider-news__slide-date">2021-02-12</p>
+                                          <p class="slider-news__descr">ЦИТАТА: О. Басилашвили - об аннексии Крыма.</p>
+                                       </div>
+                                    </div>
+                                    <div class="slider-news__nav">
+                                       <div class="slider-news__prev">
+                                          <img src="images/list-of-judgments/prev-slide-news.svg" alt="prev" />
+                                       </div>
+                                       <div class="slider-news__next">
+                                          <img src="images/list-of-judgments/next-slide-news.svg" alt="next" />
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="slider-news__item">
+                                 <div class="slider-news__title">Аналитические статьи</div>
+                                 <div class="slider-news__container swiper">
+                                    <div class="slider-news__wrapper swiper-wrapper">
+                                       <div class="slider-news__slide swiper-slide">
+                                          <div class="slider-news__bg-img"><img src="images/list-of-judgments/bg-slides.png" alt="" /></div>
+                                          <p class="slider-news__slide-date">2021-02-12</p>
+                                          <p class="slider-news__descr">ЦИТАТА: О. Басилашвили - об аннексии Крыма.</p>
+                                       </div>
+                                       <div class="slider-news__slide swiper-slide">
+                                          <div class="slider-news__bg-img"><img src="images/list-of-judgments/bg-slides.png" alt="" /></div>
+                                          <p class="slider-news__slide-date">2021-02-12</p>
+                                          <p class="slider-news__descr">ЦИТАТА: О. Басилашвили - об аннексии Крыма.</p>
+                                       </div>
+                                       <div class="slider-news__slide swiper-slide">
+                                          <div class="slider-news__bg-img"><img src="images/list-of-judgments/bg-slides.png" alt="" /></div>
+                                          <p class="slider-news__slide-date">2021-02-12</p>
+                                          <p class="slider-news__descr">ЦИТАТА: О. Басилашвили - об аннексии Крыма.</p>
+                                       </div>
+                                    </div>
+                                    <div class="slider-news__nav">
+                                       <div class="slider-news__prev">
+                                          <img src="images/list-of-judgments/prev-slide-news.svg" alt="prev" />
+                                       </div>
+                                       <div class="slider-news__next">
+                                          <img src="images/list-of-judgments/next-slide-news.svg" alt="next" />
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="slider-news__item">
+                                 <div class="slider-news__title">Консультации</div>
+                                 <div class="slider-news__container swiper">
+                                    <div class="slider-news__wrapper swiper-wrapper">
+                                       <div class="slider-news__slide swiper-slide">
+                                          <div class="slider-news__bg-img"><img src="images/list-of-judgments/bg-slides.png" alt="" /></div>
+                                          <p class="slider-news__slide-date">2021-02-12</p>
+                                          <p class="slider-news__descr">ЦИТАТА: О. Басилашвили - об аннексии Крыма.</p>
+                                       </div>
+                                       <div class="slider-news__slide swiper-slide">
+                                          <div class="slider-news__bg-img"><img src="images/list-of-judgments/bg-slides.png" alt="" /></div>
+                                          <p class="slider-news__slide-date">2021-02-12</p>
+                                          <p class="slider-news__descr">ЦИТАТА: О. Басилашвили - об аннексии Крыма.</p>
+                                       </div>
+                                       <div class="slider-news__slide swiper-slide">
+                                          <div class="slider-news__bg-img"><img src="images/list-of-judgments/bg-slides.png" alt="" /></div>
+                                          <p class="slider-news__slide-date">2021-02-12</p>
+                                          <p class="slider-news__descr">ЦИТАТА: О. Басилашвили - об аннексии Крыма.</p>
+                                       </div>
+                                    </div>
+                                    <div class="slider-news__nav">
+                                       <div class="slider-news__prev">
+                                          <img src="images/list-of-judgments/prev-slide-news.svg" alt="prev" />
+                                       </div>
+                                       <div class="slider-news__next">
+                                          <img src="images/list-of-judgments/next-slide-news.svg" alt="next" />
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="slider-news__item">
+                                 <div class="slider-news__title">Интересные судебные решения</div>
+                                 <div class="slider-news__container swiper">
+                                    <div class="slider-news__wrapper swiper-wrapper">
+                                       <div class="slider-news__slide swiper-slide">
+                                          <div class="slider-news__bg-img"><img src="images/list-of-judgments/bg-slides.png" alt="" /></div>
+                                          <p class="slider-news__slide-date">2021-02-12</p>
+                                          <p class="slider-news__descr">ЦИТАТА: О. Басилашвили - об аннексии Крыма.</p>
+                                       </div>
+                                       <div class="slider-news__slide swiper-slide">
+                                          <div class="slider-news__bg-img"><img src="images/list-of-judgments/bg-slides.png" alt="" /></div>
+                                          <p class="slider-news__slide-date">2021-02-12</p>
+                                          <p class="slider-news__descr">ЦИТАТА: О. Басилашвили - об аннексии Крыма.</p>
+                                       </div>
+                                       <div class="slider-news__slide swiper-slide">
+                                          <div class="slider-news__bg-img"><img src="images/list-of-judgments/bg-slides.png" alt="" /></div>
+                                          <p class="slider-news__slide-date">2021-02-12</p>
+                                          <p class="slider-news__descr">ЦИТАТА: О. Басилашвили - об аннексии Крыма.</p>
+                                       </div>
+                                    </div>
+                                    <div class="slider-news__nav">
+                                       <div class="slider-news__prev">
+                                          <img src="images/list-of-judgments/prev-slide-news.svg" alt="prev" />
+                                       </div>
+                                       <div class="slider-news__next">
+                                          <img src="images/list-of-judgments/next-slide-news.svg" alt="next" />
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </aside>
+                     <div class="list-of-judgments__social-media our-social-media">
+                        <div class="our-social-media__title">Мы в социальных сетях:</div>
+                        <div class="our-social-media__list">
+                           <div class="our-social-media__item our-social-media__item_fb-page">
+                              <img src="images/list-of-judgments/fb.svg" alt="fb" />page
+                           </div>
+                           <div class="our-social-media__item our-social-media__item_fb-group">
+                              <img src="images/list-of-judgments/fb.svg" alt="fb" />group
+                           </div>
+                           <div class="our-social-media__item our-social-media__item_telegram">
+                              <img src="images/list-of-judgments/telegram.svg" alt="telegram" />telegram
+                           </div>
+                           <div class="our-social-media__item our-social-media__item_viber">
+                              <img src="images/list-of-judgments/viber.svg" alt="viber" />viber
+                           </div>
+                           <div class="our-social-media__item our-social-media__item_youtube">
+                              <img src="images/list-of-judgments/youtube.svg" alt="youtube" />youtube
                            </div>
                         </div>
                      </div>

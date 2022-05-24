@@ -70,6 +70,27 @@
    //Filter open end========================================================================================================================================================
 }
 
+//FILTER MOBILE========================================================================================================================================================
+
+const mobTitleEl = document.querySelector('.list-of-judgments__filter_mobile');
+const mainContentEl = document.querySelector('.judg-main-content__resolution-list');
+
+mobTitleEl.addEventListener('click', (e) => {
+   if (e.target.classList.contains('solution-filter__title')) {
+      mobTitleEl.classList.toggle('close-mobile');
+      mainContentEl.classList.toggle('reload');
+   }
+});
+
+mainContentEl.addEventListener('click', (e) => {
+   if (e.target.classList.contains('judg-main-content__resolution-list')) {
+      mainContentEl.classList.remove('reload');
+      mobTitleEl.classList.add('close-mobile');
+   }
+});
+
+//FILTER MOBILE========================================================================================================================================================
+
 //Filter checkbox start========================================================================================================================================================
 
 {

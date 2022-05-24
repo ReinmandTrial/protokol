@@ -9,89 +9,88 @@ $mobileSmall: 479.98px;
       text-decoration: none;
    }
 
-   .active-quest {
-      .lawyers-found__request {
-         background: #efefef !important;
-         border-color: #efefef !important;
-         color: #000 !important;
-      }
-      .lawyers-found__cancel {
-         display: flex !important;
-      }
-      .lawyers-question {
-         display: block;
-      }
-   }
+   // .active-quest {
+   //    .lawyers-found__request {
+   //       background: #efefef !important;
+   //       border-color: #efefef !important;
+   //       color: #000 !important;
+   //    }
+   //    .lawyers-found__cancel {
+   //       display: flex !important;
+   //    }
+   //    .lawyers-question {
+   //       display: block;
+   //    }
+   // }
 
    //HEAD-question========================================================================================================================================================
 
-   .lawyers-found__btn-question {
-      max-height: 34px;
-      padding: 10px 0px !important;
-      width: 160px;
-      font-size: 14px;
-   }
+   // .lawyers-found__btn-question {
+   //    max-height: 34px;
+   //    padding: 10px 0px !important;
+   //    width: 160px;
+   //    font-size: 14px;
+   // }
 
-   .lawyers-found {
-      @media (max-width: $mobile) {
-         margin: 0px 0px 0px 0px;
-      }
-      &__head {
-         display: flex;
-         @media (max-width: $tablet) {
-            flex-direction: column;
-         }
-         @media (max-width: $mobile) {
-            margin-bottom: 32px;
-         }
-      }
-      &__list-btn {
-         display: flex;
-         column-gap: 20px;
-         @media (min-width: $tablet) {
-            align-self: start;
-         }
-         @media (max-width: 360px) {
-            flex-direction: column;
-            row-gap: 20px;
-         }
-      }
+   // .lawyers-found {
+   //    @media (max-width: $mobile) {
+   //       margin: 0px 0px 0px 0px;
+   //    }
+   //    &__head {
+   //       display: flex;
+   //       @media (max-width: $tablet) {
+   //          flex-direction: column;
+   //       }
+   //       @media (max-width: $mobile) {
+   //          margin-bottom: 32px;
+   //       }
+   //    }
+   //    &__list-btn {
+   //       display: flex;
+   //       column-gap: 20px;
+   //       @media (min-width: $tablet) {
+   //          align-self: start;
+   //       }
+   //       @media (max-width: 360px) {
+   //          flex-direction: column;
+   //          row-gap: 20px;
+   //       }
+   //    }
 
-      &__title {
-         margin-bottom: 30px;
-      }
+   //    &__title {
+   //       margin-bottom: 30px;
+   //    }
 
-      &__btn-question {
-      }
-      &__request {
-      }
-      &__cancel {
-         // display: none !important;
-      }
+   //    &__btn-question {
+   //    }
+   //    &__request {
+   //    }
+   //    &__cancel {
+   //       // display: none !important;
+   //    }
 
-      &__btn-question--desktop {
-         display: flex;
-      }
+   //    &__btn-question--desktop {
+   //       display: flex;
+   //    }
 
-      &__wrap {
-      }
+   //    &__wrap {
+   //    }
 
-      &__item {
-      }
+   //    &__item {
+   //    }
 
-      &__item-text {
-      }
+   //    &__item-text {
+   //    }
 
-      &__btn-clear {
-      }
+   //    &__btn-clear {
+   //    }
 
-      &__btn-question--mobile {
-         display: none;
-      }
-   }
+   //    &__btn-question--mobile {
+   //       display: none;
+   //    }
+   // }
 
    .lawyers-question {
-      // display: none;
       border-bottom: 1px solid #bdbdbd;
       padding-bottom: 40px;
       @media (max-width: $mobile) {
@@ -228,62 +227,62 @@ $mobileSmall: 479.98px;
          }
       }
 
-      &__title {
-         font-weight: 400;
-         font-size: 14px;
-         line-height: 19px;
-         &::before {
-            width: 36px;
-            height: 42px;
-         }
-      }
+      // &__title {
+      //    font-weight: 400;
+      //    font-size: 14px;
+      //    line-height: 19px;
+      //    &::before {
+      //       width: 36px;
+      //       height: 42px;
+      //    }
+      // }
 
-      &__message {
-      }
+      // &__message {
+      // }
 
-      &__textarea {
-      }
+      // &__textarea {
+      // }
 
-      &__message-nav {
-         column-gap: 0px;
-         justify-content: space-between;
-      }
-      &__list-btn {
-         @media (max-width: $tablet) {
-            display: flex;
-            flex-direction: column;
-            row-gap: 20px;
-         }
-      }
-      &__attach {
-      }
+      // &__message-nav {
+      //    column-gap: 0px;
+      //    justify-content: space-between;
+      // }
+      // &__list-btn {
+      //    @media (max-width: $tablet) {
+      //       display: flex;
+      //       flex-direction: column;
+      //       row-gap: 20px;
+      //    }
+      // }
+      // &__attach {
+      // }
 
-      &__btn-send-to-selected {
-         margin-right: 20px;
-         @media (max-width: $tablet) {
-            margin-right: 0px;
-            min-width: 285px;
-         }
-      }
+      // &__btn-send-to-selected {
+      //    margin-right: 20px;
+      //    @media (max-width: $tablet) {
+      //       margin-right: 0px;
+      //       min-width: 285px;
+      //    }
+      // }
 
-      &__btn-sunmit-first {
-         @media (max-width: $tablet) {
-            min-width: 285px;
-         }
-      }
+      // &__btn-sunmit-first {
+      //    @media (max-width: $tablet) {
+      //       min-width: 285px;
+      //    }
+      // }
 
-      &__btn {
-      }
+      // &__btn {
+      // }
 
-      &__btn--voice {
-         margin-right: 20px;
-         @media (max-width: $mobile) {
-            margin-right: 0;
-         }
-      }
+      // &__btn--voice {
+      //    margin-right: 20px;
+      //    @media (max-width: $mobile) {
+      //       margin-right: 0;
+      //    }
+      // }
 
-      &__btn--file {
-      }
+      // &__btn--file {
+      // }
    }
 
    //ASIDE========================================================================================================================================================

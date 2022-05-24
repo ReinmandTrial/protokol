@@ -162,88 +162,7 @@
 .new-list-lawyer a:hover {
    text-decoration: none;
 }
-.new-list-lawyer .active-quest .lawyers-found__request {
-   background: #efefef !important;
-   border-color: #efefef !important;
-   color: #000 !important;
-}
-.new-list-lawyer .active-quest .lawyers-found__cancel {
-   display: -webkit-box !important;
-   display: -ms-flexbox !important;
-   display: flex !important;
-}
-.new-list-lawyer .active-quest .lawyers-question {
-   display: block;
-}
-.new-list-lawyer .lawyers-found__btn-question {
-   max-height: 34px;
-   padding: 10px 0px !important;
-   width: 160px;
-   font-size: 14px;
-}
-@media (max-width: 767.98px) {
-   .new-list-lawyer .lawyers-found {
-      margin: 0px 0px 0px 0px;
-   }
-}
-.new-list-lawyer .lawyers-found__head {
-   display: -webkit-box;
-   display: -ms-flexbox;
-   display: flex;
-}
-@media (max-width: 991.98px) {
-   .new-list-lawyer .lawyers-found__head {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-   }
-}
-@media (max-width: 767.98px) {
-   .new-list-lawyer .lawyers-found__head {
-      margin-bottom: 32px;
-   }
-}
-.new-list-lawyer .lawyers-found__list-btn {
-   display: -webkit-box;
-   display: -ms-flexbox;
-   display: flex;
-   -webkit-column-gap: 20px;
-   -moz-column-gap: 20px;
-   column-gap: 20px;
-}
-@media (min-width: 991.98px) {
-   .new-list-lawyer .lawyers-found__list-btn {
-      -ms-flex-item-align: start;
-      -ms-grid-row-align: start;
-      align-self: start;
-   }
-}
-@media (max-width: 360px) {
-   .new-list-lawyer .lawyers-found__list-btn {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      row-gap: 20px;
-   }
-}
-.new-list-lawyer .lawyers-found__title {
-   margin-bottom: 30px;
-}
-.new-list-lawyer .lawyers-found__cancel {
-   /* display: none !important; */
-}
-.new-list-lawyer .lawyers-found__btn-question--desktop {
-   display: -webkit-box;
-   display: -ms-flexbox;
-   display: flex;
-}
-.new-list-lawyer .lawyers-found__btn-question--mobile {
-   display: none;
-}
 .new-list-lawyer .lawyers-question {
-   /* display: none; */
    border-bottom: 1px solid #bdbdbd;
    padding-bottom: 40px;
 }
@@ -374,7 +293,7 @@
       -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-      margin-left: 45px;
+      margin-left: 20px;
    }
 }
 @media (max-width: 360px) {
@@ -417,57 +336,6 @@
 @media (max-width: 767.98px) {
    .new-list-lawyer .lawyers-question__temp-name {
       min-width: auto;
-   }
-}
-.new-list-lawyer .lawyers-question__title {
-   font-weight: 400;
-   font-size: 14px;
-   line-height: 19px;
-}
-.new-list-lawyer .lawyers-question__title::before {
-   width: 36px;
-   height: 42px;
-}
-.new-list-lawyer .lawyers-question__message-nav {
-   -webkit-column-gap: 0px;
-   -moz-column-gap: 0px;
-   column-gap: 0px;
-   -webkit-box-pack: justify;
-   -ms-flex-pack: justify;
-   justify-content: space-between;
-}
-@media (max-width: 991.98px) {
-   .new-list-lawyer .lawyers-question__list-btn {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      row-gap: 20px;
-   }
-}
-.new-list-lawyer .lawyers-question__btn-send-to-selected {
-   margin-right: 20px;
-}
-@media (max-width: 991.98px) {
-   .new-list-lawyer .lawyers-question__btn-send-to-selected {
-      margin-right: 0px;
-      min-width: 285px;
-   }
-}
-@media (max-width: 991.98px) {
-   .new-list-lawyer .lawyers-question__btn-sunmit-first {
-      min-width: 285px;
-   }
-}
-.new-list-lawyer .lawyers-question__btn--voice {
-   margin-right: 20px;
-}
-@media (max-width: 767.98px) {
-   .new-list-lawyer .lawyers-question__btn--voice {
-      margin-right: 0;
    }
 }
 .new-list-lawyer .aside-container {
