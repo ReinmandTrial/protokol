@@ -28,5 +28,4 @@ new Swiper('.slider-news__container', {
    },
    loop: true,
    spaceBetween: 30,
-   effect: 'cube',
 });
