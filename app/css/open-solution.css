@@ -392,6 +392,8 @@
    }
 }
 .sticky-label__text {
+   max-width: 90px;
+   max-height: 90px;
    -webkit-transition: all 0.7s ease 0s;
    -o-transition: all 0.7s ease 0s;
    transition: all 0.7s ease 0s;

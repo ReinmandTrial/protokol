@@ -3,13 +3,13 @@ const bodyCommentEl = document.querySelector('.solution-action-bar__body-comment
 const scrollEl = document.querySelector('.solution-action-bar__content');
 
 openSlolutionEl.addEventListener('click', (e) => {
-   switch (true) {
-      case e.target.classList.contains('sticky-label__text'):
-         return openContainer(), scrollTo();
-      case e.target.classList.contains('comments-bar'):
-         return openContainer();
-      case e.target.classList.contains('sticky-label__img'):
-         return openContainer(), scrollTo();
+   if (
+      e.target.classList.contains('sticky-label__text') ||
+      e.target.classList.contains('comments-bar') ||
+      e.target.classList.contains('sticky-label__img')
+   ) {
+      scrollTo();
+      openContainer();
    }
 });
 

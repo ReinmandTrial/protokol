@@ -356,6 +356,8 @@ $mobileSmall: 479.98px;
    }
 
    &__text {
+      max-width: 90px;
+      max-height: 90px;
       transition: all 0.7s ease 0s;
       opacity: 0;
       padding: 21px 8px;
