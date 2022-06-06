@@ -336,6 +336,11 @@
    color: #ffffff;
    padding: 24px 9px;
 }
+@media (min-width: 991.98px) {
+   .other-services__title {
+      width: 280px;
+   }
+}
 .other-services__list {
    padding: 16px 9px;
    display: -webkit-box;
@@ -667,6 +672,7 @@
 .our-social-media__item_youtube {
    border: 1px solid #e53935;
 }
+
 .list-of-judgments {
    font-family: 'Open Sans';
    margin-top: 70px;
@@ -713,12 +719,11 @@
    -webkit-box-pack: justify;
    -ms-flex-pack: justify;
    justify-content: space-between;
-   margin: 0px 0px 20px 0px;
+   margin: 0px 0px 0px 0px;
 }
 @media (max-width: 767.98px) {
    .list-of-judgments__info-row {
       padding: 0px 15px;
-      margin: 0px 0px 0px 0px;
    }
 }
 .list-of-judgments__update-today-text {
@@ -768,10 +773,38 @@
       max-width: 133px;
    }
 }
+@media (min-width: 991.98px) {
+   .list-of-judgments .swiper-slide-prev {
+      position: relative;
+   }
+   .list-of-judgments .swiper-slide-prev::after {
+      content: '';
+      position: absolute;
+      width: 870px;
+      height: 120px;
+      top: 0;
+      left: 0;
+      background-color: #fff;
+      opacity: 45%;
+   }
+   .list-of-judgments .swiper-slide-next {
+      position: relative;
+   }
+   .list-of-judgments .swiper-slide-next::after {
+      content: '';
+      position: absolute;
+      width: 870px;
+      height: 120px;
+      top: 0;
+      right: 0;
+      background-color: #fff;
+      opacity: 55%;
+   }
+}
 .list-of-judgments__slider {
    border-radius: 20px;
    max-width: 1170px;
-   padding: 10px 35px;
+   padding: 0px 35px;
 }
 @media (max-width: 991.98px) {
    .list-of-judgments__slider {
@@ -795,16 +828,6 @@
    -webkit-box-pack: center;
    -ms-flex-pack: center;
    justify-content: center;
-}
-.list-of-judgments__slider-item + .swiper-slide-active {
-   -webkit-transform: translate3d(0px, -10px, 0px) !important;
-   transform: translate3d(0px, -10px, 0px) !important;
-}
-@media (max-width: 991.98px) {
-   .list-of-judgments__slider-item + .swiper-slide-active {
-      -webkit-transform: translate3d(0px, 0px, 0px) !important;
-      transform: translate3d(0px, 0px, 0px) !important;
-   }
 }
 .list-of-judgments__slider-body {
    margin-bottom: 15px;
@@ -986,14 +1009,13 @@
 .list-of-judgments .judg-main-content__search-result {
    font-style: normal;
    font-weight: 400;
-   font-size: 20px;
+   font-size: 16px;
    line-height: 27px;
    margin-bottom: 30px;
 }
 @media (max-width: 767.98px) {
    .list-of-judgments .judg-main-content__search-result {
       font-weight: 600;
-      font-size: 16px;
       line-height: 22px;
       text-align: center;
    }

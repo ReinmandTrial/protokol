@@ -17,6 +17,7 @@ $mobileSmall: 479.98px;
          color: #9b51e0;
       }
    }
+
    &__row {
       height: 140px;
       display: flex;
@@ -262,6 +263,9 @@ $mobileSmall: 479.98px;
       text-transform: uppercase;
       color: #ffffff;
       padding: 24px 9px;
+      @media (min-width: $tablet) {
+         width: 280px;
+      }
    }
 
    &__list {
@@ -606,10 +610,9 @@ $mobileSmall: 479.98px;
    &__info-row {
       display: flex;
       justify-content: space-between;
-      margin: 0px 0px 20px 0px;
+      margin: 0px 0px 0px 0px;
       @media (max-width: $mobile) {
          padding: 0px 15px;
-         margin: 0px 0px 0px 0px;
       }
    }
 
@@ -664,11 +667,39 @@ $mobileSmall: 479.98px;
    }
    //HEAD SLIDER========================================================================================================================================================
 
+   @media (min-width: $tablet) {
+      .swiper-slide-prev {
+         position: relative;
+         &::after {
+            content: '';
+            position: absolute;
+            width: 870px;
+            height: 120px;
+            top: 0;
+            left: 0;
+            background-color: #fff;
+            opacity: 45%;
+         }
+      }
+      .swiper-slide-next {
+         position: relative;
+         &::after {
+            content: '';
+            position: absolute;
+            width: 870px;
+            height: 120px;
+            top: 0;
+            right: 0;
+            background-color: #fff;
+            opacity: 55%;
+         }
+      }
+   }
+
    &__slider {
       border-radius: 20px;
       max-width: 1170px;
-      padding: 10px 35px;
-      // position: relative;
+      padding: 0px 35px;
       @media (max-width: $tablet) {
          padding-top: 15px;
       }
@@ -686,12 +717,6 @@ $mobileSmall: 479.98px;
    &__slider-item {
       display: flex;
       justify-content: center;
-      & + .swiper-slide-active {
-         transform: translate3d(0px, -10px, 0px) !important;
-         @media (max-width: $tablet) {
-            transform: translate3d(0px, 0px, 0px) !important;
-         }
-      }
    }
 
    &__slider-body {
@@ -929,12 +954,12 @@ $mobileSmall: 479.98px;
       &__search-result {
          font-style: normal;
          font-weight: 400;
-         font-size: 20px;
+         font-size: 16px;
          line-height: 27px;
          margin-bottom: 30px;
          @media (max-width: $mobile) {
             font-weight: 600;
-            font-size: 16px;
+
             line-height: 22px;
             text-align: center;
          }
