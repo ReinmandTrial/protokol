@@ -663,32 +663,33 @@ $mobileSmall: 479.98px;
       }
    }
    //HEAD SLIDER========================================================================================================================================================
-
-   @media (min-width: $tablet) {
-      .swiper-slide-prev {
-         position: relative;
-         &::after {
-            content: '';
-            position: absolute;
-            width: 870px;
-            height: 120px;
-            top: 0;
-            left: 0;
-            background-color: #fff;
-            opacity: 45%;
+   .list-of-judgments__slider {
+      @media (min-width: $tablet) {
+         .swiper-slide-prev {
+            position: relative;
+            &::after {
+               content: '';
+               position: absolute;
+               width: 870px;
+               height: 120px;
+               top: 0;
+               left: 0;
+               background-color: #fff;
+               opacity: 45%;
+            }
          }
-      }
-      .swiper-slide-next {
-         position: relative;
-         &::after {
-            content: '';
-            position: absolute;
-            width: 870px;
-            height: 120px;
-            top: 0;
-            right: 0;
-            background-color: #fff;
-            opacity: 55%;
+         .swiper-slide-next {
+            position: relative;
+            &::after {
+               content: '';
+               position: absolute;
+               width: 870px;
+               height: 120px;
+               top: 0;
+               right: 0;
+               background-color: #fff;
+               opacity: 55%;
+            }
          }
       }
    }

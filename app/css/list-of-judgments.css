@@ -770,10 +770,10 @@
    }
 }
 @media (min-width: 991.98px) {
-   .list-of-judgments .swiper-slide-prev {
+   .list-of-judgments .list-of-judgments__slider .swiper-slide-prev {
       position: relative;
    }
-   .list-of-judgments .swiper-slide-prev::after {
+   .list-of-judgments .list-of-judgments__slider .swiper-slide-prev::after {
       content: '';
       position: absolute;
       width: 870px;
@@ -783,10 +783,10 @@
       background-color: #fff;
       opacity: 45%;
    }
-   .list-of-judgments .swiper-slide-next {
+   .list-of-judgments .list-of-judgments__slider .swiper-slide-next {
       position: relative;
    }
-   .list-of-judgments .swiper-slide-next::after {
+   .list-of-judgments .list-of-judgments__slider .swiper-slide-next::after {
       content: '';
       position: absolute;
       width: 870px;
