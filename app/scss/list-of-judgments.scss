@@ -262,10 +262,7 @@ $mobileSmall: 479.98px;
       line-height: 27px;
       text-transform: uppercase;
       color: #ffffff;
-      padding: 24px 9px;
-      @media (min-width: $tablet) {
-         width: 280px;
-      }
+      padding: 24px 12px;
    }
 
    &__list {

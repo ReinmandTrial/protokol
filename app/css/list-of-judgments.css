@@ -334,13 +334,9 @@
    line-height: 27px;
    text-transform: uppercase;
    color: #ffffff;
-   padding: 24px 9px;
+   padding: 24px 12px;
 }
-@media (min-width: 991.98px) {
-   .other-services__title {
-      width: 280px;
-   }
-}
+
 .other-services__list {
    padding: 16px 9px;
    display: -webkit-box;
