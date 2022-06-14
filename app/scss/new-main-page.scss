@@ -525,17 +525,54 @@ $mobileSmall: 479.98px;
    &__list {
       display: flex;
       justify-content: space-between;
-      gap: 60px;
+      gap: 60px 30px;
       flex-wrap: wrap;
       @media (max-width: 1200px) {
          justify-content: center;
       }
       @media (max-width: $mobile) {
-         gap: 60px 30px;
+         gap: 60px 20px;
+      }
+      @media (max-width: $mobileSmall) {
+         display: grid;
+         grid-template-columns: repeat(2, 1fr);
       }
    }
 
+   // display: flex;
+   // justify-content: space-between;
+   // gap: 60px 30px;
+   // flex-wrap: wrap;
+   // @media (max-width: 1200px) {
+   //    justify-content: center;
+   // }
+   // @media (max-width: $mobile) {
+   //    gap: 60px 20px;
+   // }
+   // }
+
    &__item {
+      @media (max-width: $mobileSmall) {
+         &:last-child {
+            grid-column-end: 3;
+            grid-column-start: 1;
+         }
+         // &:nth-child(even):not(:last-child) {
+         //    justify-self: end;
+         // }
+         // &:nth-child(odd):not(:last-child) {
+         //    justify-self: start;
+         // }
+      }
+
+      @media (max-width: 350px) {
+         transform: scale(0.8);
+      }
+      // @media (max-width: 400px) {
+      //    &:nth-child(even) {
+      //       margin-left: auto;
+      //    }
+      // }
    }
 
    &__img {
