@@ -62,8 +62,8 @@ function build() {
 }
 
 function watching() {
-   watch(['app/scss/**/*.scss'], { usePolling: true }, styles);
-   watch(['app/js/**/*.js', { usePolling: true }, '!app/js/main.min.js'], scripts);
+   watch(['app/scss/**/*.scss'], styles);
+   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
    watch(['app/*.html']).on('change', browserSync.reload);
 }
 

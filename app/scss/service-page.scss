@@ -612,8 +612,9 @@ $mobileSmall: 479.98px;
       font-weight: 600;
       font-size: 28px;
       line-height: 134%;
-      text-decoration: underline;
+      border-bottom: 1px solid #000000;
       text-align: left;
+      display: inline-block;
    }
 
    &__form {
