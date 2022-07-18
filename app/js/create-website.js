@@ -1,6 +1,6 @@
 'use strict';
 //UNTIL CONST========================================================================================================================================================
-const MAIN_EL = document.querySelector('.create-website__form');
+const MAIN_FORM = document.querySelector('.create-website__form');
 
 //========================================================================================================================================================
 
@@ -34,7 +34,7 @@ function onInput(e) {
 
 //SELECT START========================================================================================================================================================
 
-MAIN_EL.addEventListener('click', (e) => {
+MAIN_FORM.addEventListener('click', (e) => {
    if (e.target.classList.contains('temp-select__head')) {
       e.preventDefault();
       onOpenSelect(e.target);
@@ -65,7 +65,7 @@ function onAddOption(item) {
 }
 
 function closeAllSelect() {
-   MAIN_EL.querySelectorAll('.temp-select').forEach((select) => select.classList.remove('active'));
+   MAIN_FORM.querySelectorAll('.temp-select').forEach((select) => select.classList.remove('active'));
 }
 
 //SELECT END========================================================================================================================================================
@@ -86,7 +86,7 @@ function onChangeAlwaysInput(e) {
 
 //input one file START ========================================================================================================================================================
 
-MAIN_EL.addEventListener('change', (e) => {
+MAIN_FORM.addEventListener('change', (e) => {
    if (e.target.classList.contains('temp-input-file__input')) {
       e.preventDefault();
       onChangeFileInput(e.target.closest('.temp-input-file'), e);
@@ -154,7 +154,7 @@ function readURL(input) {
       }
    }
 }
-MAIN_EL.addEventListener('click', (e) => {
+MAIN_FORM.addEventListener('click', (e) => {
    if (e.target.classList.contains('temp-input-list-file__trash')) {
       e.preventDefault();
       const curItem = e.target.closest('.temp-input-list-file__item');
@@ -197,6 +197,7 @@ allTextareaEl.forEach((area) =>
    })
 );
 //auto-heigh-textarea END========================================================================================================================================================
+
 //step second START========================================================================================================================================================
 const SERVICE_TEMP = document.getElementById('secondStepServiceItemTemplate').innerHTML;
 const servicesListEl = document.querySelector('.second-step__list-services');
@@ -308,3 +309,14 @@ function onAddFaq(e) {
    listFaq.insertAdjacentHTML('beforeend', TEMP_FAQ);
 }
 //step eight END========================================================================================================================================================
+
+//delete-item START ========================================================================================================================================================
+
+MAIN_FORM.addEventListener('click', (e) => {
+   if (e.target.classList.contains('temp-delete-btn')) {
+      e.preventDefault();
+      e.target.parentElement.remove();
+   }
+});
+
+//delete-item END========================================================================================================================================================

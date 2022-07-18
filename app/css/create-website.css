@@ -156,6 +156,10 @@
 .temp-textarea__textarea::placeholder {
    color: #828282;
 }
+.temp-textarea__textarea:focus {
+   outline: none;
+   border: 1px solid #cc7f31;
+}
 .temp-textarea__max-symbol {
    font-size: 12px;
    margin: 0px 0px 0px 0px;
@@ -633,6 +637,27 @@
 .schedule__input:disabled {
    opacity: 0.5;
 }
+.schedule__input:focus {
+   outline: none;
+   border: 1px solid #cc7f31;
+}
+.temp-delete-btn {
+   background-color: transparent;
+   outline: none;
+   border: none;
+   margin: 12px 0px 12px calc(25% + 12px);
+   font-size: 18px;
+   line-height: 21px;
+   color: #bd462b;
+   border-bottom: 1px dashed #bd462b;
+}
+@media (max-width: 767.98px) {
+   .temp-delete-btn {
+      margin: 0 auto;
+      margin-bottom: 12px;
+      display: block;
+   }
+}
 .first-step {
    border-bottom: 1px solid #cc7f31;
    padding-bottom: 20px;
@@ -937,7 +962,7 @@
    background-color: transparent;
    outline: none;
    border: none;
-   margin-left: 27%;
+   margin-left: calc(25% + 12px);
    font-size: 18px;
    line-height: 21px;
    color: #cc7f31;
@@ -1056,7 +1081,7 @@
    background-color: transparent;
    outline: none;
    border: none;
-   margin-left: 27%;
+   margin-left: calc(25% + 12px);
    font-size: 18px;
    line-height: 21px;
    color: #cc7f31;
@@ -1139,7 +1164,6 @@
    margin-right: 4px;
 }
 .fifth-step__publication {
-   padding-bottom: 20px;
    border-bottom: 1px dashed #cc7f31;
    margin-bottom: 20px;
 }
@@ -1181,7 +1205,7 @@
    background-color: transparent;
    outline: none;
    border: none;
-   margin-left: 27%;
+   margin-left: calc(25% + 12px);
    font-size: 18px;
    line-height: 21px;
    color: #cc7f31;
@@ -1298,7 +1322,7 @@
    background-color: transparent;
    outline: none;
    border: none;
-   margin-left: 27%;
+   margin-left: calc(25% + 12px);
    font-size: 18px;
    line-height: 21px;
    color: #cc7f31;
@@ -1363,7 +1387,7 @@
    background-color: transparent;
    outline: none;
    border: none;
-   margin-left: 27%;
+   margin-left: calc(25% + 12px);
    font-size: 18px;
    line-height: 21px;
    color: #cc7f31;

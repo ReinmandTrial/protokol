@@ -119,6 +119,10 @@ $mobileSmall: 479.98px;
       &::placeholder {
          color: #828282;
       }
+      &:focus {
+         outline: none;
+         border: 1px solid #cc7f31;
+      }
    }
 
    &__max-symbol {
@@ -552,8 +556,27 @@ $mobileSmall: 479.98px;
       &:disabled {
          opacity: 0.5;
       }
+      &:focus {
+         outline: none;
+         border: 1px solid #cc7f31;
+      }
    }
    &__checkbox-always {
+   }
+}
+.temp-delete-btn {
+   background-color: transparent;
+   outline: none;
+   border: none;
+   margin: 12px 0px 12px calc(25% + 12px);
+   font-size: 18px;
+   line-height: 21px;
+   color: #bd462b;
+   border-bottom: 1px dashed #bd462b;
+   @media (max-width: $mobile) {
+      margin: 0 auto;
+      margin-bottom: 12px;
+      display: block;
    }
 }
 
@@ -938,7 +961,7 @@ $mobileSmall: 479.98px;
       background-color: transparent;
       outline: none;
       border: none;
-      margin-left: 27%;
+      margin-left: calc(25% + 12px);
       font-size: 18px;
       line-height: 21px;
       color: #cc7f31;
@@ -1073,7 +1096,7 @@ $mobileSmall: 479.98px;
       background-color: transparent;
       outline: none;
       border: none;
-      margin-left: 27%;
+     margin-left: calc(25% + 12px);
       font-size: 18px;
       line-height: 21px;
       color: #cc7f31;
@@ -1166,7 +1189,6 @@ $mobileSmall: 479.98px;
    }
 
    &__publication {
-      padding-bottom: 20px;
       border-bottom: 1px dashed #cc7f31;
       margin-bottom: 20px;
    }
@@ -1223,7 +1245,7 @@ $mobileSmall: 479.98px;
       background-color: transparent;
       outline: none;
       border: none;
-      margin-left: 27%;
+      margin-left: calc(25% + 12px);
       font-size: 18px;
       line-height: 21px;
       color: #cc7f31;
@@ -1358,7 +1380,7 @@ $mobileSmall: 479.98px;
       background-color: transparent;
       outline: none;
       border: none;
-      margin-left: 27%;
+      margin-left: calc(25% + 12px);
       font-size: 18px;
       line-height: 21px;
       color: #cc7f31;
@@ -1435,7 +1457,7 @@ $mobileSmall: 479.98px;
       background-color: transparent;
       outline: none;
       border: none;
-      margin-left: 27%;
+     margin-left: calc(25% + 12px);
       font-size: 18px;
       line-height: 21px;
       color: #cc7f31;
