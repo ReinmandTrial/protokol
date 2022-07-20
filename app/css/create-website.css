@@ -190,6 +190,7 @@
 @media (max-width: 767.98px) {
    .temp-input-file__title {
       text-align: left;
+      margin-bottom: 10px;
    }
 }
 .temp-input-file__prompt {
