@@ -91,7 +91,10 @@
       }
    }
    .light-theme & {
-      background: #ffffff;
+      background: #ffffff !important;
+      @media (max-width: $tablet) {
+         background: #ffffff !important;
+      }
       .introduce__container {
          background: url('@img/light/femida.png') 95% 50% / rem(378) rem(476) no-repeat;
          @media (max-width: $tablet) {
@@ -614,8 +617,8 @@
 
    &__slide {
       @media (max-width: $tablet) {
-         min-height:rem(640) ;
-         max-height:rem(640) ;
+         min-height: rem(640);
+         max-height: rem(640);
       }
    }
 
@@ -624,7 +627,7 @@
       margin-bottom: rem(60);
       height: rem(286);
       @media (max-width: $tablet) {
-         height: rem(490) ;
+         height: rem(490);
       }
    }
 
@@ -816,7 +819,7 @@
          top: 50%;
          left: 50%;
          transform: translate(-50%, -50%);
-         font-size:rem(52) ;
+         font-size: rem(52);
          color: #ffffff;
          opacity: 0;
          transition: all 0.5s ease 0s;
@@ -899,8 +902,8 @@
    }
 
    &__slide-image {
-      width:rem(220) ;
-      height:rem(260) ;
+      width: rem(220);
+      height: rem(260);
    }
 
    &__slide-preview {
