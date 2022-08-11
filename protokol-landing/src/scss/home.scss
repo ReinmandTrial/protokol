@@ -276,7 +276,7 @@
          content: '';
          width: rem(540);
          height: rem(540);
-         background: radial-gradient(100% 100% at 97.1% 0%, $orange 0%, #334153 72.92%);
+         background: radial-gradient(100% 100% at 97.1% 0%, #dba88a 0%, #334153 72.92%);
          position: absolute;
          top: 50%;
          transform: translate(0px, -50%);
@@ -396,7 +396,7 @@
 
    &__icon {
       flex: none;
-      border: rem(2) solid $orange;
+      border: rem(2) solid #dba88a;
       border-radius: 50%;
       width: rem(60);
       height: rem(60);
@@ -405,7 +405,7 @@
       justify-content: center;
       &::before {
          font-size: rem(30);
-         color: $orange;
+         color: #dba88a;
       }
    }
 
@@ -448,7 +448,7 @@
       display: grid;
       grid-gap: rem(30);
       grid-template-columns: 20% 60% 20%;
-      border-bottom: rem(1) solid $orange;
+      border-bottom: rem(1) solid #dba88a;
       padding: rem(20) 0;
       @media (max-width: $mobile) {
          display: block;
@@ -475,11 +475,9 @@
    //++++++++++++++++++++++++++++++++++++
    .light-theme & {
       background: url('@img/light/waves-bg.svg') 50% / cover no-repeat;
-      padding-top: rem(120);
-      margin-top: rem(-120);
       .services__content {
          @media (max-width: $mobile) {
-            padding-top: 0;
+            padding: 0;
          }
       }
       .services__title {
@@ -1396,12 +1394,24 @@
    }
    &__about-me {
       @include adaptiveValue('margin-bottom', 100, 60);
+      .light-theme & {
+         margin-bottom: rem(0);
+      }
    }
    &__services {
+      .light-theme & {
+         @include adaptiveValue('padding-top', 100, 60);
+         @include adaptiveValue('margin-top', -100, -60);
+      }
    }
    &__examples {
       @include adaptiveValue('padding-top', 100, 60);
       @include adaptiveValue('padding-bottom', 100, 60);
+      .light-theme & {
+         // @include adaptiveValue('padding-top', 100, 60);
+         @include adaptiveValue('margin-top', -70, 0);
+         @include adaptiveValue('margin-bottom', -70, -60);
+      }
    }
    &__documents {
       @include adaptiveValue('margin-bottom', 120, 60);
@@ -1412,7 +1422,6 @@
    &__publications {
       @include adaptiveValue('margin-bottom', 100, 60);
       .light-theme & {
-         @include adaptiveValue('padding-top', 100, 60);
          @include adaptiveValue('padding-bottom', 100, 60);
          margin-bottom: 0;
       }
@@ -1420,18 +1429,16 @@
    &__gallery {
       @include adaptiveValue('margin-bottom', 100, 60);
       .light-theme & {
-         @include adaptiveValue('padding-top', 100, 60);
-         @include adaptiveValue('padding-bottom', 100, 60);
          margin-bottom: 0;
       }
    }
    &__reviews {
       .light-theme & {
-         @include adaptiveValue('padding-bottom', 100, 60);
+         @include adaptiveValue('padding-top', 100, 60);
       }
    }
    &__faq {
-      @include adaptiveValue('padding-top ', 140, 60);
+      @include adaptiveValue('padding-top ', 100, 60);
       @include adaptiveValue('padding-bottom', 100, 60);
    }
    &__contact {
