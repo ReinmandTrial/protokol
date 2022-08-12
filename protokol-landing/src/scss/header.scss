@@ -241,6 +241,9 @@
       width: 100%;
       height: rem(3);
       background-color: #dba88a;
+      @media (max-width:$mobile){
+            background-color: #000;
+      }
    }
    &::before {
       top: 0;

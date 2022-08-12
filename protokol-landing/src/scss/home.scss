@@ -98,7 +98,7 @@
       .introduce__container {
          background: url('@img/light/femida.png') 95% 50% / rem(378) rem(476) no-repeat;
          @media (max-width: $tablet) {
-            background: transparent;
+            background: #ffffff !important;
          }
       }
       .introduce__lawyer-name {
