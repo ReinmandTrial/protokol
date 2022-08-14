@@ -2,8 +2,24 @@ $pc: 1024.98px;
 $tablet: 991.98px;
 $mobile: 767.98px;
 $mobileSmall: 479.98px;
+@font-face {
+   font-family: 'Roboto Condensed';
+   src: url('../fonts/RobotoCondensed-Regular.woff2') format('woff2'), url('../fonts/RobotoCondensed-Regular.woff') format('woff');
+   font-weight: normal;
+   font-style: normal;
+   font-display: swap;
+}
 
 .temp-input {
+   &._error {
+      .temp-input__input {
+         background: rgba(199, 74, 46, 0.1);
+         border: 1px solid #c74a2e;
+      }
+      .temp-input__error {
+         display: block;
+      }
+   }
    margin-bottom: 20px;
    @media (max-width: $mobile) {
       margin-bottom: 15px;
@@ -70,14 +86,14 @@ $mobileSmall: 479.98px;
          display: block;
       }
    }
+   &__error {
+      display: none;
+      font-size: 12px;
+      color: #c74a2e;
+      margin-top: 2px;
+   }
 }
-@font-face {
-   font-family: 'Roboto Condensed';
-   src: url('../fonts/RobotoCondensed-Regular.woff2') format('woff2'), url('../fonts/RobotoCondensed-Regular.woff') format('woff');
-   font-weight: normal;
-   font-style: normal;
-   font-display: swap;
-}
+
 .temp-textarea {
    &__content {
       display: grid;
@@ -182,6 +198,13 @@ $mobileSmall: 479.98px;
       visibility: hidden;
       clip: rect(0 0 0 0);
    }
+   &__input-edit {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      visibility: hidden;
+      clip: rect(0 0 0 0);
+   }
 
    &__icon-plus {
       position: absolute;
@@ -198,7 +221,7 @@ $mobileSmall: 479.98px;
    &__previous-img {
       width: 100%;
       height: 100%;
-      object-fit: contain;
+      object-fit: cover;
       border-radius: 6px;
    }
    &__previous-trash {
@@ -206,19 +229,42 @@ $mobileSmall: 479.98px;
       outline: none;
       border: none;
       position: absolute;
-      right: -35px;
+      right: -85px;
       top: 50%;
       transform: translate(0, -50%);
       @media (max-width: $mobile) {
-         right: unset;
-         top: 50%;
-         left: 50%;
-         transform: translate(-50%, -50%);
+         top: unset;
+         bottom: 5px;
+         right: 5px;
+         transform: translate(0px, 0px);
       }
       path {
          fill: #828282;
          @media (max-width: $mobile) {
-            fill: #fff;
+            fill: #000;
+         }
+      }
+   }
+   &__previous-edit {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translate(0px, -50%);
+      right: -45px;
+      max-width: 32px;
+      margin: 0px 0px 0px 0px;
+      display: flex;
+      @media (max-width: 767.98px) {
+         right: unset;
+         left: 50%;
+         transform: translate(-50%, -50%);
+      }
+      img {
+         pointer-events: none;
+      }
+      path {
+         @media (max-width: $mobile) {
+            fill: #000;
          }
       }
    }
@@ -1097,7 +1143,7 @@ $mobileSmall: 479.98px;
       background-color: transparent;
       outline: none;
       border: none;
-     margin-left: calc(25% + 12px);
+      margin-left: calc(25% + 12px);
       font-size: 18px;
       line-height: 21px;
       color: #cc7f31;
@@ -1458,7 +1504,7 @@ $mobileSmall: 479.98px;
       background-color: transparent;
       outline: none;
       border: none;
-     margin-left: calc(25% + 12px);
+      margin-left: calc(25% + 12px);
       font-size: 18px;
       line-height: 21px;
       color: #cc7f31;

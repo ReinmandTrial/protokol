@@ -1,5 +1,20 @@
+@font-face {
+   font-family: 'Roboto Condensed';
+   src: url('../fonts/RobotoCondensed-Regular.woff2') format('woff2'), url('../fonts/RobotoCondensed-Regular.woff') format('woff');
+   font-weight: normal;
+   font-style: normal;
+   font-display: swap;
+}
+
 .temp-input {
    margin-bottom: 20px;
+}
+.temp-input._error .temp-input__input {
+   background: rgba(199, 74, 46, 0.1);
+   border: 1px solid #c74a2e;
+}
+.temp-input._error .temp-input__error {
+   display: block;
 }
 @media (max-width: 767.98px) {
    .temp-input {
@@ -98,12 +113,11 @@
 .temp-input__cross.active {
    display: block;
 }
-@font-face {
-   font-family: 'Roboto Condensed';
-   src: url('../fonts/RobotoCondensed-Regular.woff2') format('woff2'), url('../fonts/RobotoCondensed-Regular.woff') format('woff');
-   font-weight: normal;
-   font-style: normal;
-   font-display: swap;
+.temp-input__error {
+   display: none;
+   font-size: 12px;
+   color: #c74a2e;
+   margin-top: 2px;
 }
 .temp-textarea__content {
    display: -ms-grid;
@@ -212,6 +226,13 @@
    visibility: hidden;
    clip: rect(0 0 0 0);
 }
+.temp-input-file__input-edit {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   visibility: hidden;
+   clip: rect(0 0 0 0);
+}
 .temp-input-file__icon-plus {
    position: absolute;
    top: 50%;
@@ -227,8 +248,8 @@
 .temp-input-file__previous-img {
    width: 100%;
    height: 100%;
-   -o-object-fit: contain;
-   object-fit: contain;
+   -o-object-fit: cover;
+   object-fit: cover;
    border-radius: 6px;
 }
 .temp-input-file__previous-trash {
@@ -236,7 +257,7 @@
    outline: none;
    border: none;
    position: absolute;
-   right: -35px;
+   right: -85px;
    top: 50%;
    -webkit-transform: translate(0, -50%);
    -ms-transform: translate(0, -50%);
@@ -244,12 +265,12 @@
 }
 @media (max-width: 767.98px) {
    .temp-input-file__previous-trash {
-      right: unset;
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
+      top: unset;
+      bottom: 5px;
+      right: 5px;
+      -webkit-transform: translate(0px, 0px);
+      -ms-transform: translate(0px, 0px);
+      transform: translate(0px, 0px);
    }
 }
 .temp-input-file__previous-trash path {
@@ -257,7 +278,38 @@
 }
 @media (max-width: 767.98px) {
    .temp-input-file__previous-trash path {
-      fill: #fff;
+      fill: #000;
+   }
+}
+.temp-input-file__previous-edit {
+   cursor: pointer;
+   position: absolute;
+   top: 50%;
+   -webkit-transform: translate(0px, -50%);
+   -ms-transform: translate(0px, -50%);
+   transform: translate(0px, -50%);
+   right: -45px;
+   max-width: 32px;
+   margin: 0px 0px 0px 0px;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+}
+@media (max-width: 767.98px) {
+   .temp-input-file__previous-edit {
+      right: unset;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+   }
+}
+.temp-input-file__previous-edit img {
+   pointer-events: none;
+}
+@media (max-width: 767.98px) {
+   .temp-input-file__previous-edit path {
+      fill: #000;
    }
 }
 .temp-input-file__max-size {

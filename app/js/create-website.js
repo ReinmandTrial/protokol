@@ -87,11 +87,12 @@ function onChangeAlwaysInput(e) {
 //input one file START ========================================================================================================================================================
 
 MAIN_FORM.addEventListener('change', (e) => {
-   if (e.target.classList.contains('temp-input-file__input')) {
+   if (e.target.classList.contains('temp-input-file__input') || e.target.classList.contains('temp-input-file__input-edit')) {
       e.preventDefault();
       onChangeFileInput(e.target.closest('.temp-input-file'), e);
    }
 });
+
 
 function onChangeFileInput(curTemp, e) {
    const img = curTemp.querySelector('.temp-input-file__previous-img');
@@ -101,7 +102,6 @@ function onChangeFileInput(curTemp, e) {
    let file = e.target.files[0];
 
    trash.addEventListener('click', deletePhoto);
-
    if (file) {
       const reader = new FileReader();
       reader.addEventListener('load', setPhoto);
